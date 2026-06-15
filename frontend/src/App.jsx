@@ -1,122 +1,120 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import AppRoutes from './routes/AppRoutes';
+import api from './services/api';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState(null);
+  const [history, setHistory] = useState([]);
+  const [currentScan, setCurrentScan] = useState(null);
+  const [tempImage, setTempImage] = useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Load user and history on mount
+  useEffect(() => {
+    const savedUser = localStorage.getItem('derma_user');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+
+    const fetchHistory = async () => {
+      try {
+        const response = await api.get('/history');
+        setHistory(response.data);
+      } catch (err) {
+        console.error('Failed to load history:', err);
+      }
+    };
+    fetchHistory();
+  }, []);
+
+  // Sync scroll to top on path changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  const handleLogin = async (email, password) => {
+    const response = await api.post('/login', { email, password });
+    setUser(response.data);
+    // Reload history after user login to refresh state
+    const histResp = await api.get('/history');
+    setHistory(histResp.data);
+  };
+
+  const handleSignup = async (name, email, password) => {
+    const response = await api.post('/signup', { name, email, password });
+    setUser(response.data);
+    const histResp = await api.get('/history');
+    setHistory(histResp.data);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('derma_user');
+    setUser(null);
+  };
+
+  const handleAnalyze = async (imageObj) => {
+    try {
+      const response = await api.post('/analyze', {
+        imageName: imageObj.name,
+        imageSize: imageObj.size,
+        imageData: imageObj.data
+      });
+      setCurrentScan(response.data);
+      // Pre-add to history list locally immediately
+      setHistory(prev => [response.data, ...prev]);
+      setTempImage(null);
+      // Wait a tiny moment and route to result
+      setTimeout(() => {
+        navigate('/result');
+      }, 500);
+    } catch (err) {
+      console.error('Analysis failed:', err);
+      throw err;
+    }
+  };
+
+  const handleDeleteScan = (scanId) => {
+    const updated = history.filter(s => s.id !== scanId);
+    setHistory(updated);
+    localStorage.setItem('derma_history', JSON.stringify(updated));
+  };
+
+  const handleSelectScan = (scan) => {
+    setCurrentScan(scan);
+  };
+
+  const handleReset = () => {
+    setCurrentScan(null);
+    setTempImage(null);
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="flex flex-col min-h-screen bg-[#F7FBFF]">
+      <Navbar user={user} onLogout={handleLogout} />
+      
+      <main className="flex-grow pb-16">
+        <AppRoutes
+          user={user}
+          history={history}
+          currentScan={currentScan}
+          tempImage={tempImage}
+          setTempImage={setTempImage}
+          onLogin={handleLogin}
+          onSignup={handleSignup}
+          onAnalyze={handleAnalyze}
+          onDeleteScan={handleDeleteScan}
+          onSelectScan={handleSelectScan}
+          onReset={handleReset}
+        />
+      </main>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
