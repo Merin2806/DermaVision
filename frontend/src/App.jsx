@@ -10,25 +10,34 @@ function App() {
   const [history, setHistory] = useState([]);
   const [currentScan, setCurrentScan] = useState(null);
   const [tempImage, setTempImage] = useState(null);
+  const [loadingSession, setLoadingSession] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Load user and history on mount
+  // Restore user session and fetch scan history on mount
   useEffect(() => {
-    const savedUser = localStorage.getItem('derma_user');
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
+    const restoreSession = async () => {
+      const token = localStorage.getItem('derma_token');
+      if (token) {
+        try {
+          // Fetch authenticated user details
+          const userResp = await api.get('/auth/me');
+          setUser(userResp.data);
 
-    const fetchHistory = async () => {
-      try {
-        const response = await api.get('/history');
-        setHistory(response.data);
-      } catch (err) {
-        console.error('Failed to load history:', err);
+          // Fetch user's saved scans
+          const histResp = await api.get('/history');
+          setHistory(histResp.data);
+        } catch (err) {
+          console.error('Failed to restore session:', err);
+          // Clear invalid token
+          localStorage.removeItem('derma_token');
+          setUser(null);
+        }
       }
+      setLoadingSession(false);
     };
-    fetchHistory();
+
+    restoreSession();
   }, []);
 
   // Sync scroll to top on path changes
@@ -37,23 +46,29 @@ function App() {
   }, [location.pathname]);
 
   const handleLogin = async (email, password) => {
-    const response = await api.post('/login', { email, password });
-    setUser(response.data);
+    const response = await api.post('/auth/login', { email, password });
+    const { token, id, name } = response.data;
+    localStorage.setItem('derma_token', token);
+    setUser({ id, name, email });
+    
     // Reload history after user login to refresh state
     const histResp = await api.get('/history');
     setHistory(histResp.data);
   };
 
   const handleSignup = async (name, email, password) => {
-    const response = await api.post('/signup', { name, email, password });
-    setUser(response.data);
-    const histResp = await api.get('/history');
-    setHistory(histResp.data);
+    const response = await api.post('/auth/signup', { name, email, password });
+    const { token, id } = response.data;
+    localStorage.setItem('derma_token', token);
+    setUser({ id, name, email });
+    setHistory([]);
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('derma_user');
+    localStorage.removeItem('derma_token');
     setUser(null);
+    setHistory([]);
+    navigate('/');
   };
 
   const handleAnalyze = async (imageObj) => {
@@ -77,10 +92,14 @@ function App() {
     }
   };
 
-  const handleDeleteScan = (scanId) => {
-    const updated = history.filter(s => s.id !== scanId);
-    setHistory(updated);
-    localStorage.setItem('derma_history', JSON.stringify(updated));
+  const handleDeleteScan = async (scanId) => {
+    try {
+      await api.delete(`/history/${scanId}`);
+      const updated = history.filter(s => s.id !== scanId);
+      setHistory(updated);
+    } catch (err) {
+      console.error('Failed to delete scan:', err);
+    }
   };
 
   const handleSelectScan = (scan) => {
@@ -109,6 +128,7 @@ function App() {
           onDeleteScan={handleDeleteScan}
           onSelectScan={handleSelectScan}
           onReset={handleReset}
+          loadingSession={loadingSession}
         />
       </main>
 

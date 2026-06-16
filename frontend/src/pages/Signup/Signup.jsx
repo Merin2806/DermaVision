@@ -1,21 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { User, Mail, Lock, ArrowRight, Check } from 'lucide-react';
+import { User, Mail, Lock, ArrowRight, Check, Eye, EyeOff, X } from 'lucide-react';
 import logoImg from '../../assets/logo/logo.png';
 
 const Signup = ({ onSignup }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [agreeTerms, setAgreeTerms] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  // Password requirement checks
+  const passwordChecks = useMemo(() => ([
+    { label: 'At least 8 characters', met: password.length >= 8 },
+    { label: 'One uppercase letter', met: /[A-Z]/.test(password) },
+    { label: 'One lowercase letter', met: /[a-z]/.test(password) },
+    { label: 'One number', met: /[0-9]/.test(password) },
+    { label: 'One special character (!@#$%^&*)', met: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password) },
+  ]), [password]);
+
+  const allPasswordChecksMet = passwordChecks.every(c => c.met);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !email || !password) {
       setError('Please fill in all fields.');
+      return;
+    }
+    if (!allPasswordChecksMet) {
+      setError('Password does not meet all requirements.');
+      return;
+    }
+    if (!agreeTerms) {
+      setError('You must agree to the Terms & Conditions and Privacy Policy to register.');
       return;
     }
     setError('');
@@ -25,7 +46,11 @@ const Signup = ({ onSignup }) => {
       await onSignup(name, email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.error || 'Registration failed. Please try again.');
+      if (err.code === 'ERR_NETWORK' || !err.response) {
+        setError('Cannot connect to the server. Please ensure the backend is running on port 5000.');
+      } else {
+        setError(err.response?.data?.error || 'Registration failed. Please try again.');
+      }
     } finally {
       setLoading(false);
     }
@@ -76,7 +101,7 @@ const Signup = ({ onSignup }) => {
           </div>
 
           <div className="text-[10px] text-slate-400 leading-relaxed">
-            By creating an account, you agree to our terms of service, privacy protocols, and medical disclaimer statements.
+            By creating an account, you agree to our <Link to="/terms" className="underline font-semibold hover:text-primary">terms of service</Link>, <Link to="/terms" className="underline font-semibold hover:text-primary">privacy protocols</Link>, and <Link to="/terms" className="underline font-semibold hover:text-primary">medical disclaimer</Link> statements.
           </div>
         </motion.div>
 
@@ -136,21 +161,82 @@ const Signup = ({ onSignup }) => {
               <div className="relative">
                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   required
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-xl text-sm text-accent focus:border-primary focus:outline-none transition-all shadow-sm focus:shadow"
+                  className="w-full pl-12 pr-12 py-3 bg-white border border-slate-200 rounded-xl text-sm text-accent focus:border-primary focus:outline-none transition-all shadow-sm focus:shadow"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors focus:outline-none cursor-pointer"
+                  title={showPassword ? 'Hide Password' : 'Show Password'}
+                >
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                </button>
               </div>
+            </div>
+
+            {/* Password Requirements */}
+            {password.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-2"
+              >
+                <p className="text-[10px] font-bold text-accent/60 uppercase tracking-wider">Password Requirements</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                  {passwordChecks.map((check, idx) => (
+                    <div
+                      key={idx}
+                      className={`flex items-center space-x-2 text-xs font-medium transition-colors duration-200 ${
+                        check.met ? 'text-emerald-600' : 'text-slate-400'
+                      }`}
+                    >
+                      {check.met ? (
+                        <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      ) : (
+                        <X className="w-3.5 h-3.5 text-slate-300 shrink-0" />
+                      )}
+                      <span>{check.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {/* Terms & Conditions Checkbox */}
+            <div className="flex items-start space-x-2.5 pt-1">
+              <input
+                id="agreeTerms"
+                type="checkbox"
+                checked={agreeTerms}
+                onChange={(e) => setAgreeTerms(e.target.checked)}
+                className="mt-1 w-4 h-4 rounded text-primary focus:ring-primary border-slate-300 accent-primary cursor-pointer"
+              />
+              <label htmlFor="agreeTerms" className="text-xs text-slate-500 leading-normal select-none cursor-pointer">
+                I agree to the{' '}
+                <Link to="/terms" className="font-bold text-primary hover:underline">
+                  Terms & Conditions
+                </Link>{' '}
+                and{' '}
+                <Link to="/terms" className="font-bold text-primary hover:underline">
+                  Privacy Policy
+                </Link>
+              </label>
             </div>
 
             {/* Submit */}
             <button
               type="submit"
-              disabled={loading}
-              className="w-full inline-flex items-center justify-center bg-primary hover:bg-primary/95 text-white font-bold py-3.5 rounded-full shadow-md btn-glow transition-all cursor-pointer"
+              disabled={loading || !agreeTerms || !allPasswordChecksMet}
+              className={`w-full inline-flex items-center justify-center font-bold py-3.5 rounded-full shadow-md transition-all ${
+                agreeTerms && allPasswordChecksMet && !loading
+                  ? 'bg-primary hover:bg-primary/95 text-white btn-glow cursor-pointer'
+                  : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200/50'
+              }`}
             >
               {loading ? 'Registering...' : 'Create Account'}
               {!loading && <ArrowRight className="w-4 h-4 ml-1.5" />}

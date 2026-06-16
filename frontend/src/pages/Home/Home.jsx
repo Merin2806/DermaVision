@@ -130,7 +130,7 @@ const Home = () => {
             <img 
               src={heroImg} 
               alt="Skin Screening UI Illustration" 
-              className="w-full h-auto object-cover rounded-[24px] shadow-2xl shadow-blue-900/10 border border-white/60 bg-white p-2"
+              className="w-full h-auto object-contain rounded-[24px] shadow-2xl shadow-blue-900/10 border border-white/60 bg-white p-2 transition-transform duration-300 hover:scale-[1.015]"
             />
           </motion.div>
         </div>

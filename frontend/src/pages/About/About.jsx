@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Heart, Award, Users, BookOpen, Layers } from 'lucide-react';
+import { Heart, Award } from 'lucide-react';
 
 const About = () => {
   const timelineSteps = [
@@ -12,33 +12,30 @@ const About = () => {
     { num: '6', title: 'Report Delivery', desc: 'Structured documentation rendering with customized evidence suggestions.' }
   ];
 
-  const technologies = [
-    'React', 'Python', 'TensorFlow', 'Keras', 'OpenCV', 
-    'MobileNetV2', 'EfficientNetB0', 'Transfer Learning', 
-    'REST API', 'Kaggle Datasets', 'DermNet'
-  ];
-
   const team = [
     {
-      name: 'Dr. Elizabeth Vance',
-      role: 'Chief Medical Officer',
-      bio: 'Board-certified clinical dermatologist with 12+ years of academic research in lesion screening.',
-      initials: 'EV',
+      name: 'Merin Joys',
+      role: 'Full Stack Developer',
+      initials: 'MJ',
       color: 'bg-blue-100 text-primary'
     },
     {
-      name: 'Dr. Marcus Chen',
-      role: 'Lead AI Scientist',
-      bio: 'PhD in Computer Vision. Former deep learning researcher at Stanford AI Lab.',
-      initials: 'MC',
+      name: 'Riya Mokale',
+      role: 'AI/ML Engineer',
+      initials: 'RM',
       color: 'bg-emerald-100 text-emerald-600'
     },
     {
-      name: 'Sarah Jenkins',
-      role: 'Head of Engineering',
-      bio: 'Experienced full stack developer focusing on responsive design systems and healthtech integrations.',
-      initials: 'SJ',
-      color: 'bg-indigo-100 text-indigo-600'
+      name: 'Snehal Mascarenhas',
+      role: 'Frontend Developer',
+      initials: 'SM',
+      color: 'bg-indigo-100 text-indigo-650'
+    },
+    {
+      name: 'Justin Sunil',
+      role: 'Backend Developer',
+      initials: 'JS',
+      color: 'bg-purple-100 text-purple-650'
     }
   ];
 
@@ -114,39 +111,18 @@ const About = () => {
         </div>
       </div>
 
-      {/* 4. Tech Stack */}
-      <div className="glass-card rounded-custom p-8 shadow-md border border-slate-100 text-center space-y-6">
-        <div className="flex items-center justify-center space-x-2">
-          <Layers className="w-5 h-5 text-primary" />
-          <h3 className="text-xl font-bold font-serif text-accent">Engineered Technology Stack</h3>
-        </div>
-        <p className="text-slate-500 text-sm max-w-2xl mx-auto leading-relaxed">
-          The software suite is backed by modern React modularity on the frontend client and state-of-the-art Deep Learning modules.
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-3xl mx-auto pt-2">
-          {technologies.map((tech, idx) => (
-            <span 
-              key={idx}
-              className="text-xs font-semibold bg-blue-50/70 border border-blue-100/50 text-accent/80 px-3.5 py-1.5 rounded-full"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* 5. Team Cards */}
+      {/* 4. Team Cards */}
       <div className="space-y-8">
         <div className="text-center max-w-xl mx-auto space-y-2">
           <h2 className="text-3xl font-serif text-accent font-bold">Clinical & AI Advisory</h2>
-          <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Meet the founders</p>
+          <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Meet the team</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, idx) => (
             <div 
               key={idx}
-              className="glass-card rounded-custom p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-4"
+              className="glass-card rounded-custom p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-4"
             >
               {/* Initials Avatar */}
               <div className={`w-16 h-16 rounded-full flex items-center justify-center font-bold text-lg shadow-sm border border-white ${member.color}`}>
@@ -156,9 +132,6 @@ const About = () => {
                 <h4 className="text-lg font-bold font-serif text-accent">{member.name}</h4>
                 <p className="text-xs text-primary font-semibold tracking-wide uppercase mt-0.5">{member.role}</p>
               </div>
-              <p className="text-slate-500 text-xs leading-relaxed">
-                {member.bio}
-              </p>
             </div>
           ))}
         </div>
