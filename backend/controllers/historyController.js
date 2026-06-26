@@ -1,4 +1,5 @@
 const { getPredictionHistory, deletePrediction } = require('../services/historyService');
+const apiResponse = require('../utils/apiResponse');
 
 /**
  * @desc    Get all prediction history for the logged-in user.
@@ -9,8 +10,7 @@ const getHistory = async (req, res, next) => {
   try {
     const history = await getPredictionHistory(req.user._id);
 
-    return res.status(200).json({
-      success: true,
+    return apiResponse.success(res, 'Prediction history retrieved successfully.', {
       history
     });
   } catch (error) {
@@ -28,16 +28,10 @@ const deleteHistory = async (req, res, next) => {
     const deleted = await deletePrediction(req.params.id, req.user._id);
 
     if (!deleted) {
-      return res.status(404).json({
-        success: false,
-        message: 'Prediction record not found or you are not authorized to delete it.'
-      });
+      return apiResponse.notFound(res, 'Prediction record not found or you are not authorized to delete it.');
     }
 
-    return res.status(200).json({
-      success: true,
-      message: 'Prediction deleted successfully.'
-    });
+    return apiResponse.success(res, 'Prediction deleted successfully.');
   } catch (error) {
     next(error);
   }

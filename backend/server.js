@@ -29,6 +29,11 @@ const reportsDir = path.join(__dirname, 'reports');
 if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
 app.use('/reports', express.static(reportsDir));
 
+// Serve uploaded skin scan images as static files
+const uploadsDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
+app.use('/uploads', express.static(uploadsDir));
+
 // Mounting API Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api', require('./routes/scanRoutes'));

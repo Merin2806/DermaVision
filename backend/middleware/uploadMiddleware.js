@@ -1,6 +1,7 @@
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const crypto = require('crypto');
 
 // Ensure uploads directory exists
 const uploadDir = path.join(__dirname, '../uploads');
@@ -14,9 +15,36 @@ const storage = multer.diskStorage({
     cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
-    // Generate unique filename using: Current Timestamp (seconds) + Original Filename
     const timestamp = Math.floor(Date.now() / 1000);
-    cb(null, `${timestamp}_${file.originalname}`);
+    const randomId = crypto.randomBytes(3).toString('hex');
+    const ext = path.extname(file.originalname).toLowerCase();
+    const nameWithoutExt = path.basename(file.originalname, ext);
+
+    // Sanitize filename: convert to lowercase, replace space and invalid characters with underscores,
+    // only allow letters, numbers, underscores, and hyphens.
+    let sanitized = nameWithoutExt
+      .toLowerCase()
+      .replace(/\s+/g, '_')
+      .replace(/[^a-z0-9_-]/g, '_')
+      .replace(/_+/g, '_')
+      .replace(/-+/g, '-')
+      .replace(/^[_,-]+|[_,-]+$/g, '');
+
+    if (!sanitized) {
+      sanitized = 'file';
+    }
+
+    let finalFilename = `${timestamp}_${randomId}_${sanitized}${ext}`;
+
+    // Guarantee that duplicate uploads never overwrite existing files
+    let attempt = 0;
+    while (fs.existsSync(path.join(uploadDir, finalFilename)) && attempt < 10) {
+      const nextRandomId = crypto.randomBytes(3).toString('hex');
+      finalFilename = `${timestamp}_${nextRandomId}_${sanitized}${ext}`;
+      attempt++;
+    }
+
+    cb(null, finalFilename);
   }
 });
 

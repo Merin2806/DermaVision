@@ -1,6 +1,7 @@
 const { getPrediction } = require('../services/predictionService');
 const { getRecommendation } = require('../services/recommendationService');
 const { savePrediction } = require('../services/historyService');
+const apiResponse = require('../utils/apiResponse');
 
 /**
  * @desc    Predict skin condition from uploaded image and return recommendation.
@@ -11,10 +12,7 @@ const predictScan = async (req, res, next) => {
   try {
     // 1. Validate that an image was uploaded
     if (!req.file) {
-      return res.status(400).json({
-        success: false,
-        message: 'No image file provided. Please upload a valid image.'
-      });
+      return apiResponse.badRequest(res, 'No image file provided. Please upload a valid image.');
     }
 
     // 2. Call Prediction Service to simulate AI model output
@@ -24,10 +22,7 @@ const predictScan = async (req, res, next) => {
     const diseaseInfo = await getRecommendation({ condition: prediction.condition });
 
     if (!diseaseInfo) {
-      return res.status(404).json({
-        success: false,
-        message: `Recommendation data not found for condition: ${prediction.condition}`
-      });
+      return apiResponse.notFound(res, `Recommendation data not found for condition: ${prediction.condition}`);
     }
 
     // 4. Collect any quality warnings from image validation middleware
@@ -46,8 +41,7 @@ const predictScan = async (req, res, next) => {
     }).catch((err) => console.error('History auto-save failed (non-critical):', err));
 
     // 6. Return one combined response
-    return res.status(200).json({
-      success: true,
+    return apiResponse.success(res, 'Prediction completed successfully.', {
       prediction: {
         condition: prediction.condition,
         confidence: prediction.confidence,

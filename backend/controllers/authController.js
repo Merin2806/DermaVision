@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const apiResponse = require('../utils/apiResponse');
 
 // Helper to generate JWT
 const generateToken = (id) => {
@@ -12,18 +13,18 @@ const generateToken = (id) => {
 // @desc    Register a new user
 // @route   POST /api/auth/signup
 // @access  Public
-const signup = async (req, res) => {
+const signup = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
-      return res.status(400).json({ error: 'Please add all fields' });
+      return apiResponse.badRequest(res, 'Please add all fields');
     }
 
     // Check if user exists
     const userExists = await User.findOne({ email });
     if (userExists) {
-      return res.status(400).json({ error: 'User already exists' });
+      return apiResponse.badRequest(res, 'User already exists');
     }
 
     // Hash password
@@ -39,64 +40,61 @@ const signup = async (req, res) => {
     });
 
     if (user) {
-      res.status(201).json({
+      return apiResponse.created(res, 'User registered successfully.', {
         id: user._id,
         name: user.name,
         email: user.email,
         token: generateToken(user._id),
       });
     } else {
-      res.status(400).json({ error: 'Invalid user data' });
+      return apiResponse.badRequest(res, 'Invalid user data');
     }
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Server error' });
+    next(error);
   }
 };
 
 // @desc    Authenticate a user
 // @route   POST /api/auth/login
 // @access  Public
-const login = async (req, res) => {
+const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(400).json({ error: 'Please provide email and password' });
+      return apiResponse.badRequest(res, 'Please provide email and password');
     }
 
     // Check for user email
     const user = await User.findOne({ email });
 
     if (user && (await bcrypt.compare(password, user.password))) {
-      res.json({
+      return apiResponse.success(res, 'User logged in successfully.', {
         id: user._id,
         name: user.name,
         email: user.email,
         token: generateToken(user._id),
       });
     } else {
-      res.status(401).json({ error: 'Invalid credentials' });
+      return apiResponse.unauthorized(res, 'Invalid credentials');
     }
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Server error' });
+    next(error);
   }
 };
 
 // @desc    Get user data
 // @route   GET /api/auth/me
 // @access  Private
-const getMe = async (req, res) => {
+const getMe = async (req, res, next) => {
   try {
-    res.json({
+    return apiResponse.success(res, 'User data retrieved successfully.', {
       id: req.user._id,
       name: req.user.name,
       email: req.user.email,
     });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Server error' });
+    next(error);
   }
 };
 

@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const apiResponse = require('../utils/apiResponse');
 
 // @desc    Analyze skin image and return mock AI prediction
 // @route   POST /api/analyze
@@ -67,14 +68,14 @@ const analyzeImage = async (req, res, next) => {
     // Save scan to user's scans list in MongoDB
     const user = await User.findById(req.user._id);
     if (!user) {
-      return res.status(404).json({ error: 'User not found' });
+      return apiResponse.notFound(res, 'User not found');
     }
 
     // Add scan to top of history
     user.scans.unshift(newScan);
     await user.save();
 
-    res.status(200).json(newScan);
+    return apiResponse.success(res, 'Image analyzed successfully.', newScan);
   } catch (error) {
     next(error);
   }
@@ -87,9 +88,9 @@ const getHistory = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
     if (!user) {
-      return res.status(404).json({ error: 'User not found' });
+      return apiResponse.notFound(res, 'User not found');
     }
-    res.status(200).json(user.scans);
+    return apiResponse.success(res, 'Scan history retrieved successfully.', user.scans);
   } catch (error) {
     next(error);
   }
@@ -102,7 +103,7 @@ const deleteScan = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
     if (!user) {
-      return res.status(404).json({ error: 'User not found' });
+      return apiResponse.notFound(res, 'User not found');
     }
 
     // Filter out the scan
@@ -110,26 +111,18 @@ const deleteScan = async (req, res, next) => {
     user.scans = user.scans.filter(s => s.id !== req.params.id);
 
     if (user.scans.length === initialLength) {
-      return res.status(404).json({ error: 'Scan record not found' });
+      return apiResponse.notFound(res, 'Scan record not found');
     }
 
     await user.save();
-    res.status(200).json({ message: 'Scan deleted successfully' });
+    return apiResponse.success(res, 'Scan deleted successfully.');
   } catch (error) {
     next(error);
   }
 };
 
-// @desc    Reserved endpoint for uploading image (mock response)
-// @route   POST /api/upload
-// @access  Private
-const mockUpload = async (req, res) => {
-  res.status(200).json({ message: 'Image uploaded successfully (mock)', url: '/mock-url' });
-};
-
 module.exports = {
   analyzeImage,
   getHistory,
-  deleteScan,
-  mockUpload
+  deleteScan
 };

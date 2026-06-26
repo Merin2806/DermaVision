@@ -1,4 +1,5 @@
 const { getRecommendation } = require('../services/recommendationService');
+const apiResponse = require('../utils/apiResponse');
 
 /**
  * Handle GET /api/recommendation/:condition requests.
@@ -8,25 +9,18 @@ const getRecommendationByCondition = async (req, res, next) => {
     const { condition } = req.params;
 
     if (!condition) {
-      return res.status(400).json({
-        success: false,
-        message: 'Condition parameter is required.'
-      });
+      return apiResponse.badRequest(res, 'Condition parameter is required.');
     }
 
     // Fetch recommendation from service
     const recommendation = await getRecommendation({ condition });
 
     if (!recommendation) {
-      return res.status(404).json({
-        success: false,
-        message: 'Disease information not found.'
-      });
+      return apiResponse.notFound(res, 'Disease information not found.');
     }
 
     // Return the response according to requirements
-    return res.status(200).json({
-      success: true,
+    return apiResponse.success(res, 'Recommendation retrieved successfully.', {
       condition: recommendation.name,
       recommendation: {
         description: recommendation.description,

@@ -1,4 +1,5 @@
 const { generateReport } = require('../services/pdfService');
+const apiResponse = require('../utils/apiResponse');
 
 /**
  * @desc    Generate a PDF screening report from prediction + recommendation data.
@@ -11,17 +12,11 @@ const generatePdfReport = async (req, res, next) => {
 
     // ── Input validation ──────────────────────────────────────────────────────
     if (!prediction || !prediction.condition || prediction.confidence === undefined || !prediction.severity) {
-      return res.status(400).json({
-        success: false,
-        message: 'Missing or incomplete prediction data. Required fields: condition, confidence, severity.'
-      });
+      return apiResponse.badRequest(res, 'Missing or incomplete prediction data. Required fields: condition, confidence, severity.');
     }
 
     if (!recommendation || !recommendation.description) {
-      return res.status(400).json({
-        success: false,
-        message: 'Missing or incomplete recommendation data. Required field: description.'
-      });
+      return apiResponse.badRequest(res, 'Missing or incomplete recommendation data. Required field: description.');
     }
 
     // ── Delegate to PDF Service ───────────────────────────────────────────────
@@ -34,9 +29,7 @@ const generatePdfReport = async (req, res, next) => {
       }
     });
 
-    return res.status(200).json({
-      success: true,
-      message: 'Report generated successfully.',
+    return apiResponse.success(res, 'Report generated successfully.', {
       filename,
       downloadUrl
     });
