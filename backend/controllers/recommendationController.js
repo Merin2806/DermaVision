@@ -19,6 +19,12 @@ const getRecommendationByCondition = async (req, res, next) => {
       return apiResponse.notFound(res, 'Disease information not found.');
     }
 
+    // Normalize severity input (e.g., 'mild' -> 'Mild')
+    let severity = 'Moderate';
+    if (req.query.severity) {
+      severity = req.query.severity.charAt(0).toUpperCase() + req.query.severity.slice(1).toLowerCase();
+    }
+
     // Return the response according to requirements
     return apiResponse.success(res, 'Recommendation retrieved successfully.', {
       condition: recommendation.name,
@@ -28,6 +34,8 @@ const getRecommendationByCondition = async (req, res, next) => {
         causes: recommendation.causes,
         precautions: recommendation.precautions,
         homeCare: recommendation.homeCare,
+        imageTips: recommendation.imageTips || [],
+        severityAdvice: recommendation.severityAdvice?.[severity] || recommendation.severityAdvice?.Moderate || '',
         consultDermatologist: recommendation.consultDermatologist,
         disclaimer: recommendation.disclaimer
       }

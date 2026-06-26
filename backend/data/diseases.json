@@ -30,6 +30,16 @@
       "Wash hair regularly, especially if it is oily and rests against your face.",
       "Use a light, oil-free moisturizer to prevent skin dryness."
     ],
+    "imageTips": [
+      "Take the photo in natural, bright lighting.",
+      "Focus the camera directly on the affected skin area.",
+      "Avoid using a flash, as it can wash out red tones."
+    ],
+    "severityAdvice": {
+      "Mild": "Cleanse twice daily with salicylic acid and use non-comedogenic moisturizers.",
+      "Moderate": "Use topical retinoids or benzoyl peroxide. Consult a dermatologist if persistent.",
+      "Severe": "Avoid picking. Professional dermatologist treatment (e.g. oral medication) is highly recommended."
+    },
     "consultDermatologist": true,
     "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
   },
@@ -63,6 +73,16 @@
       "Apply moisturizer immediately after bathing while the skin is damp.",
       "Apply cool, wet compresses to soothe itchy skin."
     ],
+    "imageTips": [
+      "Capture the dry or red patches in clear focus.",
+      "Ensure the skin texture is visible without camera blur.",
+      "Take photos at a slight angle to highlight swelling or scaling if present."
+    ],
+    "severityAdvice": {
+      "Mild": "Apply heavy emollient moisturizers frequently throughout the day and avoid hot water.",
+      "Moderate": "Apply over-the-counter hydrocortisone creams. Identify and eliminate environmental triggers.",
+      "Severe": "Seek medical advice for prescription-strength topical steroids or immunosuppressants."
+    },
     "consultDermatologist": true,
     "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
   },
@@ -94,6 +114,16 @@
       "Get moderate amounts of sunlight (ensure sun protection on unaffected skin).",
       "Avoid scratching or picking at scales."
     ],
+    "imageTips": [
+      "Hold the camera parallel to the silvery scales to capture detail.",
+      "Provide a photo showing the boundaries of the plaque.",
+      "Minimize reflection from moisturizers or ointments on the skin."
+    ],
+    "severityAdvice": {
+      "Mild": "Keep plaques well-lubricated with dense ointments. Use gentle soaps.",
+      "Moderate": "Discuss topical vitamin D analogues or coal tar preparations with a dermatologist.",
+      "Severe": "Consult a dermatologist regarding systemic therapies, biologics, or phototherapy."
+    },
     "consultDermatologist": true,
     "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
   },
@@ -125,6 +155,16 @@
       "Wash infected clothing, bedding, and towels frequently in hot water.",
       "Wear loose-fitting, breathable cotton clothing."
     ],
+    "imageTips": [
+      "Ensure the circular borders and active edges of the rash are clearly visible.",
+      "Capture the texture of the peeling or flaking skin.",
+      "Take the photo in steady lighting without casting hand shadows."
+    ],
+    "severityAdvice": {
+      "Mild": "Apply over-the-counter antifungal creams consistently for at least two weeks.",
+      "Moderate": "Keep the area dry. If no improvement with OTC options, see a doctor for stronger topicals.",
+      "Severe": "Dermatologist consultation is recommended for oral antifungal prescriptions."
+    },
     "consultDermatologist": true,
     "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
   }

@@ -1,3 +1,4 @@
+const { performance } = require('perf_hooks');
 const { getPrediction } = require('../services/predictionService');
 const { getRecommendation } = require('../services/recommendationService');
 const { savePrediction } = require('../services/historyService');
@@ -9,6 +10,7 @@ const apiResponse = require('../utils/apiResponse');
  * @access  Private (JWT protected)
  */
 const predictScan = async (req, res, next) => {
+  const startTime = performance.now();
   try {
     // 1. Validate that an image was uploaded
     if (!req.file) {
@@ -40,6 +42,9 @@ const predictScan = async (req, res, next) => {
       warnings:   warnings || []
     }).catch((err) => console.error('History auto-save failed (non-critical):', err));
 
+    // Calculate processing time
+    const duration = Math.round(performance.now() - startTime);
+
     // 6. Return one combined response
     return apiResponse.success(res, 'Prediction completed successfully.', {
       prediction: {
@@ -54,8 +59,16 @@ const predictScan = async (req, res, next) => {
         causes: diseaseInfo.causes,
         precautions: diseaseInfo.precautions,
         homeCare: diseaseInfo.homeCare,
+        imageTips: diseaseInfo.imageTips || [],
+        severityAdvice: diseaseInfo.severityAdvice?.[prediction.severity] || diseaseInfo.severityAdvice?.Moderate || '',
         consultDermatologist: diseaseInfo.consultDermatologist,
         disclaimer: diseaseInfo.disclaimer
+      },
+      metadata: {
+        model: "Mock Prediction Engine",
+        version: "1.0.0",
+        processingTime: `${duration} ms`,
+        timestamp: new Date().toISOString()
       }
     });
   } catch (error) {
