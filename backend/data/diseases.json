@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Acne",
+    "description": "Acne is a common skin condition that occurs when hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, and whiteheads.",
+    "symptoms": [
+      "Whiteheads (clogged pores)",
+      "Blackheads (open clogged pores)",
+      "Small red, tender bumps (papules)",
+      "Pimples (pustules) with pus at the tips",
+      "Large, solid, painful lumps beneath the skin (nodules)",
+      "Painful, pus-filled lumps beneath the skin (cystic lesions)"
+    ],
+    "causes": [
+      "Excess oil (sebum) production",
+      "Hair follicles clogged by oil and dead skin cells",
+      "Bacteria (Cutibacterium acnes)",
+      "Hormonal changes (specifically androgens)",
+      "Certain medications",
+      "Diet and stress (can trigger or worsen)"
+    ],
+    "precautions": [
+      "Avoid picking, squeezing, or popping pimples, which can cause scarring or infection.",
+      "Wash your face twice daily with a gentle, non-comedogenic cleanser.",
+      "Choose makeup and skincare products labeled 'oil-free' or 'non-comedogenic'.",
+      "Protect skin from excessive sun exposure."
+    ],
+    "homeCare": [
+      "Keep skin clean and avoid vigorous scrubbing.",
+      "Apply over-the-counter topical treatments containing salicylic acid, benzoyl peroxide, or adapalene.",
+      "Wash hair regularly, especially if it is oily and rests against your face.",
+      "Use a light, oil-free moisturizer to prevent skin dryness."
+    ],
+    "consultDermatologist": true,
+    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  },
+  {
+    "name": "Eczema",
+    "description": "Eczema (atopic dermatitis) is a condition that makes your skin dry, red, itchy, and irritated. It is common in children but can occur at any age.",
+    "symptoms": [
+      "Dry skin",
+      "Severe itching, especially at night",
+      "Red to brownish-gray patches, especially on the hands, feet, ankles, wrists, neck, and upper chest",
+      "Small, raised bumps which may leak fluid and crust over when scratched",
+      "Thickened, cracked, or scaly skin",
+      "Raw, sensitive, swollen skin from scratching"
+    ],
+    "causes": [
+      "Genetics and family history of eczema, asthma, or allergies",
+      "Immune system dysfunction",
+      "Environmental triggers (soaps, detergents, dust, pollen)",
+      "Skin barrier dysfunction allowing moisture out and irritants in",
+      "Stress and temperature fluctuations"
+    ],
+    "precautions": [
+      "Moisturize your skin at least twice a day using creams or ointments.",
+      "Avoid harsh soaps, detergents, and synthetic fabrics.",
+      "Identify and avoid triggers that worsen the inflammation.",
+      "Keep fingernails short to prevent skin damage from scratching."
+    ],
+    "homeCare": [
+      "Take warm (not hot) baths or showers, limited to 10-15 minutes.",
+      "Use a mild, fragrance-free cleanser.",
+      "Apply moisturizer immediately after bathing while the skin is damp.",
+      "Apply cool, wet compresses to soothe itchy skin."
+    ],
+    "consultDermatologist": true,
+    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  },
+  {
+    "name": "Psoriasis",
+    "description": "Psoriasis is a chronic autoimmune skin disease that speeds up the growth cycle of skin cells, leading to thick, red, scaly patches that are often itchy and painful.",
+    "symptoms": [
+      "Red patches of skin covered with thick, silvery scales",
+      "Small scaling spots (commonly seen in children)",
+      "Dry, cracked skin that may bleed or itch",
+      "Itching, burning, or soreness",
+      "Thickened, pitted, or ridged nails",
+      "Swollen and stiff joints"
+    ],
+    "causes": [
+      "Autoimmune system malfunction where T-cells attack healthy skin cells",
+      "Genetics and family history",
+      "Environmental triggers (infections, skin injuries, stress, cold weather, smoking)"
+    ],
+    "precautions": [
+      "Avoid skin injuries like cuts, scrapes, or severe sunburns, which can trigger new patches (Koebner phenomenon).",
+      "Limit alcohol consumption and avoid smoking.",
+      "Manage stress levels through relaxation techniques.",
+      "Avoid dry and cold environments if possible."
+    ],
+    "homeCare": [
+      "Apply heavy moisturizers or ointments regularly to keep skin lubricated.",
+      "Take daily baths with Epsom salts, oil, or colloidal oatmeal to soothe skin.",
+      "Get moderate amounts of sunlight (ensure sun protection on unaffected skin).",
+      "Avoid scratching or picking at scales."
+    ],
+    "consultDermatologist": true,
+    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  },
+  {
+    "name": "Fungal Infection",
+    "description": "Fungal skin infections (like ringworm, athlete's foot, or jock itch) are common infections caused by microscopic fungi that thrive in warm, moist areas of the body.",
+    "symptoms": [
+      "Red, itchy, or scaly circular rash with raised edges (ringworm)",
+      "Itching, burning, and stinging between toes (athlete's foot)",
+      "Chafing, redness, or burning in the groin area (jock itch)",
+      "Peeling, cracking, or flaking skin",
+      "Blisters in affected areas"
+    ],
+    "causes": [
+      "Overgrowth of dermatophytes or yeasts on the skin",
+      "Direct skin-to-skin contact with an infected person or animal",
+      "Sharing contaminated items like towels, clothing, or hairbrushes",
+      "Warm, humid environments and poor ventilation (tight shoes, sweaty clothes)"
+    ],
+    "precautions": [
+      "Keep skin clean and dry, especially in skin folds, between toes, and groin.",
+      "Change socks and underwear daily.",
+      "Avoid sharing towels, clothing, shoes, or sports gear.",
+      "Wear sandals or flip-flops in public showers, locker rooms, and pool areas."
+    ],
+    "homeCare": [
+      "Apply over-the-counter topical antifungal creams, sprays, or powders.",
+      "Dry the affected area completely after bathing before applying treatments.",
+      "Wash infected clothing, bedding, and towels frequently in hot water.",
+      "Wear loose-fitting, breathable cotton clothing."
+    ],
+    "consultDermatologist": true,
+    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  }
+]

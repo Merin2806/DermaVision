@@ -3,7 +3,7 @@ const User = require('../models/User');
 // @desc    Analyze skin image and return mock AI prediction
 // @route   POST /api/analyze
 // @access  Private
-const analyzeImage = async (req, res) => {
+const analyzeImage = async (req, res, next) => {
   try {
     const { imageName, imageSize, imageData } = req.body;
 
@@ -76,15 +76,14 @@ const analyzeImage = async (req, res) => {
 
     res.status(200).json(newScan);
   } catch (error) {
-    console.error('Scan analysis error:', error);
-    res.status(500).json({ error: 'Server error during analysis' });
+    next(error);
   }
 };
 
 // @desc    Get user's scan history
 // @route   GET /api/history
 // @access  Private
-const getHistory = async (req, res) => {
+const getHistory = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
     if (!user) {
@@ -92,15 +91,14 @@ const getHistory = async (req, res) => {
     }
     res.status(200).json(user.scans);
   } catch (error) {
-    console.error('Fetch history error:', error);
-    res.status(500).json({ error: 'Server error fetching history' });
+    next(error);
   }
 };
 
 // @desc    Delete a specific scan from history
 // @route   DELETE /api/history/:id
 // @access  Private
-const deleteScan = async (req, res) => {
+const deleteScan = async (req, res, next) => {
   try {
     const user = await User.findById(req.user._id);
     if (!user) {
@@ -118,8 +116,7 @@ const deleteScan = async (req, res) => {
     await user.save();
     res.status(200).json({ message: 'Scan deleted successfully' });
   } catch (error) {
-    console.error('Delete scan error:', error);
-    res.status(500).json({ error: 'Server error deleting scan' });
+    next(error);
   }
 };
 
