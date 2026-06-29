@@ -1,0 +1,27 @@
+Benign Keratosis 2079: Train=1663, Val=207, Test=209
+Seborrheic Keratosis 518: Train=414, Val=51, Test=53
+Candidiasis 745: Train=596, Val=74, Test=75
+Melanoma 3280: Train=2624, Val=328, Test=328
+Scabies 277: Train=221, Val=27, Test=29
+Eczema 3003: Train=2433, Val=304, Test=305
+Moles (Nevi) 308: Train=246, Val=30, Test=32
+Melanocytic Nevi 8156: Train=6524, Val=815, Test=817
+Lupus 548: Train=438, Val=54, Test=56
+Tinea 3136: Train=2508, Val=313, Test=315
+Lichen Planus 835: Train=668, Val=83, Test=84
+Herpes type1 348: Train=278, Val=34, Test=36
+Acne 1089: Train=871, Val=108, Test=110
+Warts 1788: Train=1430, Val=178, Test=180
+Herpes type2 531: Train=424, Val=53, Test=54
+Lichen Sclerosus 597: Train=477, Val=59, Test=61
+Psoriasis 2692: Train=2153, Val=269, Test=270
+Dermatitis 2025: Train=1620, Val=202, Test=203
+Bitting insects 366: Train=292, Val=36, Test=38
+Basal Cell Carcinoma 3492: Train=2793, Val=349, Test=350
+Vasculities 300: Train=240, Val=30, Test=30
+Drug-reaction 818: Train=654, Val=81, Test=83
+Vitiligo 854: Train=683, Val=85, Test=86
+Pityriasis rosacea 747: Train=597, Val=74, Test=76
+Sunlight damage 502: Train=401, Val=50, Test=51
+
+Dataset split completed successfully!
