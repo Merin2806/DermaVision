@@ -26,6 +26,11 @@ const Screen = ({ tempImage, setTempImage, onAnalyze }) => {
         quality: 'pending'
       });
       setError('');
+    } else {
+      // Run quality checks only after tempImage is committed to state.
+      // Calling runQualityChecks() directly inside reader.onload caused a
+      // race condition because setTempImage hadn't been applied yet.
+      runQualityChecks();
     }
   }, [tempImage]);
 
@@ -70,7 +75,8 @@ const Screen = ({ tempImage, setTempImage, onAnalyze }) => {
         size: file.size,
         data: e.target.result // Base64
       });
-      runQualityChecks();
+      // runQualityChecks() is now triggered by the useEffect above,
+      // ensuring it only runs after tempImage is committed to state.
     };
     reader.readAsDataURL(file);
   };

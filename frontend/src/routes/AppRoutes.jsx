@@ -10,6 +10,17 @@ import Signup from '../pages/Signup/Signup';
 import About from '../pages/About/About';
 import Terms from '../pages/Terms/Terms';
 
+// Defined outside the component so the reference is stable across renders.
+// If defined inside, React creates a new component type on every render,
+// causing full unmount/remount of children and destroying their state.
+const Protected = ({ user, children }) => {
+  return user ? children : <Navigate to="/login" replace />;
+};
+
+const PublicOnly = ({ user, children }) => {
+  return !user ? children : <Navigate to="/dashboard" replace />;
+};
+
 const AppRoutes = ({
   user,
   history,
@@ -35,15 +46,8 @@ const AppRoutes = ({
     );
   }
 
-  // Helper for Route Protection
-  const Protected = ({ children }) => {
-    return user ? children : <Navigate to="/login" replace />;
-  };
-
-  // Helper to redirect logged-in users away from Auth pages
-  const PublicOnly = ({ children }) => {
-    return !user ? children : <Navigate to="/dashboard" replace />;
-  };
+  // Protected and PublicOnly are defined at module scope (above) to keep
+  // their references stable and prevent unnecessary child unmounts.
 
   return (
     <Routes>
@@ -52,7 +56,7 @@ const AppRoutes = ({
       <Route 
         path="/screen" 
         element={
-          <Protected>
+          <Protected user={user}>
             <Screen 
               tempImage={tempImage}
               setTempImage={setTempImage}
@@ -65,7 +69,7 @@ const AppRoutes = ({
       <Route 
         path="/loading" 
         element={
-          <Protected>
+          <Protected user={user}>
             <Loading />
           </Protected>
         } 
@@ -74,7 +78,7 @@ const AppRoutes = ({
       <Route 
         path="/result" 
         element={
-          <Protected>
+          <Protected user={user}>
             <Result 
               currentScan={currentScan}
               onReset={onReset}
@@ -86,7 +90,7 @@ const AppRoutes = ({
       <Route 
         path="/dashboard" 
         element={
-          <Protected>
+          <Protected user={user}>
             <Dashboard 
               user={user}
               history={history}
@@ -100,7 +104,7 @@ const AppRoutes = ({
       <Route 
         path="/login" 
         element={
-          <PublicOnly>
+          <PublicOnly user={user}>
             <Login onLogin={onLogin} />
           </PublicOnly>
         } 
@@ -109,7 +113,7 @@ const AppRoutes = ({
       <Route 
         path="/signup" 
         element={
-          <PublicOnly>
+          <PublicOnly user={user}>
             <Signup onSignup={onSignup} />
           </PublicOnly>
         } 
