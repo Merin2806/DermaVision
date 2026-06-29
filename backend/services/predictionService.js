@@ -1,37 +1,58 @@
+const fs = require('fs');
+
 /**
- * Prediction Service — Mock Implementation
+ * Prediction Service — Real AI Model Integration
  *
- * This service simulates an AI model prediction by randomly selecting
- * a skin condition, confidence score, and severity level.
- *
- * FUTURE COMPATIBILITY:
- * When integrating a real AI model, replace only the logic inside
- * `getPrediction`. The controller and routes do not need to change.
+ * This service forwards the uploaded image from Multer to the FastAPI AI microservice
+ * for disease classification and confidence score estimation.
  *
  * @param {Object} input
  * @param {Object} input.file - The uploaded image file object from Multer.
  * @returns {Promise<Object>} Prediction result with condition, confidence, and severity.
  */
-
-const SUPPORTED_CONDITIONS = ['Acne', 'Eczema', 'Psoriasis', 'Fungal Infection'];
-const SEVERITY_LEVELS = ['Mild', 'Moderate', 'Severe'];
-
 const getPrediction = async ({ file }) => {
-  // Randomly select a condition from the supported list
-  const conditionIndex = Math.floor(Math.random() * SUPPORTED_CONDITIONS.length);
-  const condition = SUPPORTED_CONDITIONS[conditionIndex];
+  if (!file || !file.path) {
+    throw new Error('Invalid image file uploaded.');
+  }
 
-  // Generate a random confidence score between 70 and 99 (inclusive)
-  const confidence = Math.floor(Math.random() * (99 - 70 + 1)) + 70;
+  // 1. Read file from local disk as buffer and wrap in a Blob
+  const fileBuffer = fs.readFileSync(file.path);
+  const blob = new Blob([fileBuffer], { type: file.mimetype });
 
-  // Randomly select a severity level
+  // 2. Build standard multipart form-data payload
+  const formData = new FormData();
+  formData.append('image', blob, file.originalname);
+
+  // 3. Retrieve target URL from environment
+  const fastapiUrl = process.env.FASTAPI_URL || 'http://127.0.0.1:8000';
+
+  console.log(`Forwarding image '${file.originalname}' to FastAPI: ${fastapiUrl}/predict`);
+
+  // 4. Send request to FastAPI endpoint
+  const response = await fetch(`${fastapiUrl}/predict`, {
+    method: 'POST',
+    body: formData
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`AI prediction microservice error: Status ${response.status} - ${errorText}`);
+  }
+
+  // 5. Decode predicted disease and confidence percentage
+  const result = await response.json(); // Expected: { disease: string, confidence: number }
+
+  // 6. Future Ready Severity Placement
+  // Since severity prediction is designated as a placeholder architecture hook,
+  // we default/simulate severity (Mild/Moderate/Severe) for backend PDF/history compatibility.
+  const SEVERITY_LEVELS = ['Mild', 'Moderate', 'Severe'];
   const severityIndex = Math.floor(Math.random() * SEVERITY_LEVELS.length);
   const severity = SEVERITY_LEVELS[severityIndex];
 
   return {
-    condition,
-    confidence,
-    severity
+    condition: result.disease,
+    confidence: result.confidence,
+    severity: severity
   };
 };
 
