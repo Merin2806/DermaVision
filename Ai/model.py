@@ -72,39 +72,43 @@ def prepare_model_for_finetuning(model: Model, num_layers_to_unfreeze: int = 100
     """
     logger.info(f"Preparing model for Stage 2 fine-tuning. Unfreezing top {num_layers_to_unfreeze} layers...")
     
-    # Retrieve the base model backbone (it will be the 2nd layer if constructed as above,
-    # but accessing via layer name or name search is more robust)
-    backbone = None
-    for layer in model.layers:
-        if "efficientnetb4" in layer.name.lower():
-            backbone = layer
-            break
-            
-    if backbone is None:
-        raise ValueError("Could not find EfficientNet-B4 base model layer inside the model.")
-        
-    # Unfreeze the base model backbone
-    backbone.trainable = True
+    # The final classifier head starts after the backbone layers.
+    # We identify the first head layer by name and treat all preceding layers as backbone.
+    head_layer_names = {"global_avg_pool", "dropout_regularization", "disease_classifier"}
+    head_start_index = next(
+        (idx for idx, layer in enumerate(model.layers) if layer.name in head_layer_names),
+        None
+    )
     
-    # Freeze all layers of the base model except the top N layers
-    # Note: Keras documentation recommends keeping BatchNormalization layers in inference mode
-    # during fine-tuning (meaning their trainable flag should remain False) to prevent
-    # breaking moving mean/variance statistics.
-    num_layers = len(backbone.layers)
-    freeze_until = num_layers - num_layers_to_unfreeze
+    if head_start_index is None:
+        raise ValueError(
+            "Could not identify the classifier head inside the model. "
+            "Ensure the model was built using the expected EfficientNet-B4 architecture."
+        )
+    
+    backbone_layers = model.layers[:head_start_index]
+    if not backbone_layers:
+        raise ValueError("Could not find backbone layers inside the model.")
+    
+    # Unfreeze the backbone layers, then freeze the lower portion while keeping the
+    # top N layers trainable for fine-tuning.
+    for layer in backbone_layers:
+        layer.trainable = True
+    
+    num_layers = len(backbone_layers)
+    freeze_until = max(0, num_layers - num_layers_to_unfreeze)
     
     logger.info(f"Backbone has {num_layers} layers. Freezing layers 0 to {freeze_until}...")
     
-    for idx, layer in enumerate(backbone.layers[:freeze_until]):
+    for idx, layer in enumerate(backbone_layers[:freeze_until]):
         layer.trainable = False
-        
-    for idx, layer in enumerate(backbone.layers[freeze_until:]):
-        # Keep BatchNormalization layers frozen even in the trainable section
+    
+    for idx, layer in enumerate(backbone_layers[freeze_until:]):
         if isinstance(layer, layers.BatchNormalization):
             layer.trainable = False
         else:
             layer.trainable = True
-            
+    
     logger.info("Model unfreeze and fine-tuning setup completed successfully.")
     return model
 
