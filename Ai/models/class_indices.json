@@ -1,0 +1,20 @@
+{
+    "Acne": 0,
+    "Basal Cell Carcinoma": 1,
+    "Benign Keratosis": 2,
+    "Bitting insects": 3,
+    "Candidiasis": 4,
+    "Dermatitis": 5,
+    "Drug-reaction": 6,
+    "Eczema": 7,
+    "Herpes type1": 8,
+    "Herpes type2": 9,
+    "Lichen Planus": 10,
+    "Lichen Sclerosus": 11,
+    "Lupus": 12,
+    "Melanocytic Nevi": 13,
+    "Melanoma": 14,
+    "Moles (Nevi)": 15,
+    "Pityriasis rosacea": 16,
+    "Psoriasis": 17
+}

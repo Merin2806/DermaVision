@@ -9,8 +9,15 @@ frontend/node_modules/
 # AI
 # =========================
 Ai/venv/
+Ai/__pycache__/
 Ai/dataset/
-Ai/models/
+Ai/models/*.keras
+Ai/models/*.h5
+Ai/models/*.pt
+Ai/models/*.pth
+Ai/logs/
+Ai/outputs/
+
 DermaVision-datasets/
 DermaVision-models/
 
@@ -49,10 +56,17 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+.pytest_cache/
+.mypy_cache/
 
-# TensorFlow Checkpoints
+# TensorFlow / PyTorch
 *.ckpt
 *.index
+*.h5
+*.keras
+*.pb
+*.pth
+*.pt
 
 # =========================
 # IDE
@@ -67,7 +81,7 @@ __pycache__/
 *.sw?
 
 # =========================
-# OS Files
+# macOS / Windows
 # =========================
 .DS_Store
 Thumbs.db
