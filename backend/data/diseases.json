@@ -1,171 +1,2343 @@
 [
   {
-    "name": "Acne",
-    "description": "Acne is a common skin condition that occurs when hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, and whiteheads.",
-    "symptoms": [
-      "Whiteheads (clogged pores)",
-      "Blackheads (open clogged pores)",
-      "Small red, tender bumps (papules)",
-      "Pimples (pustules) with pus at the tips",
-      "Large, solid, painful lumps beneath the skin (nodules)",
-      "Painful, pus-filled lumps beneath the skin (cystic lesions)"
-    ],
-    "causes": [
-      "Excess oil (sebum) production",
-      "Hair follicles clogged by oil and dead skin cells",
-      "Bacteria (Cutibacterium acnes)",
-      "Hormonal changes (specifically androgens)",
-      "Certain medications",
-      "Diet and stress (can trigger or worsen)"
-    ],
-    "precautions": [
-      "Avoid picking, squeezing, or popping pimples, which can cause scarring or infection.",
-      "Wash your face twice daily with a gentle, non-comedogenic cleanser.",
-      "Choose makeup and skincare products labeled 'oil-free' or 'non-comedogenic'.",
-      "Protect skin from excessive sun exposure."
-    ],
-    "homeCare": [
-      "Keep skin clean and avoid vigorous scrubbing.",
-      "Apply over-the-counter topical treatments containing salicylic acid, benzoyl peroxide, or adapalene.",
-      "Wash hair regularly, especially if it is oily and rests against your face.",
-      "Use a light, oil-free moisturizer to prevent skin dryness."
-    ],
-    "imageTips": [
-      "Take the photo in natural, bright lighting.",
-      "Focus the camera directly on the affected skin area.",
-      "Avoid using a flash, as it can wash out red tones."
-    ],
-    "severityAdvice": {
-      "Mild": "Cleanse twice daily with salicylic acid and use non-comedogenic moisturizers.",
-      "Moderate": "Use topical retinoids or benzoyl peroxide. Consult a dermatologist if persistent.",
-      "Severe": "Avoid picking. Professional dermatologist treatment (e.g. oral medication) is highly recommended."
-    },
-    "consultDermatologist": true,
-    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  "name": "Acne (Acne Vulgaris)",
+  "description": "Acne vulgaris is a common chronic inflammatory skin condition that occurs when hair follicles become clogged with sebum (oil), dead skin cells, and bacteria, particularly Cutibacterium acnes. It most commonly affects adolescents but can occur at any age. Acne ranges from mild comedones (blackheads and whiteheads) to inflammatory papules, pustules, nodules, and cysts, and may result in permanent scarring if severe.",
+  "symptoms": [
+    "Whiteheads (closed comedones)",
+    "Blackheads (open comedones)",
+    "Papules (small red bumps)",
+    "Pustules (pus-filled pimples)",
+    "Nodules (large, painful lumps beneath the skin)",
+    "Cysts (deep, pus-filled lesions)",
+    "Redness and inflammation",
+    "Oily skin",
+    "Tender or painful lesions",
+    "Post-inflammatory hyperpigmentation",
+    "Acne scars"
+  ],
+  "possible_causes": [
+    "Excess sebum production",
+    "Blocked hair follicles by dead skin cells",
+    "Overgrowth of Cutibacterium acnes bacteria",
+    "Hormonal changes (especially during puberty)",
+    "Genetic predisposition",
+    "Certain medications (e.g., corticosteroids, lithium, testosterone)",
+    "Use of comedogenic cosmetics or skincare products",
+    "Friction or pressure on the skin (acne mechanica)"
+  ],
+  "risk_factors": [
+    "Adolescence and puberty",
+    "Family history of acne",
+    "Hormonal changes (menstruation, pregnancy, polycystic ovary syndrome)",
+    "Oily skin",
+    "Use of oily or comedogenic skincare products",
+    "High humidity",
+    "Stress (may worsen acne)",
+    "Certain medications"
+  ],
+  "common_locations": [
+    "Face",
+    "Forehead",
+    "Cheeks",
+    "Chin",
+    "Nose",
+    "Neck",
+    "Chest",
+    "Upper back",
+    "Shoulders"
+  ],
+  "severity_levels": {
+    "mild": "Mostly blackheads, whiteheads, and a few small inflammatory pimples with little or no scarring.",
+    "moderate": "Numerous papules and pustules with noticeable inflammation and an increased risk of scarring.",
+    "severe": "Extensive nodules, cysts, significant inflammation, painful lesions, and permanent scarring."
   },
-  {
-    "name": "Eczema",
-    "description": "Eczema (atopic dermatitis) is a condition that makes your skin dry, red, itchy, and irritated. It is common in children but can occur at any age.",
-    "symptoms": [
-      "Dry skin",
-      "Severe itching, especially at night",
-      "Red to brownish-gray patches, especially on the hands, feet, ankles, wrists, neck, and upper chest",
-      "Small, raised bumps which may leak fluid and crust over when scratched",
-      "Thickened, cracked, or scaly skin",
-      "Raw, sensitive, swollen skin from scratching"
-    ],
-    "causes": [
-      "Genetics and family history of eczema, asthma, or allergies",
-      "Immune system dysfunction",
-      "Environmental triggers (soaps, detergents, dust, pollen)",
-      "Skin barrier dysfunction allowing moisture out and irritants in",
-      "Stress and temperature fluctuations"
-    ],
-    "precautions": [
-      "Moisturize your skin at least twice a day using creams or ointments.",
-      "Avoid harsh soaps, detergents, and synthetic fabrics.",
-      "Identify and avoid triggers that worsen the inflammation.",
-      "Keep fingernails short to prevent skin damage from scratching."
-    ],
-    "homeCare": [
-      "Take warm (not hot) baths or showers, limited to 10-15 minutes.",
-      "Use a mild, fragrance-free cleanser.",
-      "Apply moisturizer immediately after bathing while the skin is damp.",
-      "Apply cool, wet compresses to soothe itchy skin."
-    ],
-    "imageTips": [
-      "Capture the dry or red patches in clear focus.",
-      "Ensure the skin texture is visible without camera blur.",
-      "Take photos at a slight angle to highlight swelling or scaling if present."
-    ],
-    "severityAdvice": {
-      "Mild": "Apply heavy emollient moisturizers frequently throughout the day and avoid hot water.",
-      "Moderate": "Apply over-the-counter hydrocortisone creams. Identify and eliminate environmental triggers.",
-      "Severe": "Seek medical advice for prescription-strength topical steroids or immunosuppressants."
-    },
-    "consultDermatologist": true,
-    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  "precautions": [
+    "Wash the face gently twice daily with a mild cleanser.",
+    "Avoid picking or squeezing pimples.",
+    "Use non-comedogenic skincare and cosmetic products.",
+    "Remove makeup before sleeping.",
+    "Avoid excessive scrubbing of the skin.",
+    "Keep hair clean and away from the face if oily.",
+    "Protect the skin from excessive sun exposure."
+  ],
+  "home_care": [
+    "Cleanse the skin with a gentle, non-irritating cleanser.",
+    "Use oil-free, non-comedogenic moisturizers and sunscreens.",
+    "Apply over-the-counter acne treatments containing benzoyl peroxide or salicylic acid when appropriate.",
+    "Avoid touching or picking acne lesions.",
+    "Maintain a consistent skincare routine.",
+    "Follow prescribed treatment regularly, as improvement may take several weeks."
+  ],
+  "when_to_consult_doctor": [
+    "Acne does not improve with over-the-counter treatments.",
+    "Painful nodules or cysts develop.",
+    "Acne causes scarring or dark spots.",
+    "Sudden onset of severe acne occurs.",
+    "Acne significantly affects self-esteem or mental well-being.",
+    "Signs of skin infection such as increasing redness, swelling, or pus develop."
+  ],
+  "treatment_options": [
+    "Topical retinoids",
+    "Topical benzoyl peroxide",
+    "Topical antibiotics",
+    "Topical azelaic acid",
+    "Topical salicylic acid",
+    "Oral antibiotics",
+    "Hormonal therapy (combined oral contraceptives or anti-androgens in appropriate patients)",
+    "Oral isotretinoin for severe acne",
+    "Intralesional corticosteroid injections for large nodules",
+    "Chemical peels or light-based therapies in selected cases"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Persistent, severe, or scarring acne should be evaluated by a qualified healthcare professional or dermatologist for appropriate management."
+},
+
+{
+  "name": "Basal Cell Carcinoma (BCC)",
+  "description": "Basal cell carcinoma (BCC) is the most common type of skin cancer. It arises from the basal cells in the lowest layer of the epidermis and is primarily caused by long-term exposure to ultraviolet (UV) radiation from sunlight or tanning beds. BCC usually grows slowly and rarely spreads (metastasizes) to distant organs, but if left untreated, it can invade surrounding skin, cartilage, bone, and other nearby tissues.",
+  "symptoms": [
+    "Pearly or shiny skin-colored bump",
+    "Pink, red, or flesh-colored nodule",
+    "Flat, scaly, reddish patch",
+    "Waxy or scar-like white lesion",
+    "Sore that bleeds easily",
+    "Non-healing ulcer",
+    "Crusted lesion",
+    "Rolled or raised border around the lesion",
+    "Visible small blood vessels (telangiectasia)",
+    "Itching or tenderness (occasionally)",
+    "Slowly enlarging skin lesion"
+  ],
+  "possible_causes": [
+    "Chronic ultraviolet (UV) radiation exposure",
+    "Frequent sunburns",
+    "Indoor tanning bed use",
+    "DNA mutations in basal cells",
+    "Ionizing radiation exposure",
+    "Exposure to arsenic",
+    "Certain inherited genetic syndromes (e.g., Gorlin syndrome)"
+  ],
+  "risk_factors": [
+    "Fair skin",
+    "Light-colored eyes",
+    "Blonde or red hair",
+    "Older age",
+    "Male sex",
+    "Chronic sun exposure",
+    "History of severe sunburns",
+    "Use of tanning beds",
+    "Personal history of skin cancer",
+    "Family history of skin cancer",
+    "Immunosuppression",
+    "Outdoor occupations"
+  ],
+  "common_locations": [
+    "Face",
+    "Nose",
+    "Eyelids",
+    "Ears",
+    "Scalp",
+    "Neck",
+    "Forehead",
+    "Shoulders",
+    "Upper chest",
+    "Back",
+    "Hands",
+    "Other sun-exposed areas"
+  ],
+  "severity_levels": {
+    "mild": "Small, localized tumor confined to the skin without invasion of surrounding structures.",
+    "moderate": "Larger or recurrent tumor with deeper local invasion requiring more extensive treatment.",
+    "severe": "Advanced, neglected, or recurrent basal cell carcinoma causing extensive tissue destruction, invasion into cartilage, bone, nerves, or, rarely, distant metastasis."
   },
-  {
-    "name": "Psoriasis",
-    "description": "Psoriasis is a chronic autoimmune skin disease that speeds up the growth cycle of skin cells, leading to thick, red, scaly patches that are often itchy and painful.",
-    "symptoms": [
-      "Red patches of skin covered with thick, silvery scales",
-      "Small scaling spots (commonly seen in children)",
-      "Dry, cracked skin that may bleed or itch",
-      "Itching, burning, or soreness",
-      "Thickened, pitted, or ridged nails",
-      "Swollen and stiff joints"
-    ],
-    "causes": [
-      "Autoimmune system malfunction where T-cells attack healthy skin cells",
-      "Genetics and family history",
-      "Environmental triggers (infections, skin injuries, stress, cold weather, smoking)"
-    ],
-    "precautions": [
-      "Avoid skin injuries like cuts, scrapes, or severe sunburns, which can trigger new patches (Koebner phenomenon).",
-      "Limit alcohol consumption and avoid smoking.",
-      "Manage stress levels through relaxation techniques.",
-      "Avoid dry and cold environments if possible."
-    ],
-    "homeCare": [
-      "Apply heavy moisturizers or ointments regularly to keep skin lubricated.",
-      "Take daily baths with Epsom salts, oil, or colloidal oatmeal to soothe skin.",
-      "Get moderate amounts of sunlight (ensure sun protection on unaffected skin).",
-      "Avoid scratching or picking at scales."
-    ],
-    "imageTips": [
-      "Hold the camera parallel to the silvery scales to capture detail.",
-      "Provide a photo showing the boundaries of the plaque.",
-      "Minimize reflection from moisturizers or ointments on the skin."
-    ],
-    "severityAdvice": {
-      "Mild": "Keep plaques well-lubricated with dense ointments. Use gentle soaps.",
-      "Moderate": "Discuss topical vitamin D analogues or coal tar preparations with a dermatologist.",
-      "Severe": "Consult a dermatologist regarding systemic therapies, biologics, or phototherapy."
-    },
-    "consultDermatologist": true,
-    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
+  "precautions": [
+    "Use broad-spectrum sunscreen (SPF 30 or higher) daily.",
+    "Avoid excessive sun exposure, especially during peak UV hours.",
+    "Wear protective clothing, wide-brimmed hats, and UV-protective sunglasses.",
+    "Avoid tanning beds.",
+    "Perform regular skin self-examinations.",
+    "Schedule routine skin examinations if at high risk."
+  ],
+  "home_care": [
+    "There is no effective home treatment for basal cell carcinoma.",
+    "Protect the affected area from further sun exposure.",
+    "Avoid picking or scratching the lesion.",
+    "Follow wound care instructions after biopsy or treatment.",
+    "Attend regular follow-up appointments to monitor for recurrence."
+  ],
+  "when_to_consult_doctor": [
+    "A sore does not heal within several weeks.",
+    "A new pearly, shiny, or bleeding skin lesion develops.",
+    "An existing skin lesion changes in size, shape, or color.",
+    "A lesion repeatedly bleeds or forms a crust.",
+    "Pain, ulceration, or rapid growth occurs.",
+    "A previously treated lesion recurs."
+  ],
+  "treatment_options": [
+    "Surgical excision",
+    "Mohs micrographic surgery",
+    "Curettage and electrodessication",
+    "Cryotherapy (selected superficial lesions)",
+    "Topical imiquimod",
+    "Topical 5-fluorouracil (5-FU)",
+    "Photodynamic therapy",
+    "Radiation therapy",
+    "Targeted therapy (e.g., hedgehog pathway inhibitors) for advanced disease",
+    "Regular follow-up for recurrence surveillance"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Basal cell carcinoma requires evaluation and treatment by a qualified healthcare professional. Early diagnosis and treatment provide the best outcomes and help prevent local tissue destruction."
+},
+
+{
+  "name": "Benign Keratosis (Seborrheic Keratosis)",
+  "description": "Benign keratosis, most commonly referring to seborrheic keratosis, is a common, non-cancerous skin growth that develops from keratinocytes in the epidermis. It typically appears during adulthood, especially with increasing age, and has a characteristic 'stuck-on', waxy, or warty appearance. The lesions are harmless and do not become skin cancer, although they may resemble other skin conditions that require medical evaluation.",
+  "symptoms": [
+    "Raised skin growth with a waxy or rough surface",
+    "Brown, black, tan, yellow, or skin-colored lesion",
+    "Round or oval shape",
+    "Well-defined borders",
+    "Stuck-on appearance",
+    "Flat or slightly elevated plaque",
+    "Rough, scaly, or wart-like texture",
+    "May be itchy",
+    "May become irritated from friction",
+    "Occasional bleeding if traumatized",
+    "Usually painless"
+  ],
+  "possible_causes": [
+    "Unknown exact cause",
+    "Age-related proliferation of epidermal keratinocytes",
+    "Genetic predisposition",
+    "Accumulation of skin aging changes",
+    "Possible role of sun exposure in some individuals"
+  ],
+  "risk_factors": [
+    "Increasing age",
+    "Family history",
+    "Middle-aged and older adults",
+    "Multiple existing seborrheic keratoses",
+    "Possible chronic sun exposure"
+  ],
+  "common_locations": [
+    "Face",
+    "Scalp",
+    "Neck",
+    "Chest",
+    "Back",
+    "Shoulders",
+    "Abdomen",
+    "Extremities",
+    "Can occur almost anywhere except palms and soles"
+  ],
+  "severity_levels": {
+    "mild": "Single or few asymptomatic lesions with no irritation or cosmetic concern.",
+    "moderate": "Multiple lesions causing itching, irritation, or cosmetic concerns, especially in visible areas.",
+    "severe": "Large, numerous, inflamed, bleeding, rapidly changing, or atypical lesions requiring medical evaluation to exclude skin cancer."
   },
-  {
-    "name": "Fungal Infection",
-    "description": "Fungal skin infections (like ringworm, athlete's foot, or jock itch) are common infections caused by microscopic fungi that thrive in warm, moist areas of the body.",
-    "symptoms": [
-      "Red, itchy, or scaly circular rash with raised edges (ringworm)",
-      "Itching, burning, and stinging between toes (athlete's foot)",
-      "Chafing, redness, or burning in the groin area (jock itch)",
-      "Peeling, cracking, or flaking skin",
-      "Blisters in affected areas"
-    ],
-    "causes": [
-      "Overgrowth of dermatophytes or yeasts on the skin",
-      "Direct skin-to-skin contact with an infected person or animal",
-      "Sharing contaminated items like towels, clothing, or hairbrushes",
-      "Warm, humid environments and poor ventilation (tight shoes, sweaty clothes)"
-    ],
-    "precautions": [
-      "Keep skin clean and dry, especially in skin folds, between toes, and groin.",
-      "Change socks and underwear daily.",
-      "Avoid sharing towels, clothing, shoes, or sports gear.",
-      "Wear sandals or flip-flops in public showers, locker rooms, and pool areas."
-    ],
-    "homeCare": [
-      "Apply over-the-counter topical antifungal creams, sprays, or powders.",
-      "Dry the affected area completely after bathing before applying treatments.",
-      "Wash infected clothing, bedding, and towels frequently in hot water.",
-      "Wear loose-fitting, breathable cotton clothing."
-    ],
-    "imageTips": [
-      "Ensure the circular borders and active edges of the rash are clearly visible.",
-      "Capture the texture of the peeling or flaking skin.",
-      "Take the photo in steady lighting without casting hand shadows."
-    ],
-    "severityAdvice": {
-      "Mild": "Apply over-the-counter antifungal creams consistently for at least two weeks.",
-      "Moderate": "Keep the area dry. If no improvement with OTC options, see a doctor for stronger topicals.",
-      "Severe": "Dermatologist consultation is recommended for oral antifungal prescriptions."
-    },
-    "consultDermatologist": true,
-    "disclaimer": "This information is for educational purposes only and does not constitute medical advice or a diagnosis. Please consult a qualified dermatologist for personal concerns."
-  }
+  "precautions": [
+    "Avoid scratching or picking the lesion.",
+    "Protect skin from excessive sun exposure.",
+    "Monitor for changes in size, color, shape, or bleeding.",
+    "Avoid repeated friction from clothing or jewelry.",
+    "Perform regular skin self-examinations."
+  ],
+  "home_care": [
+    "Keep the skin clean.",
+    "Avoid irritating the lesion.",
+    "Use moisturizers if surrounding skin is dry.",
+    "Do not attempt to cut, burn, or remove the lesion at home.",
+    "Use sunscreen on exposed skin."
+  ],
+  "when_to_consult_doctor": [
+    "Rapid increase in size",
+    "Change in color or shape",
+    "Persistent bleeding",
+    "Pain or severe irritation",
+    "Ulceration",
+    "Signs of infection",
+    "If the diagnosis is uncertain",
+    "If the lesion resembles melanoma or another skin cancer",
+    "For cosmetic removal if desired"
+  ],
+  "treatment_options": [
+    "Observation (no treatment required for harmless lesions)",
+    "Cryotherapy (liquid nitrogen)",
+    "Curettage (scraping)",
+    "Shave removal",
+    "Electrocautery",
+    "Cryotherapy combined with curettage for selected lesions",
+    "Biopsy if malignancy is suspected"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Any new, rapidly changing, bleeding, painful, or suspicious skin lesion should be evaluated by a qualified dermatologist to rule out skin cancer."
+},
+
+{
+  "name": "Biting Insect Reactions (Insect Bites and Stings)",
+  "description": "Biting insect reactions are localized or systemic skin responses caused by the bites or stings of insects such as mosquitoes, fleas, bed bugs, lice, ticks, ants, bees, wasps, and other arthropods. Reactions range from mild itching and redness to severe allergic reactions or infections. The severity depends on the insect species, the individual's immune response, and whether the insect transmits infectious diseases.",
+  "symptoms": [
+    "Red bumps or papules",
+    "Itching (pruritus)",
+    "Swelling",
+    "Pain or tenderness",
+    "Burning or stinging sensation",
+    "Small blisters",
+    "Central puncture mark",
+    "Hives (urticaria)",
+    "Warmth around the bite",
+    "Localized redness",
+    "Bruising (occasionally)",
+    "Secondary bacterial infection from scratching",
+    "Fever or flu-like symptoms if associated with an insect-borne infection"
+  ],
+  "possible_causes": [
+    "Mosquito bites",
+    "Flea bites",
+    "Bed bug bites",
+    "Tick bites",
+    "Louse bites",
+    "Ant bites or stings",
+    "Bee stings",
+    "Wasp stings",
+    "Hornet stings",
+    "Spider bites (where applicable)",
+    "Allergic reaction to insect saliva or venom"
+  ],
+  "risk_factors": [
+    "Outdoor activities",
+    "Living or traveling in insect-prone areas",
+    "Warm or humid climates",
+    "Lack of insect protection",
+    "Previous allergic reactions to insect bites or stings",
+    "Children",
+    "Camping or hiking",
+    "Exposure to pets with fleas"
+  ],
+  "common_locations": [
+    "Arms",
+    "Hands",
+    "Legs",
+    "Feet",
+    "Ankles",
+    "Face",
+    "Neck",
+    "Scalp",
+    "Any exposed area of the body"
+  ],
+  "severity_levels": {
+    "mild": "Localized redness, itching, and small swelling that resolves within a few days.",
+    "moderate": "Larger areas of swelling, persistent itching, multiple bites, or mild secondary skin infection requiring medical treatment.",
+    "severe": "Severe allergic reaction (anaphylaxis), rapidly spreading swelling, difficulty breathing, extensive infection, or signs of an insect-borne disease requiring emergency medical care."
+  },
+  "precautions": [
+    "Use insect repellents as directed.",
+    "Wear long-sleeved clothing and long pants in insect-prone areas.",
+    "Sleep under insecticide-treated bed nets where appropriate.",
+    "Avoid scratching bites.",
+    "Keep living areas free of insect infestations.",
+    "Inspect the skin for ticks after outdoor activities.",
+    "Remove ticks promptly using proper techniques."
+  ],
+  "home_care": [
+    "Wash the affected area with soap and water.",
+    "Apply a cold compress to reduce swelling.",
+    "Use calamine lotion or anti-itch creams if appropriate.",
+    "Take oral antihistamines for itching if recommended.",
+    "Keep the bite clean to prevent infection.",
+    "Avoid scratching the affected area."
+  ],
+  "when_to_consult_doctor": [
+    "Difficulty breathing or swelling of the face, lips, tongue, or throat.",
+    "Persistent or worsening redness and swelling.",
+    "Signs of infection such as pus, warmth, increasing pain, or fever.",
+    "A rash that spreads rapidly.",
+    "Tick bite followed by fever, rash, or flu-like symptoms.",
+    "Symptoms of an insect-borne illness.",
+    "Multiple stings or bites causing severe reactions.",
+    "Symptoms do not improve after several days."
+  ],
+  "treatment_options": [
+    "Cold compresses",
+    "Topical corticosteroid creams",
+    "Oral antihistamines",
+    "Pain-relieving medications",
+    "Topical antiseptics",
+    "Antibiotics for secondary bacterial infection",
+    "Epinephrine for anaphylaxis",
+    "Systemic corticosteroids for severe allergic reactions",
+    "Specific treatment for insect-borne diseases when indicated"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Seek immediate emergency medical care if an insect bite or sting causes difficulty breathing, swelling of the face or throat, dizziness, or signs of a severe allergic reaction. Consult a healthcare professional if symptoms worsen or if there are signs of infection or insect-borne disease."
+},
+
+{
+  "name": "Candidiasis",
+  "description": "Candidiasis is a fungal infection caused by Candida species, most commonly Candida albicans. Candida normally lives on the skin, mouth, gastrointestinal tract, and genital area without causing disease. When there is an imbalance in the body's normal flora or a weakened immune system, Candida can overgrow and cause infection. Candidiasis may affect the skin, mouth (oral thrush), nails, genitals, skin folds, or, rarely, become invasive and affect internal organs.",
+  "symptoms": [
+    "Red rash",
+    "Itching",
+    "Burning sensation",
+    "White patches in the mouth or tongue (oral thrush)",
+    "Creamy white plaques that may bleed when scraped",
+    "Cracked skin",
+    "Moist or macerated skin",
+    "Small red satellite lesions around the main rash",
+    "Soreness",
+    "Pain during urination (genital candidiasis)",
+    "Pain during sexual intercourse",
+    "Thick white vaginal discharge",
+    "Inflammation of the glans penis (balanitis)",
+    "Foul odor in affected skin folds (occasionally)"
+  ],
+  "possible_causes": [
+    "Overgrowth of Candida albicans or other Candida species",
+    "Prolonged antibiotic use",
+    "Weakened immune system",
+    "Diabetes mellitus",
+    "Pregnancy",
+    "Warm and humid environments",
+    "Excessive sweating",
+    "Poorly controlled blood sugar",
+    "Corticosteroid use",
+    "Immunosuppressive medications",
+    "Obesity causing skin folds",
+    "Poor hygiene"
+  ],
+  "risk_factors": [
+    "Diabetes",
+    "Immunocompromised state",
+    "HIV/AIDS",
+    "Cancer treatment",
+    "Recent antibiotic therapy",
+    "Pregnancy",
+    "Obesity",
+    "Prolonged moisture exposure",
+    "Wearing tight or non-breathable clothing",
+    "Advanced age",
+    "Infancy",
+    "Use of corticosteroids"
+  ],
+  "common_locations": [
+    "Mouth",
+    "Tongue",
+    "Inner cheeks",
+    "Throat",
+    "Vagina",
+    "Vulva",
+    "Penis",
+    "Groin",
+    "Armpits",
+    "Under the breasts",
+    "Skin folds",
+    "Between fingers",
+    "Between toes",
+    "Nails and nail folds"
+  ],
+  "severity_levels": {
+    "mild": "Localized redness, itching, or white patches with minimal discomfort.",
+    "moderate": "More extensive rash, persistent itching, soreness, cracking of skin, or recurrent infection requiring medical treatment.",
+    "severe": "Extensive skin involvement, recurrent or resistant infection, severe pain, difficulty swallowing (oral candidiasis), or invasive candidiasis affecting internal organs, especially in immunocompromised individuals."
+  },
+  "precautions": [
+    "Keep affected areas clean and dry.",
+    "Wear loose-fitting, breathable cotton clothing.",
+    "Maintain good personal hygiene.",
+    "Control blood sugar if diabetic.",
+    "Avoid unnecessary antibiotic use.",
+    "Change out of wet clothing promptly.",
+    "Maintain a healthy immune system.",
+    "Avoid sharing personal hygiene items."
+  ],
+  "home_care": [
+    "Keep skin folds dry.",
+    "Wear breathable clothing.",
+    "Maintain proper oral hygiene for oral thrush.",
+    "Avoid irritants such as scented soaps in the affected area.",
+    "Follow prescribed antifungal treatment completely.",
+    "Maintain good blood sugar control if diabetic.",
+    "Avoid prolonged moisture exposure."
+  ],
+  "when_to_consult_doctor": [
+    "Symptoms persist despite home care.",
+    "Recurrent candidiasis.",
+    "Severe pain or swelling.",
+    "Difficulty swallowing or eating.",
+    "Fever or signs of systemic infection.",
+    "Extensive skin involvement.",
+    "Symptoms during pregnancy.",
+    "Signs of invasive infection.",
+    "People with weakened immune systems should seek prompt medical evaluation."
+  ],
+  "treatment_options": [
+    "Topical antifungal creams",
+    "Topical antifungal powders",
+    "Topical antifungal ointments",
+    "Oral antifungal medications",
+    "Antifungal mouth rinses or lozenges for oral candidiasis",
+    "Improving hygiene and keeping affected areas dry",
+    "Treatment of underlying conditions such as diabetes",
+    "Intravenous antifungal therapy for invasive candidiasis"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Individuals with persistent, recurrent, severe, or widespread candidiasis, or those with weakened immune systems, should consult a qualified healthcare professional for appropriate evaluation and management."
+},
+
+{
+  "name": "Dermatitis",
+  "description": "Dermatitis is a general term for inflammation of the skin characterized by redness, itching, swelling, and irritation. It is not contagious and includes several types such as atopic dermatitis (eczema), contact dermatitis, seborrheic dermatitis, and irritant dermatitis. The condition may be acute or chronic and results from a combination of genetic, immune, environmental, or irritant factors.",
+  "symptoms": [
+    "Red or inflamed skin",
+    "Itching (pruritus)",
+    "Dry skin",
+    "Swelling",
+    "Rash",
+    "Scaly or flaky skin",
+    "Cracked or fissured skin",
+    "Blisters or vesicles",
+    "Oozing or weeping lesions",
+    "Crusting",
+    "Burning or stinging sensation",
+    "Skin thickening (lichenification) in chronic cases",
+    "Pain or tenderness",
+    "Skin discoloration after healing"
+  ],
+  "possible_causes": [
+    "Allergic reactions",
+    "Contact with irritants (e.g., soaps, detergents, chemicals)",
+    "Genetic predisposition",
+    "Immune system dysfunction",
+    "Environmental allergens",
+    "Dry skin",
+    "Excessive moisture",
+    "Stress",
+    "Climate changes",
+    "Microbial overgrowth (e.g., Malassezia in seborrheic dermatitis)"
+  ],
+  "risk_factors": [
+    "Family history of eczema, asthma, or allergies",
+    "Sensitive skin",
+    "Frequent exposure to irritants or chemicals",
+    "Occupational exposure (e.g., healthcare workers, cleaners, hairdressers)",
+    "Dry or cold climates",
+    "Stress",
+    "Infancy and childhood (for atopic dermatitis)",
+    "Weakened skin barrier"
+  ],
+  "common_locations": [
+    "Face",
+    "Scalp",
+    "Neck",
+    "Hands",
+    "Wrists",
+    "Arms",
+    "Elbows",
+    "Behind the knees",
+    "Feet",
+    "Ankles",
+    "Skin folds",
+    "Areas directly exposed to allergens or irritants"
+  ],
+  "severity_levels": {
+    "mild": "Localized redness, dryness, or itching with minimal discomfort.",
+    "moderate": "Widespread rash, persistent itching, scaling, or recurrent flare-ups affecting daily activities.",
+    "severe": "Extensive skin inflammation, severe itching, cracking, oozing, recurrent infections, or significant impairment of quality of life."
+  },
+  "precautions": [
+    "Identify and avoid known allergens or irritants.",
+    "Use fragrance-free skincare products.",
+    "Moisturize the skin regularly.",
+    "Avoid scratching affected areas.",
+    "Wear protective gloves when handling irritants.",
+    "Use mild soaps and cleansers.",
+    "Maintain good skin hydration.",
+    "Avoid very hot showers or baths."
+  ],
+  "home_care": [
+    "Apply emollients or moisturizers frequently.",
+    "Take short, lukewarm baths or showers.",
+    "Use gentle, fragrance-free cleansers.",
+    "Apply cool compresses to relieve itching.",
+    "Wear loose-fitting cotton clothing.",
+    "Avoid harsh detergents and skincare products.",
+    "Follow prescribed treatment consistently."
+  ],
+  "when_to_consult_doctor": [
+    "Symptoms persist despite home care.",
+    "The rash spreads rapidly.",
+    "Signs of infection such as pus, fever, warmth, or increasing redness develop.",
+    "Severe itching interferes with sleep or daily activities.",
+    "Painful skin cracks or bleeding occur.",
+    "The diagnosis is uncertain.",
+    "Frequent or severe flare-ups occur."
+  ],
+  "treatment_options": [
+    "Regular use of emollients and moisturizers",
+    "Topical corticosteroids",
+    "Topical calcineurin inhibitors",
+    "Topical phosphodiesterase-4 (PDE4) inhibitors",
+    "Oral antihistamines for itch relief",
+    "Phototherapy",
+    "Systemic corticosteroids (selected severe cases)",
+    "Immunosuppressive medications",
+    "Biologic therapies for severe chronic dermatitis",
+    "Antibiotics or antifungal medications if secondary infection is present"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Dermatitis includes several different skin conditions with varying causes and treatments. Persistent, severe, or infected skin lesions should be evaluated by a qualified healthcare professional."
+},
+
+{
+  "name": "Drug Reaction (Cutaneous Drug Eruption)",
+  "description": "A drug reaction (cutaneous drug eruption) is an adverse reaction of the skin caused by medications. Reactions may range from mild, self-limiting rashes to severe, life-threatening conditions such as Stevens-Johnson syndrome (SJS), toxic epidermal necrolysis (TEN), or drug reaction with eosinophilia and systemic symptoms (DRESS). Skin reactions may occur within hours to weeks after starting a medication and usually improve after the offending drug is discontinued.",
+  "symptoms": [
+    "Red skin rash",
+    "Itching (pruritus)",
+    "Hives (urticaria)",
+    "Flat or raised red spots (maculopapular rash)",
+    "Swelling (angioedema)",
+    "Blisters",
+    "Peeling skin",
+    "Painful skin lesions",
+    "Mouth, eye, or genital sores",
+    "Fever",
+    "Facial swelling",
+    "Swollen lymph nodes",
+    "Skin tenderness",
+    "Purple spots (purpura)",
+    "Widespread redness (erythroderma)"
+  ],
+  "possible_causes": [
+    "Allergic reaction to medications",
+    "Immune-mediated hypersensitivity",
+    "Antibiotics (e.g., penicillins, sulfonamides)",
+    "Anticonvulsants",
+    "Nonsteroidal anti-inflammatory drugs (NSAIDs)",
+    "Allopurinol",
+    "Chemotherapy agents",
+    "Biologic medications",
+    "Other prescription or over-the-counter medications"
+  ],
+  "risk_factors": [
+    "Previous drug allergy",
+    "Multiple medication use (polypharmacy)",
+    "History of allergic diseases",
+    "HIV infection",
+    "Autoimmune disorders",
+    "Certain genetic predispositions",
+    "Repeated exposure to the same medication"
+  ],
+  "common_locations": [
+    "Trunk",
+    "Chest",
+    "Back",
+    "Arms",
+    "Legs",
+    "Face",
+    "Neck",
+    "Hands",
+    "Feet",
+    "Mouth",
+    "Eyes",
+    "Genital area",
+    "Entire body (in severe reactions)"
+  ],
+  "severity_levels": {
+    "mild": "Localized rash or itching without systemic symptoms that improves after discontinuing the offending medication.",
+    "moderate": "Widespread rash, hives, facial swelling, or blistering requiring medical evaluation and treatment.",
+    "severe": "Life-threatening reactions such as Stevens-Johnson syndrome (SJS), toxic epidermal necrolysis (TEN), DRESS syndrome, anaphylaxis, or significant organ involvement."
+  },
+  "precautions": [
+    "Take medications only as prescribed.",
+    "Inform healthcare providers of any previous drug allergies.",
+    "Carry a list of known medication allergies.",
+    "Avoid re-exposure to medications that previously caused a reaction.",
+    "Monitor for new skin rashes after starting a medication.",
+    "Seek prompt medical advice if symptoms develop."
+  ],
+  "home_care": [
+    "Stop the suspected medication only after consulting a healthcare provider unless severe symptoms occur.",
+    "Keep the skin cool and moisturized.",
+    "Avoid scratching affected areas.",
+    "Use cool compresses to relieve discomfort.",
+    "Take antihistamines if recommended by a healthcare professional.",
+    "Follow all medical instructions carefully."
+  ],
+  "when_to_consult_doctor": [
+    "A new rash develops after starting a medication.",
+    "The rash spreads rapidly.",
+    "Blisters or peeling skin develop.",
+    "Mouth, eye, or genital sores occur.",
+    "Fever accompanies the rash.",
+    "Facial swelling or difficulty swallowing occurs.",
+    "Signs of liver, kidney, or other organ involvement develop.",
+    "Difficulty breathing or symptoms of anaphylaxis occur (seek emergency care immediately)."
+  ],
+  "treatment_options": [
+    "Discontinuation of the offending medication",
+    "Topical corticosteroids",
+    "Oral antihistamines",
+    "Systemic corticosteroids (selected cases)",
+    "Supportive skin care",
+    "Hospitalization for severe reactions",
+    "Intravenous fluids and wound care for SJS/TEN",
+    "Immunomodulatory therapies for severe reactions",
+    "Treatment of secondary infections if present"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Drug reactions can range from mild to life-threatening. Seek immediate emergency medical attention if a medication causes difficulty breathing, facial or throat swelling, blistering, widespread skin peeling, or involvement of the eyes or mouth."
+},
+
+{
+  "name": "Eczema (Atopic Dermatitis)",
+  "description": "Eczema, also known as atopic dermatitis, is a common chronic inflammatory skin condition characterized by dry, itchy, and inflamed skin. It results from a combination of genetic, immune, and environmental factors that impair the skin's protective barrier. Eczema is not contagious and often occurs in recurrent flare-ups.",
+  "symptoms": [
+    "Intense itching (pruritus)",
+    "Dry skin",
+    "Red or inflamed patches",
+    "Scaly skin",
+    "Rough or thickened skin (lichenification)",
+    "Small raised bumps",
+    "Blisters or fluid-filled vesicles",
+    "Oozing or crusting lesions",
+    "Cracked or fissured skin",
+    "Painful skin due to scratching",
+    "Skin discoloration after healing"
+  ],
+  "possible_causes": [
+    "Genetic predisposition",
+    "Defective skin barrier function",
+    "Immune system dysfunction",
+    "Environmental allergens",
+    "Irritants such as soaps and detergents",
+    "Dry weather",
+    "Heat and sweating",
+    "Stress",
+    "Certain fabrics (e.g., wool)",
+    "Food allergies in some individuals"
+  ],
+  "risk_factors": [
+    "Family history of eczema",
+    "Family history of asthma or allergic rhinitis",
+    "Personal history of allergies",
+    "Dry skin",
+    "Living in urban or polluted environments",
+    "Exposure to irritants",
+    "Childhood (especially infancy)"
+  ],
+  "common_locations": [
+    "Face",
+    "Neck",
+    "Hands",
+    "Wrists",
+    "Elbows",
+    "Behind the knees",
+    "Ankles",
+    "Feet",
+    "Scalp (especially in infants)",
+    "Around the eyes",
+    "Skin folds"
+  ],
+  "severity_levels": {
+    "mild": "Occasional dry, itchy patches with minimal redness and little impact on daily activities.",
+    "moderate": "Frequent flare-ups with widespread redness, itching, scratching, and disturbed sleep requiring regular treatment.",
+    "severe": "Extensive inflamed skin with intense itching, significant skin thickening, recurrent infections, severe sleep disturbance, and major impact on quality of life."
+  },
+  "precautions": [
+    "Avoid known triggers and allergens.",
+    "Use fragrance-free skincare products.",
+    "Moisturize the skin regularly.",
+    "Avoid scratching affected areas.",
+    "Wear soft, breathable clothing such as cotton.",
+    "Take short, lukewarm showers instead of hot baths.",
+    "Keep fingernails short.",
+    "Manage stress when possible."
+  ],
+  "home_care": [
+    "Apply emollients or moisturizers several times daily.",
+    "Use mild, soap-free cleansers.",
+    "Take lukewarm baths followed immediately by moisturizing.",
+    "Use cool compresses to relieve itching.",
+    "Avoid harsh detergents and perfumes.",
+    "Use a humidifier in dry environments if needed.",
+    "Follow prescribed treatment during flare-ups."
+  ],
+  "when_to_consult_doctor": [
+    "Symptoms persist despite home care.",
+    "Severe or widespread rash develops.",
+    "Signs of skin infection such as pus, increasing redness, warmth, or fever.",
+    "Painful cracks or bleeding skin.",
+    "Frequent or worsening flare-ups.",
+    "Sleep or daily activities are significantly affected.",
+    "Diagnosis is uncertain."
+  ],
+  "treatment_options": [
+    "Regular use of emollients and moisturizers",
+    "Topical corticosteroids",
+    "Topical calcineurin inhibitors",
+    "Topical phosphodiesterase-4 (PDE4) inhibitors",
+    "Topical Janus kinase (JAK) inhibitors (selected patients)",
+    "Oral antihistamines for itch relief (selected cases)",
+    "Phototherapy",
+    "Systemic immunosuppressive medications",
+    "Biologic therapy (e.g., dupilumab, tralokinumab)",
+    "Oral JAK inhibitors for moderate-to-severe disease",
+    "Antibiotics for secondary bacterial infection when indicated"
+  ],
+  "medical_disclaimer": "This information is provided for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Eczema varies in severity and may require individualized management. Consult a qualified healthcare professional if symptoms are severe, recurrent, infected, or do not improve with appropriate skin care."
+},
+
+{
+  "name": "Herpes Simplex Virus Type 1 (HSV-1)",
+  "description": "Herpes simplex virus type 1 (HSV-1) is a common, lifelong viral infection caused by the herpes simplex virus type 1. It most commonly causes oral herpes (cold sores or fever blisters) around the lips and mouth, but it can also infect the eyes, fingers, and genital area through oral-genital contact. After the initial infection, the virus remains dormant in nerve cells and can reactivate periodically, leading to recurrent outbreaks.",
+  "symptoms": [
+    "Painful fluid-filled blisters",
+    "Cold sores around the lips or mouth",
+    "Burning, tingling, or itching before blisters appear (prodrome)",
+    "Clusters of small vesicles",
+    "Redness and swelling",
+    "Blisters that rupture and form crusts",
+    "Pain or tenderness",
+    "Fever (especially during the first infection)",
+    "Sore throat",
+    "Swollen lymph nodes",
+    "Difficulty eating or swallowing (severe oral infection)",
+    "Gum inflammation (gingivostomatitis)",
+    "No symptoms in many infected individuals"
+  ],
+  "possible_causes": [
+    "Infection with Herpes Simplex Virus Type 1 (HSV-1)",
+    "Direct contact with saliva or active lesions",
+    "Kissing an infected person",
+    "Sharing utensils, lip balm, razors, or drinks during active infection",
+    "Oral-genital contact",
+    "Reactivation triggered by stress, illness, fever, sunlight, hormonal changes, or weakened immunity"
+  ],
+  "risk_factors": [
+    "Close personal contact with an infected person",
+    "Childhood exposure",
+    "Weakened immune system",
+    "Physical or emotional stress",
+    "Fever or other infections",
+    "Excessive sun exposure",
+    "Skin trauma",
+    "Dental procedures"
+  ],
+  "common_locations": [
+    "Lips",
+    "Mouth",
+    "Gums",
+    "Tongue",
+    "Roof of the mouth",
+    "Face",
+    "Chin",
+    "Nose",
+    "Eyes (ocular herpes)",
+    "Fingers (herpetic whitlow)",
+    "Genital area (through oral-genital transmission)"
+  ],
+  "severity_levels": {
+    "mild": "Small, localized cold sores with mild discomfort that heal within 1–2 weeks.",
+    "moderate": "Multiple painful blisters, recurrent outbreaks, fever, swollen lymph nodes, or difficulty eating due to oral lesions.",
+    "severe": "Extensive infection, eye involvement (herpetic keratitis), eczema herpeticum, encephalitis, or severe disease in immunocompromised individuals or newborns."
+  },
+  "precautions": [
+    "Avoid kissing or close contact during active outbreaks.",
+    "Do not share utensils, towels, lip balm, or razors during an outbreak.",
+    "Wash hands after touching affected areas.",
+    "Avoid touching the eyes after contacting a sore.",
+    "Use lip sunscreen to reduce sun-triggered recurrences.",
+    "Avoid oral-genital contact during active oral herpes.",
+    "Keep lesions clean and dry."
+  ],
+  "home_care": [
+    "Keep the affected area clean and dry.",
+    "Apply cold compresses to relieve discomfort.",
+    "Stay well hydrated.",
+    "Eat soft foods if oral sores are painful.",
+    "Avoid spicy, acidic, or salty foods during outbreaks.",
+    "Use over-the-counter pain relievers if appropriate.",
+    "Take antiviral medications exactly as prescribed."
+  ],
+  "when_to_consult_doctor": [
+    "First episode of suspected herpes infection.",
+    "Symptoms persist longer than two weeks.",
+    "Frequent or severe recurrent outbreaks.",
+    "Eye pain, redness, blurred vision, or light sensitivity.",
+    "Difficulty swallowing or severe mouth pain.",
+    "Signs of bacterial infection such as pus or increasing redness.",
+    "Symptoms occur in infants, pregnant individuals, or immunocompromised patients.",
+    "High fever or neurological symptoms develop."
+  ],
+  "treatment_options": [
+    "Oral antiviral medications (e.g., acyclovir, valacyclovir, famciclovir)",
+    "Topical antiviral creams (limited benefit)",
+    "Pain-relieving medications",
+    "Supportive care including hydration and rest",
+    "Suppressive antiviral therapy for frequent recurrences",
+    "Treatment of complications such as ocular herpes by an ophthalmologist"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. HSV-1 is a lifelong viral infection that may recur. Prompt medical evaluation is recommended for first episodes, eye involvement, severe symptoms, or infections in newborns or individuals with weakened immune systems."
+},
+
+{
+  "name": "Herpes Simplex Virus Type 2 (HSV-2)",
+  "description": "Herpes simplex virus type 2 (HSV-2) is a common, lifelong viral infection that primarily causes genital herpes. It is transmitted mainly through sexual contact, including vaginal, anal, and oral sex, and can be spread even when no symptoms are present (asymptomatic viral shedding). After the initial infection, the virus remains dormant in nerve cells and may reactivate periodically, causing recurrent outbreaks.",
+  "symptoms": [
+    "Painful fluid-filled blisters on or around the genitals",
+    "Clusters of small vesicles",
+    "Ulcers or open sores after blisters rupture",
+    "Burning, tingling, or itching before lesions appear (prodrome)",
+    "Pain during urination",
+    "Genital itching",
+    "Redness and swelling of the affected area",
+    "Tenderness",
+    "Swollen lymph nodes in the groin",
+    "Fever during the initial outbreak",
+    "Body aches and fatigue",
+    "Headache",
+    "Rectal pain or discharge (if anorectal involvement)",
+    "No symptoms in many infected individuals"
+  ],
+  "possible_causes": [
+    "Infection with Herpes Simplex Virus Type 2 (HSV-2)",
+    "Vaginal, anal, or oral sexual contact with an infected person",
+    "Skin-to-skin contact with infected genital areas",
+    "Asymptomatic viral shedding",
+    "Transmission from mother to baby during childbirth (neonatal herpes)",
+    "Reactivation triggered by stress, illness, menstruation, trauma, or a weakened immune system"
+  ],
+  "risk_factors": [
+    "Unprotected sexual activity",
+    "Multiple sexual partners",
+    "Sexual contact with an infected partner",
+    "History of sexually transmitted infections (STIs)",
+    "Weakened immune system",
+    "Female sex (higher risk of acquisition)",
+    "Early onset of sexual activity"
+  ],
+  "common_locations": [
+    "Penis",
+    "Scrotum",
+    "Vulva",
+    "Vagina",
+    "Cervix",
+    "Labia",
+    "Perineum",
+    "Buttocks",
+    "Inner thighs",
+    "Anus",
+    "Rectum",
+    "Occasionally the mouth following oral-genital contact"
+  ],
+  "severity_levels": {
+    "mild": "Small number of localized genital blisters or ulcers with mild discomfort and infrequent recurrences.",
+    "moderate": "Multiple painful lesions, recurrent outbreaks, painful urination, and systemic symptoms during the first episode.",
+    "severe": "Extensive genital ulceration, urinary retention, meningitis, disseminated infection, neonatal herpes, or severe disease in immunocompromised individuals."
+  },
+  "precautions": [
+    "Avoid sexual contact during active outbreaks or when prodromal symptoms are present.",
+    "Use condoms consistently to reduce, but not eliminate, transmission risk.",
+    "Inform sexual partners about HSV-2 infection.",
+    "Avoid touching sores and wash hands thoroughly if contact occurs.",
+    "Take suppressive antiviral therapy if prescribed.",
+    "Pregnant individuals with genital herpes should inform their healthcare provider."
+  ],
+  "home_care": [
+    "Keep the affected area clean and dry.",
+    "Wear loose-fitting cotton underwear and clothing.",
+    "Take prescribed antiviral medications as directed.",
+    "Use warm baths or cool compresses to relieve discomfort.",
+    "Stay well hydrated.",
+    "Use over-the-counter pain relievers if appropriate.",
+    "Avoid irritating soaps or fragranced products on affected skin."
+  ],
+  "when_to_consult_doctor": [
+    "First episode of suspected genital herpes.",
+    "Frequent or severe recurrent outbreaks.",
+    "Difficulty urinating.",
+    "Severe pain or widespread sores.",
+    "Eye symptoms develop after contact with lesions.",
+    "Symptoms occur during pregnancy.",
+    "Signs of secondary bacterial infection develop.",
+    "Symptoms occur in newborns or immunocompromised individuals.",
+    "Neurological symptoms such as severe headache, neck stiffness, or confusion develop."
+  ],
+  "treatment_options": [
+    "Oral antiviral medications (e.g., acyclovir, valacyclovir, famciclovir)",
+    "Episodic antiviral therapy for outbreaks",
+    "Daily suppressive antiviral therapy for frequent recurrences",
+    "Pain-relieving medications",
+    "Supportive care including hydration and local wound care",
+    "Hospitalization and intravenous antiviral therapy for severe or disseminated infection"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. HSV-2 is a lifelong sexually transmitted infection that requires proper medical evaluation and management. Individuals with genital sores, pregnant patients, newborns, or those with weakened immune systems should seek prompt medical care."
+},
+
+{
+  "name": "Lichen Planus",
+  "description": "Lichen planus is a chronic inflammatory condition that affects the skin, mucous membranes, hair, and nails. It is believed to result from an immune-mediated reaction in which T lymphocytes attack the basal cells of the skin and mucous membranes. The exact cause is unknown. The condition is not contagious and may resolve spontaneously or persist with recurrent flare-ups.",
+  "symptoms": [
+    "Flat-topped, polygonal, purple or violaceous papules",
+    "Intense itching (pruritus)",
+    "Fine white lines on lesions (Wickham striae)",
+    "Shiny skin lesions",
+    "Clusters of small bumps",
+    "Oral white lacy patches",
+    "Painful oral ulcers or erosions",
+    "Burning sensation in the mouth",
+    "Nail thinning or ridging",
+    "Nail splitting or loss",
+    "Scalp involvement with hair loss (lichen planopilaris)",
+    "Post-inflammatory hyperpigmentation after healing"
+  ],
+  "possible_causes": [
+    "Immune-mediated (autoimmune) response",
+    "Genetic predisposition",
+    "Certain medications (drug-induced lichenoid reactions)",
+    "Hepatitis C infection in some individuals",
+    "Stress may trigger or worsen flare-ups",
+    "Dental materials (rarely, in oral lichen planus)"
+  ],
+  "risk_factors": [
+    "Middle-aged adults",
+    "Female sex (oral lichen planus is more common)",
+    "Family history of autoimmune diseases",
+    "Hepatitis C infection",
+    "Certain medications",
+    "Emotional stress"
+  ],
+  "common_locations": [
+    "Wrists",
+    "Forearms",
+    "Ankles",
+    "Lower legs",
+    "Lower back",
+    "Mouth (inside cheeks, tongue, gums)",
+    "Genital area",
+    "Scalp",
+    "Fingernails and toenails"
+  ],
+  "severity_levels": {
+    "mild": "Localized itchy skin lesions with minimal discomfort and no mucosal involvement.",
+    "moderate": "More widespread skin lesions or involvement of the mouth, genitals, scalp, or nails causing discomfort and requiring medical treatment.",
+    "severe": "Extensive skin disease, painful erosive oral or genital lesions, scarring hair loss, significant nail destruction, or chronic persistent disease affecting quality of life."
+  },
+  "precautions": [
+    "Avoid scratching affected areas.",
+    "Protect the skin from injury (Koebner phenomenon).",
+    "Maintain good oral hygiene if oral lesions are present.",
+    "Avoid tobacco and alcohol, especially with oral lichen planus.",
+    "Avoid spicy, acidic, or irritating foods if oral symptoms occur.",
+    "Manage stress where possible.",
+    "Attend regular follow-up appointments for chronic or oral disease."
+  ],
+  "home_care": [
+    "Use fragrance-free moisturizers to reduce dryness.",
+    "Apply cool compresses to relieve itching.",
+    "Use prescribed topical medications as directed.",
+    "Practice gentle skin care with mild cleansers.",
+    "Maintain good oral hygiene.",
+    "Avoid known triggers that worsen symptoms."
+  ],
+  "when_to_consult_doctor": [
+    "Persistent or worsening rash.",
+    "Painful mouth or genital sores.",
+    "Difficulty eating or swallowing due to oral lesions.",
+    "Hair loss or scalp scarring develops.",
+    "Nail changes or nail loss occurs.",
+    "Symptoms do not improve with treatment.",
+    "Signs of infection develop in affected areas."
+  ],
+  "treatment_options": [
+    "Topical corticosteroids",
+    "Topical calcineurin inhibitors",
+    "Oral corticosteroids for severe disease",
+    "Antihistamines for itching",
+    "Phototherapy (UV therapy)",
+    "Systemic immunosuppressive medications",
+    "Retinoids in selected cases",
+    "Treatment of underlying triggers or associated conditions"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Lichen planus can affect the skin, mouth, scalp, nails, and genitals. Persistent, painful, or widespread symptoms should be evaluated by a qualified healthcare professional. Oral lichen planus requires periodic monitoring due to a small risk of malignant transformation."
+},
+
+{
+  "name": "Lichen Sclerosus",
+  "description": "Lichen sclerosus is a chronic inflammatory skin disorder that most commonly affects the genital and perianal areas, although it can occur on other parts of the body. It is characterized by thin, white, shiny patches of skin that may become fragile, itchy, painful, and scar over time. The exact cause is unknown but is thought to involve autoimmune, genetic, and hormonal factors. It is not contagious and requires long-term monitoring due to a small increased risk of squamous cell carcinoma in affected genital skin.",
+  "symptoms": [
+    "Smooth, white or ivory-colored patches of skin",
+    "Thin, fragile, or shiny skin",
+    "Intense itching (pruritus)",
+    "Burning sensation",
+    "Pain or soreness",
+    "Pain during sexual intercourse (dyspareunia)",
+    "Painful urination if the genital area is affected",
+    "Skin cracking or fissures",
+    "Easy bruising or bleeding",
+    "Blisters (occasionally)",
+    "Scarring and skin tightening",
+    "Difficulty retracting the foreskin in males (phimosis)",
+    "Constipation or painful bowel movements if the perianal area is involved"
+  ],
+  "possible_causes": [
+    "Autoimmune dysfunction",
+    "Genetic predisposition",
+    "Hormonal influences",
+    "Chronic skin irritation or trauma (Koebner phenomenon)",
+    "Unknown exact cause"
+  ],
+  "risk_factors": [
+    "Female sex",
+    "Postmenopausal age",
+    "Prepubertal girls",
+    "Personal or family history of autoimmune diseases",
+    "Thyroid disorders",
+    "Vitiligo",
+    "Type 1 diabetes mellitus"
+  ],
+  "common_locations": [
+    "Vulva",
+    "Labia",
+    "Clitoris",
+    "Perineum",
+    "Perianal region",
+    "Penis (foreskin and glans)",
+    "Scrotum (less common)",
+    "Inner thighs",
+    "Breasts",
+    "Upper trunk",
+    "Neck",
+    "Shoulders",
+    "Wrists"
+  ],
+  "severity_levels": {
+    "mild": "Localized white patches with mild itching and minimal discomfort.",
+    "moderate": "Persistent itching, skin thinning, fissures, pain, and early scarring affecting daily activities or sexual function.",
+    "severe": "Extensive scarring, anatomical changes, severe pain, urinary or sexual dysfunction, phimosis, or suspicious lesions suggestive of squamous cell carcinoma."
+  },
+  "precautions": [
+    "Avoid scratching the affected skin.",
+    "Use gentle, fragrance-free cleansers.",
+    "Avoid tight-fitting clothing.",
+    "Wear breathable cotton underwear.",
+    "Use lubricants during sexual activity if recommended.",
+    "Maintain good genital hygiene.",
+    "Attend regular follow-up examinations to monitor for complications."
+  ],
+  "home_care": [
+    "Apply prescribed topical medications exactly as directed.",
+    "Use emollients or barrier creams to keep the skin moisturized.",
+    "Avoid irritants such as scented soaps, bubble baths, and perfumes.",
+    "Wear loose-fitting clothing.",
+    "Keep the affected area clean and dry.",
+    "Avoid excessive friction to the affected skin."
+  ],
+  "when_to_consult_doctor": [
+    "Persistent genital itching or pain.",
+    "Development of white patches or scarring.",
+    "Pain during urination or sexual intercourse.",
+    "Bleeding, ulceration, or non-healing sores.",
+    "Difficulty retracting the foreskin.",
+    "New lumps or rapidly changing lesions.",
+    "Symptoms do not improve with treatment."
+  ],
+  "treatment_options": [
+    "High-potency topical corticosteroids (first-line treatment)",
+    "Topical calcineurin inhibitors (selected patients)",
+    "Regular use of emollients",
+    "Treatment of secondary infections if present",
+    "Circumcision for severe foreskin involvement in males",
+    "Surgical management of scarring or anatomical complications",
+    "Long-term follow-up and surveillance for malignancy"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Lichen sclerosus is a chronic condition that requires ongoing medical management and regular follow-up because of the risk of scarring and a small increased risk of genital squamous cell carcinoma."
+},
+
+{
+  "name": "Cutaneous Lupus Erythematosus",
+  "description": "Cutaneous lupus erythematosus (CLE) is an autoimmune skin disorder in which the body's immune system attacks healthy skin, leading to inflammation and characteristic skin lesions. It may occur alone or as part of systemic lupus erythematosus (SLE), a condition that can affect multiple organs. Skin manifestations are often triggered or worsened by ultraviolet (UV) light exposure and may be acute, subacute, or chronic.",
+  "symptoms": [
+    "Red, scaly skin rash",
+    "Butterfly-shaped rash across the cheeks and nose",
+    "Round or disc-shaped (discoid) lesions",
+    "Photosensitivity (rash worsens after sun exposure)",
+    "Skin discoloration (lighter or darker patches after healing)",
+    "Scarring in chronic lesions",
+    "Hair loss or scarring alopecia when the scalp is affected",
+    "Mouth or nose ulcers",
+    "Itching (less common)",
+    "Burning or tenderness of affected skin",
+    "Persistent skin lesions"
+  ],
+  "possible_causes": [
+    "Autoimmune dysfunction",
+    "Genetic predisposition",
+    "Ultraviolet (UV) radiation exposure",
+    "Environmental triggers",
+    "Certain medications (drug-induced lupus)",
+    "Hormonal influences",
+    "Infections may trigger disease in susceptible individuals"
+  ],
+  "risk_factors": [
+    "Female sex",
+    "Age between 15 and 45 years",
+    "Family history of lupus or autoimmune diseases",
+    "Exposure to ultraviolet sunlight",
+    "Certain medications",
+    "Smoking",
+    "Personal history of autoimmune disease"
+  ],
+  "common_locations": [
+    "Cheeks",
+    "Bridge of the nose",
+    "Face",
+    "Scalp",
+    "Ears",
+    "Neck",
+    "Chest",
+    "Upper back",
+    "Shoulders",
+    "Arms",
+    "Hands",
+    "Sun-exposed areas of the body"
+  ],
+  "severity_levels": {
+    "mild": "Localized skin lesions with minimal symptoms and no evidence of systemic involvement.",
+    "moderate": "More extensive skin involvement, recurrent flare-ups, photosensitivity, or scarring requiring ongoing medical treatment.",
+    "severe": "Widespread skin disease, significant scarring, extensive hair loss, or cutaneous lupus associated with systemic lupus affecting internal organs."
+  },
+  "precautions": [
+    "Avoid excessive sun exposure.",
+    "Use broad-spectrum sunscreen (SPF 50+).",
+    "Wear protective clothing, hats, and sunglasses outdoors.",
+    "Avoid tanning beds.",
+    "Stop smoking if applicable.",
+    "Take prescribed medications consistently.",
+    "Attend regular follow-up appointments."
+  ],
+  "home_care": [
+    "Protect the skin from UV exposure daily.",
+    "Use gentle, fragrance-free skincare products.",
+    "Keep the skin moisturized.",
+    "Avoid known triggers that worsen flare-ups.",
+    "Maintain a healthy lifestyle with adequate rest and balanced nutrition.",
+    "Follow the prescribed treatment plan."
+  ],
+  "when_to_consult_doctor": [
+    "Persistent or worsening skin rash.",
+    "Development of new skin lesions.",
+    "Scarring or significant hair loss.",
+    "Mouth or nasal ulcers that do not heal.",
+    "Fever, fatigue, or joint pain accompanying the rash.",
+    "Signs of systemic lupus such as chest pain, shortness of breath, kidney problems, or neurological symptoms.",
+    "Symptoms do not improve with prescribed treatment."
+  ],
+  "treatment_options": [
+    "Sun protection measures",
+    "Topical corticosteroids",
+    "Topical calcineurin inhibitors",
+    "Antimalarial medications (e.g., hydroxychloroquine)",
+    "Systemic corticosteroids for severe disease",
+    "Immunosuppressive medications",
+    "Biologic therapies in selected cases",
+    "Treatment of associated systemic lupus if present"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Lupus is an autoimmune disease that may affect the skin and internal organs. Any persistent rash, photosensitivity, or symptoms suggesting systemic involvement should be evaluated promptly by a qualified healthcare professional."
+},
+
+{
+  "name": "Melanocytic Nevi",
+  "description": "Melanocytic nevi (commonly known as moles) are benign proliferations of melanocytes, the pigment-producing cells of the skin. They may be congenital (present at birth) or acquired during childhood or adulthood. Most melanocytic nevi are harmless, remain stable over time, and do not require treatment. However, atypical or changing nevi should be evaluated because they may resemble or rarely develop into melanoma.",
+  "symptoms": [
+    "Small, well-circumscribed pigmented lesion",
+    "Brown, black, tan, pink, blue, or skin-colored appearance",
+    "Flat (macule) or raised (papule or nodule)",
+    "Round or oval shape",
+    "Symmetrical appearance",
+    "Uniform color in benign lesions",
+    "Smooth, rough, or slightly elevated surface",
+    "May contain terminal hairs",
+    "Usually painless",
+    "Occasional itching or irritation due to friction"
+  ],
+  "possible_causes": [
+    "Localized proliferation of melanocytes",
+    "Genetic factors",
+    "Congenital developmental factors",
+    "Ultraviolet (UV) radiation exposure",
+    "Hormonal influences during puberty or pregnancy"
+  ],
+  "risk_factors": [
+    "Fair skin",
+    "Family history of numerous nevi",
+    "Family history of melanoma",
+    "Personal history of atypical (dysplastic) nevi",
+    "Excessive UV exposure",
+    "History of severe sunburns",
+    "Large number of acquired nevi",
+    "Congenital giant melanocytic nevi",
+    "Immunosuppression"
+  ],
+  "common_locations": [
+    "Face",
+    "Scalp",
+    "Neck",
+    "Chest",
+    "Back",
+    "Abdomen",
+    "Arms",
+    "Hands",
+    "Legs",
+    "Feet",
+    "Palms and soles (less common)",
+    "Nail unit (rare)",
+    "Anywhere on the skin"
+  ],
+  "severity_levels": {
+    "mild": "Typical benign nevus with symmetrical shape, uniform color, and no symptoms.",
+    "moderate": "Atypical (dysplastic) nevus with irregular clinical features requiring dermatological evaluation and monitoring.",
+    "severe": "Nevus showing rapid changes, ABCDE warning signs, ulceration, bleeding, or suspicion of melanoma requiring urgent assessment."
+  },
+  "precautions": [
+    "Perform regular skin self-examinations.",
+    "Follow the ABCDE rule for mole assessment.",
+    "Use broad-spectrum sunscreen (SPF 30 or higher).",
+    "Avoid excessive sun exposure and tanning beds.",
+    "Wear protective clothing when outdoors.",
+    "Avoid repeated trauma to moles."
+  ],
+  "home_care": [
+    "Monitor moles for any changes in appearance.",
+    "Take periodic photographs for comparison if recommended.",
+    "Protect skin from ultraviolet radiation.",
+    "Do not attempt to remove or cut off moles at home.",
+    "Maintain regular dermatologic skin examinations if at increased risk."
+  ],
+  "when_to_consult_doctor": [
+    "A new mole develops in adulthood.",
+    "A mole changes in size, shape, color, or elevation.",
+    "The lesion becomes asymmetrical or develops irregular borders.",
+    "Multiple colors appear within a mole.",
+    "Bleeding, crusting, ulceration, or persistent itching occurs.",
+    "A mole becomes painful or tender.",
+    "The mole looks different from other moles ('ugly duckling' sign).",
+    "There is a personal or family history of melanoma."
+  ],
+  "treatment_options": [
+    "No treatment for typical benign nevi",
+    "Routine observation and monitoring",
+    "Dermoscopic examination",
+    "Skin biopsy when diagnosis is uncertain",
+    "Complete surgical excision for suspicious or symptomatic nevi",
+    "Histopathological examination after excision"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Although most melanocytic nevi are benign, any mole that changes in appearance or exhibits concerning features should be evaluated promptly by a qualified dermatologist to exclude melanoma."
+},
+
+{
+  "name": "Melanoma",
+  "description": "Melanoma is a serious and potentially life-threatening form of skin cancer that develops from melanocytes, the pigment-producing cells of the skin. It can arise from an existing mole or appear as a new pigmented lesion. Although less common than other skin cancers, melanoma is more likely to spread (metastasize) to other parts of the body if not detected and treated early.",
+  "symptoms": [
+    "New mole or pigmented skin lesion",
+    "Change in size, shape, or color of an existing mole",
+    "Asymmetrical lesion",
+    "Irregular or poorly defined borders",
+    "Multiple colors within a single lesion (brown, black, blue, red, white, or pink)",
+    "Diameter greater than 6 mm (may be smaller in early melanoma)",
+    "Evolution or rapid change in appearance",
+    "Itching or tenderness",
+    "Bleeding or oozing",
+    "Crusting or ulceration",
+    "Non-healing skin lesion",
+    "Dark streak under a fingernail or toenail (subungual melanoma)"
+  ],
+  "possible_causes": [
+    "DNA mutations in melanocytes",
+    "Excessive ultraviolet (UV) radiation from sunlight",
+    "Frequent use of tanning beds",
+    "Genetic predisposition",
+    "History of severe sunburns",
+    "Certain inherited genetic mutations"
+  ],
+  "risk_factors": [
+    "Fair skin",
+    "Light-colored eyes",
+    "Blonde or red hair",
+    "Excessive UV exposure",
+    "History of blistering sunburns",
+    "Use of indoor tanning devices",
+    "Large number of moles",
+    "Presence of atypical (dysplastic) moles",
+    "Family history of melanoma",
+    "Personal history of melanoma or other skin cancers",
+    "Weakened immune system",
+    "Increasing age (can occur at any age)"
+  ],
+  "common_locations": [
+    "Face",
+    "Neck",
+    "Back",
+    "Chest",
+    "Arms",
+    "Legs",
+    "Palms",
+    "Soles",
+    "Under fingernails",
+    "Under toenails",
+    "Scalp",
+    "Mucosal surfaces (less common)",
+    "Anywhere on the skin"
+  ],
+  "severity_levels": {
+    "mild": "Early-stage melanoma confined to the outer layer of the skin without evidence of spread.",
+    "moderate": "Melanoma has grown deeper into the skin or involves nearby lymph nodes but has not spread to distant organs.",
+    "severe": "Advanced melanoma with spread (metastasis) to distant organs such as the lungs, liver, brain, or bones."
+  },
+  "precautions": [
+    "Avoid excessive sun exposure, especially during peak UV hours.",
+    "Apply broad-spectrum sunscreen (SPF 30 or higher).",
+    "Wear protective clothing, hats, and UV-blocking sunglasses.",
+    "Avoid tanning beds.",
+    "Perform regular skin self-examinations using the ABCDE rule.",
+    "Have suspicious or changing moles examined promptly by a dermatologist."
+  ],
+  "home_care": [
+    "No home treatment can cure melanoma.",
+    "Protect the skin from further UV exposure.",
+    "Monitor existing moles for changes.",
+    "Follow wound care instructions after biopsy or surgery.",
+    "Attend all scheduled follow-up appointments."
+  ],
+  "when_to_consult_doctor": [
+    "A new or changing mole appears.",
+    "A lesion shows ABCDE warning signs (Asymmetry, Border irregularity, Color variation, Diameter, Evolution).",
+    "A mole bleeds, crusts, or ulcerates.",
+    "A skin lesion does not heal.",
+    "Persistent itching or pain in a mole.",
+    "Dark streak develops under a nail without injury.",
+    "Any rapidly growing or suspicious pigmented lesion."
+  ],
+  "treatment_options": [
+    "Surgical excision",
+    "Sentinel lymph node biopsy",
+    "Lymph node dissection (selected cases)",
+    "Immunotherapy",
+    "Targeted therapy for specific genetic mutations",
+    "Radiation therapy",
+    "Chemotherapy (less commonly used)",
+    "Clinical trials",
+    "Regular surveillance and follow-up"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Melanoma is a medical emergency that requires prompt evaluation by a qualified healthcare professional. Early diagnosis and treatment significantly improve outcomes."
+},
+
+{
+  "name": "Moles (Melanocytic Nevi)",
+  "description": "Moles (also called melanocytic nevi or nevi) are common benign skin growths formed by clusters of melanocytes, the cells that produce melanin (skin pigment). They may be present at birth (congenital nevi) or develop later in childhood or adulthood (acquired nevi). Most moles are harmless, but changes in their appearance may indicate melanoma and should be evaluated by a healthcare professional.",
+  "symptoms": [
+    "Small, well-defined skin growth",
+    "Brown, black, tan, pink, blue, or skin-colored lesion",
+    "Flat or raised appearance",
+    "Round or oval shape",
+    "Smooth, rough, or slightly bumpy surface",
+    "Uniform color in most benign moles",
+    "May contain hair",
+    "Usually painless",
+    "Occasional itching or irritation if rubbed",
+    "Rare bleeding or crusting if injured"
+  ],
+  "possible_causes": [
+    "Clusters of melanocytes in the skin",
+    "Genetic predisposition",
+    "Sun (UV) exposure",
+    "Hormonal changes during puberty or pregnancy",
+    "Congenital development (present at birth)"
+  ],
+  "risk_factors": [
+    "Fair skin",
+    "Family history of numerous moles",
+    "Family history of melanoma",
+    "Personal history of atypical (dysplastic) nevi",
+    "Excessive ultraviolet (UV) exposure",
+    "History of sunburns",
+    "Having a large number of moles",
+    "Congenital giant nevi"
+  ],
+  "common_locations": [
+    "Face",
+    "Scalp",
+    "Neck",
+    "Chest",
+    "Back",
+    "Arms",
+    "Hands",
+    "Legs",
+    "Feet",
+    "Anywhere on the body"
+  ],
+  "severity_levels": {
+    "mild": "Small, stable, symmetrical mole with uniform color and no symptoms.",
+    "moderate": "Atypical or dysplastic mole with irregular features that requires monitoring or biopsy.",
+    "severe": "Rapidly changing mole with ABCDE warning signs or features suspicious for melanoma requiring urgent medical evaluation."
+  },
+  "precautions": [
+    "Perform regular skin self-examinations.",
+    "Monitor moles using the ABCDE rule (Asymmetry, Border, Color, Diameter, Evolution).",
+    "Protect skin from excessive UV exposure.",
+    "Use broad-spectrum sunscreen (SPF 30 or higher).",
+    "Avoid tanning beds.",
+    "Do not pick or repeatedly traumatize moles."
+  ],
+  "home_care": [
+    "Monitor existing moles for changes.",
+    "Take photographs to compare changes over time if recommended.",
+    "Protect skin from sunlight with sunscreen and protective clothing.",
+    "Avoid attempting to remove a mole at home.",
+    "Maintain routine skin examinations."
+  ],
+  "when_to_consult_doctor": [
+    "A new mole appears in adulthood.",
+    "A mole changes in size, shape, or color.",
+    "The mole becomes asymmetrical or develops irregular borders.",
+    "The mole has multiple colors.",
+    "The mole bleeds, crusts, or ulcerates.",
+    "Persistent itching, pain, or tenderness develops.",
+    "A mole grows rapidly or looks different from other moles ('ugly duckling' sign)."
+  ],
+  "treatment_options": [
+    "No treatment for benign, stable moles",
+    "Regular clinical monitoring",
+    "Dermoscopic examination",
+    "Skin biopsy if diagnosis is uncertain",
+    "Complete surgical excision for suspicious or symptomatic moles",
+    "Histopathological examination after removal"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. While most moles are benign, any mole that changes in appearance or develops symptoms should be evaluated promptly by a qualified dermatologist to rule out melanoma or other skin cancers."
+},
+
+{
+  "name": "Pityriasis Rosea",
+  "description": "Pityriasis rosea is a common, self-limiting inflammatory skin condition characterized by a distinctive rash that usually begins with a single large 'herald patch' followed by multiple smaller oval, scaly lesions. The exact cause is unknown, but it is thought to be associated with reactivation of human herpesvirus 6 (HHV-6) or human herpesvirus 7 (HHV-7). It is not considered highly contagious and typically resolves spontaneously within 6 to 12 weeks.",
+  "symptoms": [
+    "Single large oval 'herald patch'",
+    "Multiple smaller oval pink or salmon-colored patches",
+    "Fine scaly border (collarette scale)",
+    "Rash following skin cleavage lines ('Christmas tree' pattern on the back)",
+    "Mild to moderate itching",
+    "Red or brown patches depending on skin tone",
+    "Dry or scaly skin",
+    "Mild fatigue before the rash (occasionally)",
+    "Headache (occasionally)",
+    "Low-grade fever (occasionally)",
+    "Sore throat or upper respiratory symptoms before the rash (occasionally)"
+  ],
+  "possible_causes": [
+    "Unknown exact cause",
+    "Possible reactivation of human herpesvirus 6 (HHV-6)",
+    "Possible reactivation of human herpesvirus 7 (HHV-7)",
+    "Viral infection may trigger the condition in susceptible individuals"
+  ],
+  "risk_factors": [
+    "Age between 10 and 35 years",
+    "Young adults",
+    "Previous viral illness",
+    "Seasonal occurrence (spring and autumn in some regions)",
+    "Pregnancy (rare but may require closer monitoring)"
+  ],
+  "common_locations": [
+    "Chest",
+    "Back",
+    "Abdomen",
+    "Neck",
+    "Upper arms",
+    "Upper thighs",
+    "Shoulders",
+    "Rarely the face, scalp, palms, or soles"
+  ],
+  "severity_levels": {
+    "mild": "Few skin lesions with little or no itching that resolve without treatment.",
+    "moderate": "Widespread rash with persistent itching causing mild discomfort.",
+    "severe": "Extensive rash, intense itching, atypical distribution, prolonged disease, or occurrence during pregnancy requiring specialist evaluation."
+  },
+  "precautions": [
+    "Avoid excessive heat and sweating, which may worsen itching.",
+    "Use mild, fragrance-free soaps and cleansers.",
+    "Avoid scratching affected areas.",
+    "Wear loose-fitting cotton clothing.",
+    "Keep the skin moisturized.",
+    "Follow up with a healthcare provider if the rash persists or worsens."
+  ],
+  "home_care": [
+    "Apply fragrance-free moisturizers to relieve dryness.",
+    "Take lukewarm baths instead of hot showers.",
+    "Use calamine lotion for itching if appropriate.",
+    "Take oral antihistamines if recommended by a healthcare professional.",
+    "Avoid harsh soaps and skin irritants.",
+    "Rest and stay hydrated if mild viral symptoms are present."
+  ],
+  "when_to_consult_doctor": [
+    "The diagnosis is uncertain.",
+    "The rash lasts longer than 12 weeks.",
+    "Severe or persistent itching develops.",
+    "The rash involves the face, palms, soles, or mucous membranes.",
+    "Blisters, pus, or signs of infection develop.",
+    "The patient is pregnant.",
+    "Systemic symptoms such as high fever or significant illness occur."
+  ],
+  "treatment_options": [
+    "Observation (most cases resolve spontaneously)",
+    "Topical corticosteroids for itching",
+    "Oral antihistamines",
+    "Moisturizers and emollients",
+    "Ultraviolet B (UVB) phototherapy for severe cases",
+    "Oral antiviral therapy (e.g., acyclovir) in selected early or severe cases",
+    "Supportive skin care"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Pityriasis rosea is usually a self-limiting condition, but persistent, atypical, or severe rashes should be evaluated by a qualified healthcare professional. Pregnant individuals who develop pityriasis rosea should seek prompt medical advice."
+},
+
+{
+  "name": "Psoriasis",
+  "description": "Psoriasis is a chronic, immune-mediated inflammatory skin disease characterized by accelerated skin cell turnover, resulting in well-defined, thickened, red plaques covered with silvery-white scales. It is a non-contagious condition that may affect the skin, nails, scalp, and joints (psoriatic arthritis). The disease typically follows a relapsing and remitting course and may be triggered by environmental or systemic factors in genetically predisposed individuals.",
+  "symptoms": [
+    "Well-defined red or pink plaques",
+    "Silvery-white scales",
+    "Dry, cracked skin",
+    "Itching",
+    "Burning sensation",
+    "Pain or tenderness",
+    "Thickened skin",
+    "Bleeding after scratching or scale removal (Auspitz sign)",
+    "Scalp scaling",
+    "Nail pitting",
+    "Nail thickening",
+    "Nail discoloration",
+    "Nail separation from the nail bed (onycholysis)",
+    "Joint pain, stiffness, or swelling (psoriatic arthritis)"
+  ],
+  "possible_causes": [
+    "Immune system dysfunction",
+    "Genetic predisposition",
+    "Abnormal activation of T lymphocytes",
+    "Environmental triggers",
+    "Skin injury (Koebner phenomenon)",
+    "Streptococcal infection",
+    "Certain medications (e.g., lithium, beta-blockers, antimalarials)",
+    "Stress",
+    "Smoking",
+    "Excessive alcohol consumption"
+  ],
+  "risk_factors": [
+    "Family history of psoriasis",
+    "Personal history of autoimmune disease",
+    "Obesity",
+    "Smoking",
+    "Heavy alcohol use",
+    "Stress",
+    "Recurrent infections",
+    "Certain medications",
+    "Skin trauma"
+  ],
+  "common_locations": [
+    "Scalp",
+    "Elbows",
+    "Knees",
+    "Lower back",
+    "Hands",
+    "Feet",
+    "Palms",
+    "Soles",
+    "Nails",
+    "Face",
+    "Skin folds (inverse psoriasis)",
+    "Genital area"
+  ],
+  "severity_levels": {
+    "mild": "Limited skin involvement affecting less than 3% of body surface area with mild symptoms.",
+    "moderate": "Skin involvement affecting approximately 3% to 10% of body surface area or lesions significantly affecting quality of life, daily activities, or visible areas.",
+    "severe": "More than 10% body surface area involvement, extensive plaques, erythrodermic or pustular psoriasis, or associated psoriatic arthritis causing significant disability."
+  },
+  "precautions": [
+    "Moisturize the skin regularly.",
+    "Avoid scratching or picking plaques.",
+    "Protect the skin from injury.",
+    "Avoid smoking and excessive alcohol consumption.",
+    "Manage stress.",
+    "Follow prescribed treatment consistently.",
+    "Maintain a healthy body weight.",
+    "Identify and avoid known triggers."
+  ],
+  "home_care": [
+    "Use fragrance-free moisturizers daily.",
+    "Take short, lukewarm baths or showers.",
+    "Use gentle, non-irritating skin cleansers.",
+    "Apply prescribed topical medications as directed.",
+    "Avoid harsh soaps and excessive skin rubbing.",
+    "Maintain a healthy lifestyle with balanced nutrition and regular exercise.",
+    "Protect affected skin from excessive sun exposure while avoiding sunburn."
+  ],
+  "when_to_consult_doctor": [
+    "Persistent or worsening skin lesions.",
+    "Development of joint pain, swelling, or stiffness.",
+    "Signs of skin infection such as increasing redness, warmth, pus, or fever.",
+    "Widespread rash or rapidly worsening symptoms.",
+    "Severe itching or pain.",
+    "Treatment is ineffective.",
+    "Significant impact on daily activities or quality of life."
+  ],
+  "treatment_options": [
+    "Topical corticosteroids",
+    "Vitamin D analogues",
+    "Topical retinoids",
+    "Coal tar preparations",
+    "Salicylic acid",
+    "Topical calcineurin inhibitors (for selected areas)",
+    "Phototherapy (UVB or PUVA)",
+    "Systemic medications (e.g., methotrexate, cyclosporine, acitretin)",
+    "Biologic therapies",
+    "Oral phosphodiesterase-4 (PDE4) inhibitors",
+    "Janus kinase (JAK) inhibitors in selected cases",
+    "Treatment for psoriatic arthritis when present"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Psoriasis is a chronic condition that requires individualized management. Consult a qualified healthcare professional if symptoms are severe, widespread, associated with joint pain, or do not improve with prescribed treatment."
+},
+
+{
+  "name": "Scabies",
+  "description": "Scabies is a highly contagious skin infestation caused by the microscopic mite Sarcoptes scabiei var. hominis. The female mite burrows into the outer layer of the skin to lay eggs, triggering an allergic reaction that leads to intense itching and a characteristic rash. It spreads primarily through prolonged skin-to-skin contact and, less commonly, through contaminated clothing, bedding, or towels.",
+  "symptoms": [
+    "Intense itching, especially at night",
+    "Small red bumps or papules",
+    "Thin, wavy, grayish or skin-colored burrows",
+    "Rash with scattered bumps",
+    "Blisters or vesicles (especially in infants)",
+    "Scaly or crusted skin",
+    "Scratch marks (excoriations)",
+    "Secondary bacterial skin infection due to scratching",
+    "Thick crusts with extensive scaling in crusted (Norwegian) scabies"
+  ],
+  "possible_causes": [
+    "Infestation with the mite Sarcoptes scabiei var. hominis",
+    "Direct prolonged skin-to-skin contact with an infected person",
+    "Sexual contact with an infected individual",
+    "Sharing infested clothing, bedding, or towels (less common)",
+    "Outbreaks in crowded living environments"
+  ],
+  "risk_factors": [
+    "Close contact with an infected person",
+    "Living in crowded conditions",
+    "Nursing homes and long-term care facilities",
+    "Childcare centers and schools",
+    "Hospitals",
+    "Immunocompromised individuals",
+    "Residents of refugee camps or institutions",
+    "Poor access to healthcare"
+  ],
+  "common_locations": [
+    "Finger webs",
+    "Wrists",
+    "Elbows",
+    "Armpits",
+    "Waist",
+    "Buttocks",
+    "Groin",
+    "Genitals",
+    "Around the nipples",
+    "Inner thighs",
+    "Ankles",
+    "Feet",
+    "Palms and soles (especially in infants)",
+    "Scalp, face, and neck (mainly in infants, elderly, or immunocompromised individuals)"
+  ],
+  "severity_levels": {
+    "mild": "Localized itching and a few burrows or papules without secondary infection.",
+    "moderate": "Widespread rash, persistent itching, multiple burrows, and excoriations from scratching.",
+    "severe": "Crusted (Norwegian) scabies with thick crusts containing thousands of mites, extensive skin involvement, or secondary bacterial infection."
+  },
+  "precautions": [
+    "Avoid close skin-to-skin contact with infected individuals until treatment is completed.",
+    "Treat all household members and close contacts simultaneously.",
+    "Wash clothing, bedding, and towels used within the previous 3 days in hot water and dry on high heat.",
+    "Seal non-washable items in a plastic bag for at least 72 hours to one week.",
+    "Avoid sharing personal items.",
+    "Trim fingernails to reduce skin damage from scratching."
+  ],
+  "home_care": [
+    "Use prescribed scabicide exactly as directed.",
+    "Wash all recently used clothing and bedding.",
+    "Apply moisturizers after treatment if the skin becomes dry.",
+    "Use antihistamines or soothing lotions to relieve itching if recommended by a healthcare provider.",
+    "Avoid scratching to reduce the risk of infection.",
+    "Continue good personal hygiene, although hygiene alone does not eliminate scabies."
+  ],
+  "when_to_consult_doctor": [
+    "Persistent itching lasting more than 2 to 4 weeks after treatment",
+    "Symptoms worsen despite treatment",
+    "Signs of bacterial infection such as pus, increased redness, warmth, or fever",
+    "Development of thick crusts or widespread scaling",
+    "Infants, elderly individuals, pregnant women, or immunocompromised patients with suspected scabies",
+    "Uncertain diagnosis"
+  ],
+  "treatment_options": [
+    "Topical permethrin 5% cream",
+    "Oral ivermectin (in selected cases)",
+    "Benzyl benzoate lotion",
+    "Sulfur ointment",
+    "Crotamiton cream or lotion",
+    "Antihistamines for itch relief",
+    "Topical corticosteroids for persistent post-treatment inflammation (when appropriate)",
+    "Antibiotics for secondary bacterial infection",
+    "Simultaneous treatment of close contacts"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Scabies requires appropriate medical diagnosis and treatment. Close contacts often require treatment even if they have no symptoms. Consult a qualified healthcare professional for persistent symptoms or suspected crusted scabies."
+},
+
+{
+  "name": "Seborrheic Keratosis",
+  "description": "Seborrheic keratosis is a common, benign (non-cancerous) skin growth that originates from epidermal keratinocytes. It typically develops in middle-aged and older adults and has a characteristic waxy, rough, or 'stuck-on' appearance. These lesions vary in size, color, and thickness and do not become skin cancer, although they can sometimes resemble melanoma or other malignant skin lesions.",
+  "symptoms": [
+    "Waxy or rough skin growth",
+    "Raised or slightly elevated lesion",
+    "Brown, black, tan, yellow, or skin-colored appearance",
+    "Round or oval shape",
+    "Well-defined borders",
+    "Stuck-on appearance",
+    "Flat or thickened plaque",
+    "Scaly or wart-like surface",
+    "Mild itching",
+    "Irritation due to rubbing against clothing",
+    "Occasional bleeding if scratched or injured",
+    "Usually painless"
+  ],
+  "possible_causes": [
+    "Exact cause is unknown",
+    "Age-related skin cell proliferation",
+    "Genetic predisposition",
+    "Inherited tendency",
+    "Possible contribution of chronic sun exposure"
+  ],
+  "risk_factors": [
+    "Age over 40 years",
+    "Family history of seborrheic keratosis",
+    "Increasing age",
+    "Fair skin",
+    "Frequent sun exposure"
+  ],
+  "common_locations": [
+    "Face",
+    "Scalp",
+    "Neck",
+    "Chest",
+    "Back",
+    "Shoulders",
+    "Abdomen",
+    "Arms",
+    "Legs",
+    "Usually absent on palms and soles"
+  ],
+  "severity_levels": {
+    "mild": "One or a few small, asymptomatic lesions causing little or no discomfort.",
+    "moderate": "Multiple lesions with itching, irritation, cosmetic concerns, or repeated friction.",
+    "severe": "Large, inflamed, bleeding, rapidly changing, or atypical lesions requiring evaluation to exclude skin cancer."
+  },
+  "precautions": [
+    "Avoid scratching or picking the lesions.",
+    "Protect the skin from excessive sun exposure.",
+    "Use sunscreen regularly.",
+    "Monitor lesions for changes in size, color, or shape.",
+    "Avoid repeated friction from clothing or accessories.",
+    "Perform routine skin self-examinations."
+  ],
+  "home_care": [
+    "Keep the affected skin clean.",
+    "Apply moisturizer if surrounding skin is dry.",
+    "Avoid attempting to remove the lesion at home.",
+    "Protect irritated lesions from trauma.",
+    "Wear loose-fitting clothing if lesions become irritated."
+  ],
+  "when_to_consult_doctor": [
+    "Rapid growth of a lesion",
+    "Sudden appearance of numerous lesions",
+    "Persistent bleeding",
+    "Pain or significant tenderness",
+    "Ulceration",
+    "Signs of infection",
+    "Noticeable changes in color, shape, or border",
+    "Difficulty distinguishing the lesion from skin cancer",
+    "If cosmetic removal is desired"
+  ],
+  "treatment_options": [
+    "No treatment required if asymptomatic",
+    "Cryotherapy (liquid nitrogen)",
+    "Curettage",
+    "Shave excision",
+    "Electrocautery",
+    "Laser therapy in selected cases",
+    "Biopsy if diagnosis is uncertain or malignancy is suspected"
+  ],
+  "medical_disclaimer": "This information is intended for educational purposes only and should not replace professional medical advice. Although seborrheic keratosis is a benign condition, any new, changing, bleeding, painful, or unusual skin lesion should be evaluated by a qualified dermatologist to rule out skin cancer or other serious skin conditions."
+},
+
+{
+  "name": "Sunlight Damage (Photodamage / Sun-Damaged Skin)",
+  "description": "Sunlight damage, also known as photodamage or sun-damaged skin, refers to skin changes caused by cumulative exposure to ultraviolet (UV) radiation from the sun or artificial tanning devices. Chronic UV exposure accelerates skin aging (photoaging), damages collagen and elastin, causes pigmentation changes, and increases the risk of precancerous lesions and skin cancers, including basal cell carcinoma, squamous cell carcinoma, and melanoma.",
+  "symptoms": [
+    "Sunburn",
+    "Redness (erythema)",
+    "Dry or rough skin",
+    "Fine lines and wrinkles",
+    "Deep wrinkles",
+    "Uneven skin tone",
+    "Dark spots (solar lentigines or age spots)",
+    "Freckles",
+    "Mottled pigmentation",
+    "Loss of skin elasticity",
+    "Leathery skin texture",
+    "Visible blood vessels (telangiectasia)",
+    "Actinic keratoses (rough, scaly precancerous patches)",
+    "Easy bruising",
+    "Persistent skin discoloration"
+  ],
+  "possible_causes": [
+    "Chronic exposure to ultraviolet (UV) radiation",
+    "Repeated sunburns",
+    "Ultraviolet A (UVA) exposure",
+    "Ultraviolet B (UVB) exposure",
+    "Use of indoor tanning beds",
+    "Inadequate sun protection"
+  ],
+  "risk_factors": [
+    "Fair skin",
+    "Light-colored eyes",
+    "Blonde or red hair",
+    "History of frequent sunburns",
+    "Outdoor occupations",
+    "Living in sunny climates",
+    "High-altitude exposure",
+    "Use of tanning beds",
+    "Older age",
+    "Weakened immune system"
+  ],
+  "common_locations": [
+    "Face",
+    "Forehead",
+    "Nose",
+    "Ears",
+    "Neck",
+    "Chest",
+    "Shoulders",
+    "Upper back",
+    "Arms",
+    "Back of the hands",
+    "Scalp (especially in people with hair loss)",
+    "Lips"
+  ],
+  "severity_levels": {
+    "mild": "Minor sunburn, mild pigmentation changes, or early fine wrinkles with no permanent damage.",
+    "moderate": "Noticeable wrinkles, uneven pigmentation, actinic keratoses, rough skin texture, and moderate photoaging.",
+    "severe": "Extensive photoaging, multiple precancerous lesions, severe skin texture changes, or development of skin cancers requiring medical treatment."
+  },
+  "precautions": [
+    "Apply broad-spectrum sunscreen (SPF 30 or higher) daily.",
+    "Reapply sunscreen every 2 hours and after swimming or sweating.",
+    "Avoid direct sun exposure during peak UV hours (10 AM to 4 PM).",
+    "Wear protective clothing, wide-brimmed hats, and UV-blocking sunglasses.",
+    "Avoid tanning beds.",
+    "Perform regular skin self-examinations.",
+    "Schedule routine skin examinations if at increased risk for skin cancer."
+  ],
+  "home_care": [
+    "Keep the skin well moisturized.",
+    "Drink plenty of water after sun exposure.",
+    "Apply cool compresses for mild sunburn.",
+    "Use aloe vera or fragrance-free moisturizers for symptomatic relief.",
+    "Avoid further sun exposure until the skin has healed.",
+    "Continue daily sun protection even after symptoms improve."
+  ],
+  "when_to_consult_doctor": [
+    "Severe sunburn with blistering or extensive pain.",
+    "Signs of heat illness or dehydration.",
+    "Persistent non-healing skin lesions.",
+    "Development of rough, scaly patches suggestive of actinic keratosis.",
+    "New or changing moles.",
+    "Bleeding, ulcerated, or rapidly growing skin lesions.",
+    "Signs of skin cancer."
+  ],
+  "treatment_options": [
+    "Broad-spectrum sunscreen and sun avoidance",
+    "Moisturizers and emollients",
+    "Topical retinoids for photoaging",
+    "Topical antioxidants",
+    "Cryotherapy for actinic keratoses",
+    "Topical 5-fluorouracil or imiquimod for precancerous lesions",
+    "Chemical peels",
+    "Laser resurfacing",
+    "Photodynamic therapy",
+    "Surgical treatment for skin cancers when indicated"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Chronic sunlight damage increases the risk of skin cancer. Any new, changing, non-healing, bleeding, or suspicious skin lesion should be evaluated promptly by a qualified healthcare professional or dermatologist."
+},
+
+{
+  "name": "Tinea (Dermatophytosis / Ringworm)",
+  "description": "Tinea, also known as dermatophytosis or ringworm, is a common contagious fungal infection of the skin, hair, or nails caused by dermatophyte fungi, primarily Trichophyton, Microsporum, and Epidermophyton species. Despite its name, ringworm is not caused by a worm. The infection is classified according to the body site affected, such as tinea corporis (body), tinea pedis (feet), tinea cruris (groin), tinea capitis (scalp), tinea manuum (hands), tinea faciei (face), and tinea unguium (nails).",
+  "symptoms": [
+    "Ring-shaped rash with a raised, scaly border",
+    "Central clearing within the rash",
+    "Red, pink, or brown patches",
+    "Itching",
+    "Burning sensation",
+    "Dry, flaky, or scaly skin",
+    "Cracked skin",
+    "Blisters (especially in athlete's foot)",
+    "Hair loss or broken hairs (tinea capitis)",
+    "Thickened, brittle, or discolored nails (tinea unguium)",
+    "Inflammation and tenderness in severe cases"
+  ],
+  "possible_causes": [
+    "Infection with dermatophyte fungi",
+    "Direct skin-to-skin contact with an infected person",
+    "Contact with infected animals",
+    "Contact with contaminated surfaces or objects",
+    "Walking barefoot in public showers, locker rooms, or swimming pools",
+    "Warm and humid environments"
+  ],
+  "risk_factors": [
+    "Hot and humid climate",
+    "Excessive sweating",
+    "Poor hygiene",
+    "Wearing tight or occlusive clothing",
+    "Sharing towels, clothing, combs, or footwear",
+    "Participation in contact sports",
+    "Diabetes mellitus",
+    "Weakened immune system",
+    "Living with an infected person or pet"
+  ],
+  "common_locations": [
+    "Body (tinea corporis)",
+    "Feet (tinea pedis)",
+    "Groin (tinea cruris)",
+    "Scalp (tinea capitis)",
+    "Face (tinea faciei)",
+    "Hands (tinea manuum)",
+    "Beard area (tinea barbae)",
+    "Nails (tinea unguium)"
+  ],
+  "severity_levels": {
+    "mild": "Small, localized fungal rash with mild itching and limited skin involvement.",
+    "moderate": "Multiple or enlarging lesions with persistent itching, scaling, or spread to adjacent areas requiring medical treatment.",
+    "severe": "Extensive infection, scalp or nail involvement, secondary bacterial infection, inflammatory kerion, or infection in immunocompromised individuals."
+  },
+  "precautions": [
+    "Keep the affected area clean and dry.",
+    "Avoid sharing personal items such as towels, clothing, shoes, and combs.",
+    "Wear breathable clothing and footwear.",
+    "Change socks and underwear daily.",
+    "Wear footwear in public showers and locker rooms.",
+    "Treat infected pets if advised by a veterinarian.",
+    "Wash hands after touching infected areas."
+  ],
+  "home_care": [
+    "Keep the skin dry, especially in skin folds.",
+    "Use over-the-counter antifungal creams for mild infections as directed.",
+    "Wash clothing, towels, and bedding regularly.",
+    "Avoid scratching the rash.",
+    "Complete the full course of antifungal treatment even if symptoms improve.",
+    "Maintain good personal hygiene."
+  ],
+  "when_to_consult_doctor": [
+    "The rash does not improve after 2 to 4 weeks of treatment.",
+    "The infection spreads rapidly.",
+    "Scalp or nail involvement is suspected.",
+    "Signs of bacterial infection such as pus, swelling, warmth, or fever develop.",
+    "Severe pain or inflammation occurs.",
+    "The patient is immunocompromised or has diabetes.",
+    "The diagnosis is uncertain."
+  ],
+  "treatment_options": [
+    "Topical antifungal creams",
+    "Topical antifungal gels, sprays, or powders",
+    "Oral antifungal medications for extensive, scalp, or nail infections",
+    "Medicated antifungal shampoos (for scalp infections as adjunct therapy)",
+    "Treatment of secondary bacterial infection if present",
+    "Good hygiene and moisture control"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and should not replace professional medical advice, diagnosis, or treatment. Persistent, extensive, recurrent, scalp, or nail fungal infections should be evaluated by a qualified healthcare professional for accurate diagnosis and appropriate therapy."
+},
+
+{
+  "name": "Vasculitis",
+  "description": "Vasculitis is a group of disorders characterized by inflammation of blood vessels, including arteries, veins, and capillaries. The inflammation can cause the blood vessel walls to thicken, weaken, narrow, or scar, reducing blood flow and potentially leading to tissue or organ damage. Vasculitis may affect only the skin (cutaneous vasculitis) or involve multiple organs such as the kidneys, lungs, nerves, and gastrointestinal tract. It can occur as a primary autoimmune disease or secondary to infections, medications, or other underlying conditions.",
+  "symptoms": [
+    "Red or purple spots (purpura)",
+    "Palpable purpura (raised purple lesions)",
+    "Petechiae (small red or purple dots)",
+    "Skin rash",
+    "Painful skin nodules",
+    "Skin ulcers",
+    "Blisters",
+    "Livedo reticularis (lace-like skin discoloration)",
+    "Swelling",
+    "Fever",
+    "Fatigue",
+    "Weight loss",
+    "Joint pain (arthralgia)",
+    "Muscle pain (myalgia)",
+    "Numbness or tingling",
+    "Abdominal pain",
+    "Blood in urine or stool (in systemic disease)"
+  ],
+  "possible_causes": [
+    "Autoimmune disorders",
+    "Abnormal immune system response",
+    "Bacterial infections",
+    "Viral infections (e.g., hepatitis B, hepatitis C)",
+    "Certain medications",
+    "Connective tissue diseases",
+    "Blood cancers",
+    "Unknown (idiopathic) causes"
+  ],
+  "risk_factors": [
+    "Personal history of autoimmune disease",
+    "Chronic infections",
+    "Certain medications",
+    "Increasing age (varies by vasculitis type)",
+    "Family history of autoimmune disorders",
+    "Smoking (for some forms)",
+    "Underlying malignancy"
+  ],
+  "common_locations": [
+    "Lower legs",
+    "Feet",
+    "Arms",
+    "Hands",
+    "Buttocks",
+    "Skin",
+    "Kidneys",
+    "Lungs",
+    "Peripheral nerves",
+    "Joints",
+    "Gastrointestinal tract",
+    "Eyes"
+  ],
+  "severity_levels": {
+    "mild": "Limited cutaneous vasculitis with localized rash or purpura and no internal organ involvement.",
+    "moderate": "More extensive skin disease or mild involvement of one or more organs requiring systemic treatment.",
+    "severe": "Rapidly progressive vasculitis with significant organ involvement such as the kidneys, lungs, nervous system, heart, or gastrointestinal tract, which can be life-threatening."
+  },
+  "precautions": [
+    "Take prescribed medications exactly as directed.",
+    "Attend regular medical follow-up appointments.",
+    "Avoid smoking.",
+    "Monitor for new or worsening symptoms.",
+    "Treat underlying infections promptly.",
+    "Maintain a healthy lifestyle and balanced diet.",
+    "Avoid medications known to trigger vasculitis if previously identified."
+  ],
+  "home_care": [
+    "Get adequate rest during flare-ups.",
+    "Elevate affected limbs if swelling is present.",
+    "Protect skin ulcers from injury and infection.",
+    "Maintain good skin hygiene.",
+    "Follow the prescribed treatment plan.",
+    "Stay hydrated and eat a balanced diet."
+  ],
+  "when_to_consult_doctor": [
+    "Persistent or worsening rash.",
+    "Development of painful skin ulcers.",
+    "Fever, unexplained weight loss, or severe fatigue.",
+    "Blood in urine or stool.",
+    "Shortness of breath or chest pain.",
+    "Severe abdominal pain.",
+    "Numbness, weakness, or loss of sensation.",
+    "Swelling or decreased kidney function.",
+    "Signs of infection while receiving immunosuppressive therapy."
+  ],
+  "treatment_options": [
+    "Corticosteroids",
+    "Immunosuppressive medications",
+    "Biologic therapies",
+    "Treatment of underlying infections",
+    "Discontinuation of causative medications",
+    "Pain management",
+    "Wound care for skin ulcers",
+    "Plasma exchange (plasmapheresis) in selected severe cases",
+    "Supportive care for affected organs"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Vasculitis can range from a mild skin-limited condition to a life-threatening systemic disease. Prompt medical evaluation is recommended for persistent purpura, skin ulcers, or symptoms suggesting internal organ involvement."
+},
+
+{
+  "name": "Vitiligo",
+  "description": "Vitiligo is a chronic autoimmune skin disorder characterized by the progressive loss of melanocytes, the pigment-producing cells of the skin, resulting in well-defined depigmented (white) patches. It is not contagious or infectious and can affect people of all ages and skin types. Vitiligo may remain localized or become widespread and can involve the skin, hair, and mucous membranes.",
+  "symptoms": [
+    "Well-defined white or depigmented patches of skin",
+    "Progressive enlargement of depigmented areas",
+    "Premature whitening or graying of scalp hair, eyebrows, eyelashes, or beard",
+    "Loss of pigment in the lips or inside the mouth",
+    "Loss of pigment in the genital area",
+    "Symmetrical distribution of patches (common)",
+    "Increased sensitivity to sunlight in affected areas",
+    "No pain or itching in most cases (occasionally mild itching)"
+  ],
+  "possible_causes": [
+    "Autoimmune destruction of melanocytes",
+    "Genetic predisposition",
+    "Family history of vitiligo",
+    "Oxidative stress",
+    "Neural mechanisms",
+    "Skin injury (Koebner phenomenon)",
+    "Emotional or physical stress may trigger onset or progression in susceptible individuals"
+  ],
+  "risk_factors": [
+    "Family history of vitiligo",
+    "Personal or family history of autoimmune diseases",
+    "Autoimmune thyroid disease",
+    "Type 1 diabetes mellitus",
+    "Pernicious anemia",
+    "Addison disease",
+    "Alopecia areata"
+  ],
+  "common_locations": [
+    "Face",
+    "Around the eyes",
+    "Around the mouth",
+    "Hands",
+    "Fingers",
+    "Wrists",
+    "Forearms",
+    "Elbows",
+    "Knees",
+    "Feet",
+    "Ankles",
+    "Armpits",
+    "Groin",
+    "Genital area",
+    "Scalp",
+    "Lips",
+    "Areas exposed to friction or trauma"
+  ],
+  "severity_levels": {
+    "mild": "A few small, localized depigmented patches affecting a limited area of the body.",
+    "moderate": "Multiple or enlarging patches involving several body regions with noticeable cosmetic impact.",
+    "severe": "Extensive or generalized depigmentation affecting large areas of the body, hair, or mucous membranes, with significant psychosocial impact."
+  },
+  "precautions": [
+    "Protect depigmented skin from sun exposure using broad-spectrum sunscreen (SPF 30 or higher).",
+    "Wear protective clothing when outdoors.",
+    "Avoid tanning beds.",
+    "Minimize skin trauma to reduce new lesion formation (Koebner phenomenon).",
+    "Perform regular skin examinations.",
+    "Seek evaluation for associated autoimmune conditions if recommended."
+  ],
+  "home_care": [
+    "Apply sunscreen daily to exposed skin.",
+    "Use moisturizers to maintain skin hydration.",
+    "Consider cosmetic camouflage products if desired.",
+    "Avoid skin injuries such as cuts, burns, or excessive friction.",
+    "Follow prescribed treatment consistently.",
+    "Maintain emotional well-being and seek support if the condition affects self-esteem."
+  ],
+  "when_to_consult_doctor": [
+    "New white patches appear on the skin.",
+    "Existing patches enlarge rapidly.",
+    "Hair becomes prematurely white in affected areas.",
+    "Depigmentation involves the eyes or mucous membranes.",
+    "Symptoms are associated with signs of another autoimmune disease.",
+    "The condition causes emotional distress or significantly affects quality of life."
+  ],
+  "treatment_options": [
+    "Topical corticosteroids",
+    "Topical calcineurin inhibitors",
+    "Topical Janus kinase (JAK) inhibitors (selected patients)",
+    "Narrowband ultraviolet B (NB-UVB) phototherapy",
+    "Excimer laser therapy",
+    "Systemic corticosteroids for rapidly progressive disease (selected cases)",
+    "Surgical grafting procedures for stable vitiligo",
+    "Depigmentation therapy for extensive disease (selected patients)",
+    "Cosmetic camouflage products"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Vitiligo is a chronic autoimmune condition that requires individualized management. Consult a qualified healthcare professional for diagnosis, evaluation of associated autoimmune diseases, and appropriate treatment options."
+},
+
+{
+  "name": "Warts (Verrucae)",
+  "description": "Warts are common benign (non-cancerous) skin growths caused by infection with the human papillomavirus (HPV). They develop when the virus infects the outer layer of the skin through small cuts or abrasions, causing excessive growth of keratin. Warts are contagious and can spread through direct skin-to-skin contact or contact with contaminated surfaces. Different types include common warts (verruca vulgaris), plantar warts, flat warts, filiform warts, and periungual warts.",
+  "symptoms": [
+    "Small, rough, raised skin growth",
+    "Flesh-colored, white, pink, tan, or gray lesion",
+    "Rough or cauliflower-like surface",
+    "Tiny black dots (clotted blood vessels)",
+    "Painless in most cases",
+    "Pain or tenderness when pressure is applied (especially plantar warts)",
+    "Flat-topped lesions (flat warts)",
+    "Thread-like projections (filiform warts)",
+    "Thickened skin on weight-bearing areas",
+    "Single or multiple lesions"
+  ],
+  "possible_causes": [
+    "Infection with human papillomavirus (HPV)",
+    "Direct skin-to-skin contact with an infected person",
+    "Contact with contaminated surfaces or objects",
+    "Autoinoculation (spreading the virus by scratching or shaving over a wart)",
+    "Virus entering through small cuts or damaged skin"
+  ],
+  "risk_factors": [
+    "Children and adolescents",
+    "Weakened immune system",
+    "Frequent skin injuries or cuts",
+    "Walking barefoot in public showers, locker rooms, or swimming pools",
+    "Close contact with someone who has warts",
+    "Nail biting or cuticle picking"
+  ],
+  "common_locations": [
+    "Hands",
+    "Fingers",
+    "Palms",
+    "Feet (plantar surface)",
+    "Toes",
+    "Face",
+    "Neck",
+    "Around fingernails and toenails",
+    "Knees",
+    "Elbows"
+  ],
+  "severity_levels": {
+    "mild": "One or a few small, painless warts with minimal cosmetic concern.",
+    "moderate": "Multiple or enlarging warts causing discomfort, cosmetic concerns, or interference with daily activities.",
+    "severe": "Numerous, recurrent, painful, bleeding, rapidly spreading, or treatment-resistant warts, especially in immunocompromised individuals."
+  },
+  "precautions": [
+    "Avoid picking or scratching warts.",
+    "Wash hands after touching a wart.",
+    "Do not share towels, razors, nail clippers, or footwear.",
+    "Keep warts covered when possible.",
+    "Wear footwear in public showers and swimming pool areas.",
+    "Avoid shaving over warts to prevent spread."
+  ],
+  "home_care": [
+    "Keep the affected area clean and dry.",
+    "Use over-the-counter salicylic acid preparations as directed.",
+    "Cover plantar warts with protective padding if painful.",
+    "Avoid sharing personal items.",
+    "Do not attempt to cut or remove warts at home.",
+    "Be consistent with treatment, as clearance may take weeks to months."
+  ],
+  "when_to_consult_doctor": [
+    "The diagnosis is uncertain.",
+    "The wart is painful, bleeding, or infected.",
+    "The wart grows rapidly or changes in appearance.",
+    "Multiple warts develop or spread quickly.",
+    "Warts persist despite home treatment.",
+    "The patient has diabetes, poor circulation, or a weakened immune system.",
+    "Warts occur on the face, genitals, or under the nails."
+  ],
+  "treatment_options": [
+    "Observation (many warts resolve spontaneously)",
+    "Topical salicylic acid",
+    "Cryotherapy (liquid nitrogen)",
+    "Cantharidin application",
+    "Electrosurgery and curettage",
+    "Laser therapy",
+    "Chemical treatments (e.g., trichloroacetic acid for selected cases)",
+    "Immunotherapy",
+    "Surgical excision (selected cases)"
+  ],
+  "medical_disclaimer": "This information is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Warts are generally harmless but should be evaluated by a healthcare professional if they are painful, persistent, rapidly changing, recurrent, or occur in high-risk individuals."
+}
 ]

@@ -27,10 +27,8 @@ def preprocess_image_tensor(img_tensor: tf.Tensor, img_size: int = 380) -> tf.Te
     # 2. Resize image using bilinear interpolation with antialiasing
     img_resized = tf.image.resize(img_tensor, [img_size, img_size], antialias=True)
     
-    # 3. Normalize pixel values to range [0.0, 1.0]
-    img_normalized = img_resized / 255.0
-    
-    return img_normalized
+    # 3. EfficientNet-B4 internal graph expects raw 0-255 float32 inputs
+    return img_resized
 
 
 def load_and_preprocess_image(image_path: str, img_size: int = 380) -> tf.Tensor:

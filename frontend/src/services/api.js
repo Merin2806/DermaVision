@@ -19,4 +19,17 @@ api.interceptors.request.use((config) => {
   return Promise.reject(error);
 });
 
+// Set up a response interceptor to unwrap data from our standard apiResponse
+api.interceptors.response.use((response) => {
+  if (response.data && response.data.success === true && response.data.hasOwnProperty('data')) {
+    return {
+      ...response,
+      data: response.data.data
+    };
+  }
+  return response;
+}, (error) => {
+  return Promise.reject(error);
+});
+
 export default api;

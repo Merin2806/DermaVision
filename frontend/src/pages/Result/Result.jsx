@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ChevronRight, FileText, ArrowLeft, Image as ImageIcon } from 'lucide-react';
+import { CheckCircle2, ChevronRight, FileText, ArrowLeft, Image as ImageIcon, AlertTriangle, Stethoscope, Activity } from 'lucide-react';
 import ConditionCard from '../../components/Cards/ConditionCard';
 import SeverityCard from '../../components/Cards/SeverityCard';
 import DisclaimerCard from '../../components/Cards/DisclaimerCard';
+import PipelineCards from '../../components/Cards/PipelineCards';
 
 const Result = ({ currentScan, onReset }) => {
   const navigate = useNavigate();
 
-  // If no scan exists, bounce back to screen
   useEffect(() => {
     if (!currentScan) {
       navigate('/screen');
@@ -41,7 +41,7 @@ const Result = ({ currentScan, onReset }) => {
           <CheckCircle2 className="w-8 h-8" />
         </motion.div>
         <div>
-          <h1 className="text-4xl font-serif text-accent font-black tracking-tight">Screening Complete</h1>
+          <h1 className="text-4xl font-serif text-accent font-black tracking-tight">AI Screening Report</h1>
           <p className="text-slate-500 text-sm mt-1">
             Scan completed on {new Date(currentScan.date).toLocaleDateString()} at {new Date(currentScan.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </p>
@@ -58,20 +58,36 @@ const Result = ({ currentScan, onReset }) => {
             confidence={currentScan.confidence} 
           />
 
-          {/* 2. Recommendation card */}
+          {/* 2. Disease Description Overview if present */}
+          {currentScan.description && (
+            <div className="glass-card rounded-custom p-6 shadow-sm border border-slate-100 space-y-2">
+              <h3 className="text-base font-bold text-accent font-serif flex items-center">
+                <Stethoscope className="w-4 h-4 mr-2 text-primary" />
+                Clinical Profile & Overview
+              </h3>
+              <p className="text-slate-600 text-xs leading-relaxed">
+                {currentScan.description}
+              </p>
+            </div>
+          )}
+
+          {/* 3. Multi-Model AI Pipeline Cards (Grad-CAM, Lesion Mask, Body Location) */}
+          <PipelineCards currentScan={currentScan} />
+
+          {/* 4. Clinical Evidence Recommendations */}
           <div className="glass-card rounded-custom p-8 shadow-md border border-slate-100">
             <h3 className="text-xl font-bold text-accent font-serif mb-4 flex items-center">
               <FileText className="w-5 h-5 mr-2 text-primary" />
-              <span>Evidence-Guided Recommendations</span>
+              <span>Evidence-Guided Precautions & Home Care</span>
             </h3>
             
-            <ul className="space-y-4 text-slate-600 text-sm">
-              {currentScan.recommendations.map((rec, index) => (
+            <ul className="space-y-3.5 text-slate-600 text-sm mb-6">
+              {(currentScan.recommendations || []).map((rec, index) => (
                 <motion.li 
                   key={index}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 * index }}
+                  transition={{ delay: 0.08 * index }}
                   className="flex items-start space-x-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100"
                 >
                   <span className="w-6 h-6 rounded-full bg-blue-50 text-primary flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">
@@ -81,6 +97,21 @@ const Result = ({ currentScan, onReset }) => {
                 </motion.li>
               ))}
             </ul>
+
+            {/* When to consult doctor section */}
+            {currentScan.consultDoctor && currentScan.consultDoctor.length > 0 && (
+              <div className="p-4 bg-amber-50/70 border border-amber-200/70 rounded-2xl space-y-2">
+                <span className="text-xs font-bold text-amber-900 flex items-center">
+                  <AlertTriangle className="w-4 h-4 mr-1.5 text-amber-600" />
+                  When to Seek Professional Dermatological Evaluation:
+                </span>
+                <ul className="list-disc list-inside text-xs text-amber-800 space-y-1 pl-1">
+                  {currentScan.consultDoctor.slice(0, 4).map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
@@ -91,13 +122,13 @@ const Result = ({ currentScan, onReset }) => {
             <div className="glass-card rounded-custom p-4 shadow-sm border border-slate-100 space-y-2.5">
               <span className="flex items-center text-xs font-bold text-accent/70 uppercase tracking-wider">
                 <ImageIcon className="w-3.5 h-3.5 text-primary mr-1" />
-                Analyzed Image
+                Uploaded Scan
               </span>
-              <div className="rounded-xl overflow-hidden border border-slate-150 bg-slate-50 max-h-[200px] flex items-center justify-center">
+              <div className="rounded-xl overflow-hidden border border-slate-150 bg-slate-50 max-h-[220px] flex items-center justify-center">
                 <img 
                   src={currentScan.imageUrl} 
                   alt="Scanned Region" 
-                  className="max-h-[200px] w-full object-cover"
+                  className="max-h-[220px] w-full object-cover"
                 />
               </div>
             </div>
