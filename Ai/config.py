@@ -43,10 +43,10 @@ class Config:
 
     # Hyperparameters
     BATCH_SIZE: int = 16
-    EPOCHS_STAGE1: int = 10           # Head classifier training
-    EPOCHS_STAGE2: int = 20           # Backbone fine-tuning
+    EPOCHS_STAGE1: int = 15           # Head classifier training
+    EPOCHS_STAGE2: int = 50           # Backbone fine-tuning
     LEARNING_RATE_STAGE1: float = 1e-3
-    LEARNING_RATE_STAGE2: float = 1e-4
+    LEARNING_RATE_STAGE2: float = 5e-5  # Lower LR for stable fine-tuning
     DROPOUT_RATE: float = 0.4
 
     # Future-Ready Placeholder Flags (not to be implemented yet)

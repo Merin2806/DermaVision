@@ -76,19 +76,32 @@ const analyzeImage = async (req, res, next) => {
         aiResult = await fastResp.json();
       }
     } catch (fastApiErr) {
-      console.log('FastAPI service unreachable, falling back to direct Python script invocation...');
+      console.warn('FastAPI service unreachable:', fastApiErr.message);
+      console.warn('>>> Make sure the FastAPI server is running: cd Ai && python app.py');
     }
 
     if (!aiResult) {
       // Direct Python script execution fallback
-      aiResult = await runPythonPrediction(tempFilePath);
+      console.log('Attempting direct Python script fallback...');
+      try {
+        aiResult = await runPythonPrediction(tempFilePath);
+        console.log('Python fallback succeeded:', aiResult?.disease);
+      } catch (pyErr) {
+        console.error('Python script fallback ALSO failed:', pyErr.message);
+        console.error('>>> Prediction completely failed. Check that Ai/app.py is running and the model exists.');
+        throw new Error('AI prediction failed: Both FastAPI and Python fallback are unavailable.');
+      }
     }
 
     const condition = aiResult.disease || 'Skin Lesion';
     const confidence = aiResult.confidence || 92.5;
 
     // 3. Retrieve matching clinical guidance from diseases.json
+    console.log(`Looking up disease info for: "${condition}"`);
     const diseaseInfo = await getRecommendation({ condition });
+    if (!diseaseInfo || diseaseInfo.name !== condition) {
+      console.warn(`No exact match found in diseases.json for "${condition}". Using closest match: "${diseaseInfo?.name}"`);
+    }
 
     const recommendations = (diseaseInfo && diseaseInfo.precautions) 
       ? diseaseInfo.precautions.slice(0, 5)

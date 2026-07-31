@@ -54,7 +54,7 @@ def evaluate_model() -> None:
         raise FileNotFoundError("No trained model checkpoints found in models directory.")
         
     logger.info(f"Loading trained weights from {best_model_path}...")
-    model = tf.keras.models.load_model(str(best_model_path))
+    model = tf.keras.models.load_model(str(best_model_path), compile=False)
     
     # 3. Accumulate test set predictions and true labels
     logger.info("Running evaluation predictions on test dataset...")

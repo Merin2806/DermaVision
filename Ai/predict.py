@@ -60,7 +60,7 @@ class DiseasePredictor:
             raise FileNotFoundError(f"Model file not found at: {selected_path}")
             
         logger.info(f"Loading Keras model from {selected_path}...")
-        self.model = tf.keras.models.load_model(str(selected_path))
+        self.model = tf.keras.models.load_model(str(selected_path), compile=False)
         logger.info("Model loaded successfully. Ready for inference.")
 
     def generate_gradcam(self, img_batch: tf.Tensor, predicted_idx: int, orig_bgr: np.ndarray) -> str:
@@ -275,6 +275,19 @@ class DiseasePredictor:
         predictions = self.model.predict(img_batch, verbose=0)[0]
         predicted_idx = int(np.argmax(predictions))
         confidence_prob = float(predictions[predicted_idx])
+        
+        # --- DIAGNOSTIC: Log top-5 predictions to help debug always-acne issue ---
+        top5_indices = np.argsort(predictions)[::-1][:5]
+        logger.info("=== PREDICTION DIAGNOSTIC ===")
+        logger.info(f"Image: {image_path}")
+        logger.info(f"Input tensor shape: {img_tensor.shape}, dtype: {img_tensor.dtype}")
+        logger.info(f"Input pixel range: min={float(tf.reduce_min(img_tensor)):.2f}, max={float(tf.reduce_max(img_tensor)):.2f}")
+        logger.info("Top-5 predictions:")
+        for rank, idx in enumerate(top5_indices):
+            class_name = self.idx_to_class.get(int(idx), "Unknown")
+            logger.info(f"  #{rank+1}: [{idx}] {class_name} => {predictions[idx]*100:.2f}%")
+        logger.info(f"Winner: [{predicted_idx}] {self.idx_to_class.get(predicted_idx, 'Unknown')} @ {confidence_prob*100:.2f}%")
+        logger.info("===============================")
         
         # Calculate top disease class name
         disease_name = self.idx_to_class.get(predicted_idx, "Skin Lesion")

@@ -54,9 +54,9 @@ def get_augmentation_pipeline() -> tf.keras.Sequential:
         # 4. Random Contrast adjustment (factor=0.1 represents [1 - 0.1, 1 + 0.1] scaling)
         layers.RandomContrast(factor=0.1, name="random_contrast"),
         
-        # 5. Random Brightness adjustment (factor=0.1 represents brightness delta up to 10%)
-        # Specifying value_range=(0.0, 1.0) because images are normalized to [0, 1] range
-        layers.RandomBrightness(factor=0.1, value_range=(0.0, 1.0), name="random_brightness")
+        # 5. Random Brightness adjustment
+        # value_range must match the actual image pixel range (0-255 since EfficientNet takes raw pixels)
+        layers.RandomBrightness(factor=0.1, value_range=(0.0, 255.0), name="random_brightness")
     ], name="derma_augmentation_pipeline")
     
     logger.info("Augmentation pipeline successfully constructed.")
