@@ -12,33 +12,6 @@ const About = () => {
     { num: '6', title: 'Report Delivery', desc: 'Structured documentation rendering with customized evidence suggestions.' }
   ];
 
-  const team = [
-    {
-      name: 'Merin Joys',
-      role: 'Full Stack Developer',
-      initials: 'MJ',
-      color: 'bg-blue-100 text-primary'
-    },
-    {
-      name: 'Riya Mokale',
-      role: 'AI/ML Engineer',
-      initials: 'RM',
-      color: 'bg-emerald-100 text-emerald-600'
-    },
-    {
-      name: 'Snehal Mascarenhas',
-      role: 'Frontend Developer',
-      initials: 'SM',
-      color: 'bg-indigo-100 text-indigo-650'
-    },
-    {
-      name: 'Justin Sunil',
-      role: 'Backend Developer',
-      initials: 'JS',
-      color: 'bg-purple-100 text-purple-650'
-    }
-  ];
-
   return (
     <motion.div 
       initial={{ opacity: 0, y: 15 }}
@@ -111,31 +84,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* 4. Team Cards */}
-      <div className="space-y-8">
-        <div className="text-center max-w-xl mx-auto space-y-2">
-          <h2 className="text-3xl font-serif text-accent font-bold">Clinical & AI Advisory</h2>
-          <p className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Meet the team</p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, idx) => (
-            <div 
-              key={idx}
-              className="glass-card rounded-custom p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col items-center text-center space-y-4"
-            >
-              {/* Initials Avatar */}
-              <div className={`w-16 h-16 rounded-full flex items-center justify-center font-bold text-lg shadow-sm border border-white ${member.color}`}>
-                {member.initials}
-              </div>
-              <div>
-                <h4 className="text-lg font-bold font-serif text-accent">{member.name}</h4>
-                <p className="text-xs text-primary font-semibold tracking-wide uppercase mt-0.5">{member.role}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </motion.div>
   );
 };
