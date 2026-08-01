@@ -1,33 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import logoImg from '../../assets/logo/logo.png';
 import { Sparkles } from 'lucide-react';
 
 const Loading = () => {
-  const [activeLogIndex, setActiveLogIndex] = useState(0);
-  
-  const pipelineLogs = [
-    'Initializing neural network layers...',
-    'Performing histogram equalization and color correction...',
-    'Extracting region-of-interest bounding coordinates...',
-    'Passing features to MobileNetV2 and EfficientNetB0 models...',
-    'Evaluating confidence ratios against clinical database metrics...',
-    'Classifying structural borders and lesion severity scales...',
-    'Formatting diagnostic recommendations report...'
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveLogIndex((prev) => {
-        if (prev < pipelineLogs.length - 1) {
-          return prev + 1;
-        }
-        return prev;
-      });
-    }, 280);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="fixed inset-0 z-50 bg-[#F7FBFF] flex flex-col items-center justify-center p-6">
@@ -82,28 +58,6 @@ const Loading = () => {
             animate={{ width: '95%' }}
             transition={{ duration: 1.8, ease: 'easeInOut' }}
           />
-        </div>
-
-        {/* Sequential Logs Terminal */}
-        <div className="w-full bg-slate-900/95 text-slate-300 font-mono text-[11px] p-5 rounded-custom text-left shadow-lg border border-slate-800 space-y-2.5 h-[160px] overflow-y-auto flex flex-col justify-end">
-          {pipelineLogs.slice(0, activeLogIndex + 1).map((log, idx) => {
-            const isLast = idx === activeLogIndex;
-            return (
-              <motion.div 
-                key={idx} 
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2 }}
-                className={`flex items-start ${isLast ? 'text-primary' : 'text-slate-400'}`}
-              >
-                <span className="text-primary mr-2 select-none shrink-0">&gt;</span>
-                <span className="leading-relaxed">{log}</span>
-              </motion.div>
-            );
-          })}
-          {activeLogIndex < pipelineLogs.length - 1 && (
-            <div className="w-1.5 h-3 bg-primary animate-pulse ml-4 mt-0.5 inline-block shrink-0"></div>
-          )}
         </div>
       </div>
     </div>
