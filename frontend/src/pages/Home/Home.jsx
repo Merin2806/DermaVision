@@ -141,7 +141,7 @@ const Home = () => {
       </section>
 
       {/* 2. Feature Pills */}
-      <section className="bg-white/40 py-8 border-y border-blue-50/50 backdrop-blur-sm">
+      <section className="bg-white/40 py-2 border-y border-blue-50/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             {featurePills.map((pill, idx) => {
@@ -163,7 +163,7 @@ const Home = () => {
       </section>
 
       {/* 3. How It Works Timeline */}
-      <section className="max-w-7xl mx-auto px-6 py-24 lg:px-8">
+      <section className="max-w-7xl mx-auto px-6 pt-16 pb-10 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <h2 className="text-3xl md:text-5xl font-serif text-accent font-black">How It Works</h2>
           <p className="text-slate-500 text-base leading-relaxed">
@@ -198,7 +198,7 @@ const Home = () => {
       </section>
 
       {/* 4. Conditions Section */}
-      <section className="bg-white/60 py-24 border-y border-slate-100/50 backdrop-blur-sm">
+      <section className="bg-white/60 pt-10 pb-16 border-y border-slate-100/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <h2 className="text-3xl md:text-5xl font-serif text-accent font-black">Supported Conditions</h2>

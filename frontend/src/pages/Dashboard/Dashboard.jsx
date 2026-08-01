@@ -26,6 +26,7 @@ const Dashboard = ({ user, history, onDeleteScan, onSelectScan }) => {
   }, {});
 
   const handleViewScan = (scan) => {
+    console.log(scan);
     onSelectScan(scan);
     navigate('/result');
   };

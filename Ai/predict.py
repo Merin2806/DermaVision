@@ -192,32 +192,44 @@ class DiseasePredictor:
 
     def detect_body_part(self, disease_name: str, img_shape: Tuple[int, int]) -> str:
         """
-        Infers spatial body location based on lesion aspect ratio and disease location profiles.
+        Infers spatial body location based on clinical disease location profiles and image aspect ratio.
         """
+        disease_lower = disease_name.lower()
         h, w = img_shape
-        aspect_ratio = w / float(h)
+        aspect = w / float(h)
 
-        # Standard disease location preferences
-        locations_map = {
-            "Acne": ["Face / Forehead", "Cheeks & Chin", "Upper Back / Chest"],
-            "Eczema": ["Flexoral Elbows / Knees", "Forearm / Hand", "Neck & Scalp"],
-            "Psoriasis": ["Outer Elbow / Knee", "Lower Back & Scalp", "Shins & Calves"],
-            "Melanoma": ["Upper Back", "Right Hand / Arm", "Lower Leg / Foot"],
-            "Basal Cell": ["Nose & Face", "Ears & Neck", "Shoulders"],
-            "Tinea": ["Torso / Chest", "Inner Thigh / Groin", "Feet & Toes"],
-            "Vitiligo": ["Hands & Wrists", "Face / Around Lips", "Arms & Knees"]
-        }
+        if "acne" in disease_lower or "rosacea" in disease_lower:
+            return "Face / Forehead" if aspect < 1.1 else "Cheeks & Chin"
+        elif "alopecia" in disease_lower or "scalp" in disease_lower:
+            return "Scalp & Hairline"
+        elif "wart" in disease_lower or "verruca" in disease_lower:
+            return "Hands & Fingers"
+        elif "vitiligo" in disease_lower:
+            return "Hands & Wrists"
+        elif "eczema" in disease_lower or "dermatitis" in disease_lower:
+            return "Hands & Arms" if aspect > 0.9 else "Neck & Flexures"
+        elif "psoriasis" in disease_lower:
+            return "Elbows & Knees"
+        elif "tinea" in disease_lower or "ringworm" in disease_lower:
+            return "Torso & Chest"
+        elif "scabies" in disease_lower:
+            return "Wrist & Fingers"
+        elif "basal" in disease_lower or "squamous" in disease_lower or "actinic" in disease_lower:
+            return "Face & Nose"
+        elif "melanoma" in disease_lower or "nevus" in disease_lower:
+            return "Back & Torso"
+        elif "herpes" in disease_lower:
+            return "Lips & Mouth Area"
+        elif "candidiasis" in disease_lower:
+            return "Skin Folds & Arms"
+        else:
+            if aspect > 1.3:
+                return "Torso & Back"
+            elif aspect < 0.8:
+                return "Face & Neck"
+            else:
+                return "Forearm & Hand"
 
-        # Match location options
-        options = ["Right Arm / Hand", "Forearm", "Face & Neck", "Chest & Torso", "Lower Leg", "Upper Back", "Scalp"]
-        for key, vals in locations_map.items():
-            if key.lower() in disease_name.lower():
-                options = vals
-                break
-
-        # Pick consistent index from shape & disease length
-        idx = (h + w + len(disease_name)) % len(options)
-        return options[idx]
 
     def estimate_severity(self, confidence: float, affected_area_num: float, disease_name: str) -> Dict[str, Any]:
         """

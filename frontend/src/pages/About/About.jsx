@@ -170,19 +170,19 @@ const About = () => {
     {
       number: '86.77%',
       title: 'Average Detection Accuracy',
-      desc: 'High-fidelity deep learning predictions trained on verified medical data.',
+      desc: 'Achieved through clinically validated datasets and advanced deep learning classification techniques.',
       icon: Award
     },
     {
-      number: '<30 Seconds',
+      number: '< 30 Sec',
       title: 'Analysis Time',
-      desc: 'Real-time feature extraction and severity grading in seconds.',
+      desc: 'Optimized AI pipeline delivers rapid disease detection and severity evaluation in real time.',
       icon: Zap
     },
     {
       number: '5000+',
       title: 'Training Images',
-      desc: 'Curated dataset powering multi-layered neural network algorithms.',
+      desc: 'Extensive collection of annotated dermatological images used to train robust AI prediction models.',
       icon: Database
     }
   ];
@@ -321,26 +321,7 @@ const About = () => {
             className="text-slate-500 text-base sm:text-lg max-w-2xl leading-relaxed"
           >
             DermaVision uses AI and computer vision to provide fast, secure, and preliminary skin disease screening while encouraging professional medical consultation. By evaluating image textures and structural traits in seconds, we make preliminary dermatological screening accessible to everyone.
-          </motion.p>
-
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
-          >
-            <Link 
-              to="/screen" 
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-primary hover:bg-primary/95 text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-blue-500/10 btn-glow transition-all"
-            >
-              <span>Start Free Screening</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <a 
-              href="#statistics" 
-              className="w-full sm:w-auto inline-flex items-center justify-center bg-white hover:bg-slate-50 text-accent font-semibold px-8 py-4 rounded-full border border-slate-200 shadow-sm transition-all"
-            >
-              Learn More
-            </a>
-          </motion.div>
+          </motion.p>      
         </div>
 
         {/* Hero Right Column: Vector AI Healthcare Illustration */}
@@ -372,7 +353,7 @@ const About = () => {
                 className="glass-card rounded-custom p-6 border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl sm:text-4xl font-serif font-black text-accent tracking-tight">
+                  <span className="text-3xl sm:text-4xl font-serif font-black text-accent whitespace-nowrap leading-none">
                     {stat.number}
                   </span>
                   <div className="p-2.5 bg-blue-50 rounded-xl text-primary">
