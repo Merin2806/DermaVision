@@ -26,46 +26,6 @@ const ConditionCard = ({ condition, confidence }) => {
           Our deep learning model has matched your uploaded image with dataset patterns corresponding to {condition}.
         </p>
       </div>
-
-      <div className="flex flex-col items-center">
-        <div className="relative flex items-center justify-center">
-          {/* Circular Progress Ring */}
-          <svg
-            height={radius * 2}
-            width={radius * 2}
-            className="transform -rotate-90"
-          >
-            {/* Background Circle */}
-            <circle
-              stroke="#E1EEFC"
-              fill="transparent"
-              strokeWidth={stroke}
-              r={normalizedRadius}
-              cx={radius}
-              cy={radius}
-            />
-            {/* Foreground Circle */}
-            <motion.circle
-              stroke="#4A9DE8"
-              fill="transparent"
-              strokeWidth={stroke}
-              strokeDasharray={circumference + ' ' + circumference}
-              style={{ strokeDashoffset }}
-              r={normalizedRadius}
-              cx={radius}
-              cy={radius}
-              animate={{ strokeDashoffset }}
-              transition={{ duration: 1.2, ease: 'easeOut' }}
-              strokeLinecap="round"
-            />
-          </svg>
-          {/* Inner Percentage */}
-          <div className="absolute text-center">
-            <span className="text-2xl font-bold text-accent">{confidence}%</span>
-            <p className="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Confidence</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

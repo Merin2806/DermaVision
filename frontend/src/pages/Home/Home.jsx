@@ -5,7 +5,7 @@ import {
   ArrowRight, ShieldCheck, Zap, Activity, Award, CheckCircle2, 
   Upload, Search, Cpu, Sparkles, ClipboardList 
 } from 'lucide-react';
-import heroImg from '../../assets/hero.png';
+import heroImg from '../../assets/home.png';
 
 const Home = () => {
   const containerVariants = {
@@ -39,26 +39,30 @@ const Home = () => {
   ];
 
   const conditions = [
-    { 
-      name: 'Acne Vulgaris', 
-      desc: 'Characterized by blackheads, whiteheads, pimples, and deeper cysts, commonly developing on the face, neck, and back.',
-      stat: '96.4% Model Accuracy'
+    {
+      name: 'Warts (Verrucae)',
+      desc: 'A viral skin infection caused by the human papillomavirus (HPV), resulting in rough, raised growths that commonly appear on the hands, feet, fingers, or other areas of the body.',
+      stat: '100% Model Accuracy',
+      link: 'https://medlineplus.gov/warts.html'
     },
-    { 
-      name: 'Eczema / Dermatitis', 
-      desc: 'An inflammatory condition triggering dry, itchy, red skin patches, frequently exacerbated by environmental allergens.',
-      stat: '94.2% Model Accuracy'
+    {
+      name: 'Vitiligo',
+      desc: 'An autoimmune skin condition that causes the loss of skin pigment, leading to well-defined white patches on different parts of the body.',
+      stat: '100% Model Accuracy',
+      link: 'https://medlineplus.gov/vitiligo.html'
     },
-    { 
-      name: 'Psoriasis', 
-      desc: 'An autoimmune condition causing rapid buildup of skin cells, creating scaly plaques that can itch or sting.',
-      stat: '93.5% Model Accuracy'
+    {
+      name: 'Tinea (Ringworm)',
+      desc: 'A contagious fungal skin infection that causes circular, red, itchy, and scaly patches with a clearer center, commonly affecting the body, scalp, feet, or groin.',
+      stat: '97.5% Model Accuracy',
+      link: 'https://medlineplus.gov/ringworm.html'
     },
-    { 
-      name: 'Fungal Infections (Tinea)', 
-      desc: 'Superficial skin infections caused by fungi (e.g. ringworm, athlete\'s foot) presenting as circular scaling plaques.',
-      stat: '95.1% Model Accuracy'
-    }
+    {
+      name: 'Scabies',
+      desc: 'A highly contagious skin infestation caused by tiny mites that burrow into the skin, resulting in intense itching, redness, and a pimple-like rash.',
+      stat: '97.5% Model Accuracy',
+      link: 'https://medlineplus.gov/scabies.html'
+    },
   ];
 
   return (
@@ -218,10 +222,10 @@ const Home = () => {
                   </div>
                   <p className="text-slate-500 text-sm leading-relaxed">{c.desc}</p>
                 </div>
-                <div className="mt-6 flex items-center text-xs font-bold text-primary hover:text-accent transition-colors cursor-pointer group-hover:translate-x-1.5 duration-200">
-                  <span>View clinical literature</span>
-                  <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </div>
+                <a href={c.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center text-xs font-bold text-primary hover:text-accent transition-colors group-hover:translate-x-1.5 duration-200">
+                    <span>View clinical literature</span>
+                    <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                </a>
               </div>
             ))}
           </div>
