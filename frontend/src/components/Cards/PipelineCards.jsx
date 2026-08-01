@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, Eye, MapPin, Activity, Image as ImageIcon, Sparkles, CheckCircle } from 'lucide-react';
+import { Layers, Eye, MapPin, Activity, Image as ImageIcon, Sparkles, CheckCircle, Target, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const getBodyPart = (scan) => {
@@ -26,6 +26,8 @@ const PipelineCards = ({ currentScan }) => {
 
   const {
     affectedArea = '18.6%',
+    lesionCoverage = currentScan.affectedArea || 'N/A',
+    followUpRecommendation = currentScan.severity === 'Mild' ? '30 Days' : currentScan.severity === 'Moderate' ? '14 Days' : '7 Days',
     segmentationMask,
     gradCamUrl,
     imageUrl,
@@ -185,15 +187,15 @@ const PipelineCards = ({ currentScan }) => {
 
       {/* 2. Secondary Metrics Grid: Body Location, Severity Score, Similar Cases */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {/* Body Location Card */}
+        {/* Lesion Coverage Card */}
         <div className="glass-card rounded-custom p-5 shadow-sm border border-slate-100 flex items-center space-x-4">
           <div className="p-3 bg-blue-50 text-primary rounded-2xl shrink-0">
-            <MapPin className="w-6 h-6" />
+            <Target className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Body Location</span>
-            <span className="text-lg font-bold text-accent font-serif">{bodyPart}</span>
-            <span className="text-[10px] text-slate-400 block mt-0.5">YOLO Spatial Detection</span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">🎯 Lesion Coverage</span>
+            <span className="text-lg font-bold text-accent font-serif">{lesionCoverage}</span>
+            <span className="text-[10px] text-slate-400 block mt-0.5">Estimated Affected Area</span>
           </div>
         </div>
 
@@ -209,15 +211,15 @@ const PipelineCards = ({ currentScan }) => {
           </div>
         </div>
 
-        {/* Similar Cases Match Card */}
+        {/* Follow-up Card */}
         <div className="glass-card rounded-custom p-5 shadow-sm border border-slate-100 flex items-center space-x-4">
           <div className="p-3 bg-emerald-50 text-emerald-600 rounded-2xl shrink-0">
-            <ImageIcon className="w-6 h-6" />
+            <Calendar className="w-6 h-6" />
           </div>
           <div>
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Similar Dataset Cases</span>
-            <span className="text-lg font-bold text-accent font-serif">{similarCases} Matches</span>
-            <span className="text-[10px] text-slate-400 block mt-0.5">Avg Severity: {averageSeverity}</span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">📅 Follow-up</span>
+            <span className="text-lg font-bold text-accent font-serif">{followUpRecommendation}</span>
+            <span className="text-[10px] text-slate-400 block mt-0.5">Recheck after</span>
           </div>
         </div>
       </div>

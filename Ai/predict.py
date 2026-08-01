@@ -268,6 +268,23 @@ class DiseasePredictor:
             "averageSeverity": severity if severity != "Critical" else "Severe"
         }
 
+    def compute_follow_up(self, severity: str) -> str:
+        """
+        Returns a rule-based follow-up interval string based on clinical severity.
+        Mild     -> 30 Days
+        Moderate -> 14 Days
+        Severe / Critical -> 7 Days
+        """
+        severity_lower = (severity or "").lower()
+        if severity_lower == "mild":
+            return "30 Days"
+        elif severity_lower == "moderate":
+            return "14 Days"
+        elif severity_lower in ("severe", "critical"):
+            return "7 Days"
+        # Safe default
+        return "7 Days"
+
     def predict(self, image_path: str) -> Dict[str, Any]:
         """
         Runs complete multi-model AI pipeline inference on uploaded skin image.
@@ -329,12 +346,17 @@ class DiseasePredictor:
         # 6. Similar Case Retrieval
         similar_res = self.retrieve_similar_cases(disease_name, severity_res["severity"])
 
+        # 7. Follow-up Recommendation (rule-based on severity)
+        follow_up = self.compute_follow_up(severity_res["severity"])
+
         return {
             "disease": disease_name,
             "confidence": confidence_percent,
             "severity": severity_res["severity"],
             "severityScore": severity_res["severityScore"],
             "affectedArea": segmentation_res["affectedArea"],
+            "lesionCoverage": segmentation_res["affectedArea"],
+            "followUpRecommendation": follow_up,
             "segmentationMask": segmentation_res["segmentationMask"],
             "bodyPart": body_part,
             "gradCamUrl": gradcam_url,

@@ -85,6 +85,10 @@ const enrichScan = async (scan) => {
   if (!scanObj.affectedArea) {
     scanObj.affectedArea = '18.6%';
   }
+  // Lesion coverage — alias of affectedArea, fall back to N/A if genuinely absent
+  if (!scanObj.lesionCoverage) {
+    scanObj.lesionCoverage = scanObj.affectedArea || 'N/A';
+  }
   if (!scanObj.severityScore) {
     scanObj.severityScore = scanObj.severity === 'Severe' ? '88/100' : scanObj.severity === 'Moderate' ? '68/100' : '35/100';
   }
@@ -93,6 +97,13 @@ const enrichScan = async (scan) => {
   }
   if (!scanObj.averageSeverity) {
     scanObj.averageSeverity = scanObj.severity || 'Moderate';
+  }
+  // Follow-up recommendation — rule-based fallback derived from severity
+  if (!scanObj.followUpRecommendation) {
+    const sev = (scanObj.severity || '').toLowerCase();
+    if (sev === 'mild') scanObj.followUpRecommendation = '30 Days';
+    else if (sev === 'moderate') scanObj.followUpRecommendation = '14 Days';
+    else scanObj.followUpRecommendation = '7 Days';
   }
   if (!scanObj.aiModelsUsed || scanObj.aiModelsUsed.length === 0) {
     scanObj.aiModelsUsed = [
@@ -203,6 +214,8 @@ const analyzeImage = async (req, res, next) => {
       severity: aiResult.severity || 'Moderate',
       severityScore: aiResult.severityScore || '68/100',
       affectedArea: aiResult.affectedArea || '18.6%',
+      lesionCoverage: aiResult.lesionCoverage || aiResult.affectedArea || 'N/A',
+      followUpRecommendation: aiResult.followUpRecommendation || '7 Days',
       segmentationMask: aiResult.segmentationMask || imageData || null,
       bodyPart: aiResult.bodyPart || diseaseInfo?.common_locations?.[0] || 'Right Arm / Hand',
       gradCamUrl: aiResult.gradCamUrl || imageData || null,
