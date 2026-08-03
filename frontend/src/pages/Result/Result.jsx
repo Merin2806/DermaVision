@@ -136,7 +136,7 @@ const Result = ({ currentScan, onReset }) => {
       {/* ----------------------------------------------------
           4. AI ANALYSIS PIPELINE (Full Width)
          ---------------------------------------------------- */}
-      <PipelineCards currentScan={currentScan} />
+      
 
       {/* ----------------------------------------------------
           5. RECOMMENDATIONS (Full Width)
