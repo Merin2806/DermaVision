@@ -187,24 +187,30 @@ const About = () => {
     }
   ];
 
-  const pillarCards = [
+  const whyDermaVisionCards = [
     {
-      title: 'Our Objective',
+      title: 'Our Mission',
       icon: Target,
-      content: 'Provide accessible AI-powered preliminary skin screening that encourages early detection and timely medical consultation.',
-      badgeBg: 'bg-gradient-to-br from-blue-50 to-blue-100/80 text-primary border-blue-100'
+      description:
+        'Provide an intelligent AI-powered skin disease screening platform that enables early detection, improves healthcare accessibility, and encourages timely medical consultation through fast and reliable analysis.',
+      iconBg: 'bg-[#EFF6FF] text-[#4F8EF7] border-blue-100',
+      hoverGlow: 'hover:border-[#4F8EF7]/50 hover:shadow-blue-500/10'
     },
     {
-      title: 'Problem Statement',
+      title: 'The Challenge',
       icon: AlertTriangle,
-      content: 'Many patients delay dermatologist visits due to long waiting periods or limited accessibility, allowing treatable skin diseases to worsen.',
-      badgeBg: 'bg-gradient-to-br from-amber-50 to-red-50 text-amber-600 border-amber-100'
+      description:
+        'Millions of people delay dermatologist visits because of limited accessibility, long waiting times, and lack of awareness, allowing treatable skin conditions to progress before diagnosis.',
+      iconBg: 'bg-[#FFF7ED] text-amber-500 border-amber-100',
+      hoverGlow: 'hover:border-amber-400/50 hover:shadow-amber-500/10'
     },
     {
       title: 'Our Solution',
       icon: Lightbulb,
-      content: 'DermaVision combines computer vision and deep learning to analyze skin images, estimate disease severity, and generate comprehensive screening reports within seconds.',
-      badgeBg: 'bg-gradient-to-br from-sky-50 to-blue-100 text-secondary border-blue-100'
+      description:
+        'DermaVision combines computer vision, deep learning, and medical knowledge to analyze skin images, estimate disease severity, and generate comprehensive AI-assisted screening reports within seconds.',
+      iconBg: 'bg-[#EFF6FF] text-[#4F8EF7] border-blue-100',
+      hoverGlow: 'hover:border-[#4F8EF7]/50 hover:shadow-blue-500/10'
     }
   ];
 
@@ -371,42 +377,97 @@ const About = () => {
       </section>
 
       {/* --------------------------------------------------
-          3. OBJECTIVE / PROBLEM / SOLUTION
+          3. WHY DERMAVISION EXISTS
          -------------------------------------------------- */}
-      <section className="max-w-7xl mx-auto px-6 py-16 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <h2 className="text-3xl md:text-5xl font-serif text-accent font-black">Our Core Pillars</h2>
-          <p className="text-slate-500 text-base leading-relaxed">
-            Understanding the purpose, problem domain, and technology driving DermaVision.
-          </p>
+      <section className="relative max-w-7xl mx-auto px-6 py-20 lg:px-8 overflow-hidden">
+        {/* Faint low-opacity neural-network background pattern */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.06] overflow-hidden -z-10">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+              <pattern id="neural-grid-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+                <circle cx="30" cy="30" r="2.5" fill="#1E3A8A" />
+                <circle cx="10" cy="10" r="1.5" fill="#4F8EF7" />
+                <circle cx="50" cy="10" r="1.5" fill="#4F8EF7" />
+                <circle cx="10" cy="50" r="1.5" fill="#4F8EF7" />
+                <circle cx="50" cy="50" r="1.5" fill="#4F8EF7" />
+                <line x1="30" y1="30" x2="10" y2="10" stroke="#4F8EF7" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="30" y1="30" x2="50" y2="10" stroke="#4F8EF7" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="30" y1="30" x2="10" y2="50" stroke="#4F8EF7" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="30" y1="30" x2="50" y2="50" stroke="#4F8EF7" strokeWidth="1" strokeDasharray="3 3" />
+                <path d="M 0 30 H 60 M 30 0 V 60" stroke="#1E3A8A" strokeWidth="0.5" strokeOpacity="0.4" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#neural-grid-pattern)" />
+          </svg>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pillarCards.map((card, idx) => {
-            const Icon = card.icon;
-            return (
-              <motion.div 
-                key={idx}
-                variants={itemVariants}
-                whileHover={{ y: -8 }}
-                transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-                className="glass-card rounded-custom p-8 border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className={`p-3.5 rounded-2xl border ${card.badgeBg}`}>
-                      <Icon className="w-6 h-6" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="space-y-12"
+        >
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1E3A8A] font-black tracking-tight">
+              Why DermaVision Exists
+            </h2>
+            
+            {/* Subtle blue gradient line below heading */}
+            <div className="h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-[#4F8EF7] to-transparent rounded-full" />
+            
+            <p className="text-slate-500 text-base sm:text-lg leading-relaxed pt-1">
+              The mission, challenge, and AI innovation behind smarter skin disease screening.
+            </p>
+          </div>
+
+          {/* Cards Grid (32px gap) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            {whyDermaVisionCards.map((card, idx) => {
+              const Icon = card.icon;
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.15 }}
+                  whileHover={{ y: -8 }}
+                  className={`group relative glass-card rounded-[26px] p-8 bg-white/80 backdrop-blur-md border border-slate-200/70 shadow-sm hover:shadow-2xl ${card.hoverGlow} transition-all duration-300 flex flex-col justify-between h-full`}
+                >
+                  <div className="space-y-5">
+                    {/* Icon Container with Circular Soft Background & Emoji */}
+                    <div className="flex items-center justify-between">
+                      <div className={`w-14 h-14 rounded-full flex items-center justify-center border shadow-sm transition-transform duration-300 group-hover:scale-110 ${card.iconBg}`}>
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <span className="text-2xl select-none" role="img" aria-label={card.title}>
+                        {card.emoji}
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold font-serif text-accent">{card.title}</h3>
+
+                    {/* Card Title */}
+                    <h3 className="text-xl font-bold font-serif text-[#1E3A8A] group-hover:text-[#4F8EF7] transition-colors duration-200">
+                      {card.title}
+                    </h3>
+
+                    {/* Card Description */}
+                    <p className="text-slate-600 text-sm leading-relaxed font-sans">
+                      {card.description}
+                    </p>
                   </div>
-                  <p className="text-slate-500 text-sm leading-relaxed pt-2">
-                    {card.content}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+
+                  {/* Subtle Card Accent Line */}
+                  <div className="pt-6 mt-6 border-t border-slate-100/80 flex items-center text-xs font-semibold text-[#4F8EF7]">
+                    <span className="w-2 h-2 rounded-full bg-[#4F8EF7] mr-2 group-hover:scale-125 transition-transform duration-200" />
+                    <span>DermaVision Core Pillar</span>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
       </section>
 
       {/* --------------------------------------------------
