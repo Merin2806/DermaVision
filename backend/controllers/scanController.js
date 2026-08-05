@@ -166,6 +166,12 @@ const analyzeImage = async (req, res, next) => {
       const fastResp = await fetch(`${fastapiUrl}/predict`, { method: 'POST', body: formData });
       if (fastResp.ok) {
         aiResult = await fastResp.json();
+      } else {
+        const errorJson = await fastResp.json().catch(() => null);
+        if (fastResp.status === 400 && errorJson && errorJson.success === false) {
+          console.warn('Image validation failed in FastAPI layer:', errorJson.message);
+          return res.status(400).json(errorJson);
+        }
       }
     } catch (fastApiErr) {
       console.warn('FastAPI service unreachable:', fastApiErr.message);

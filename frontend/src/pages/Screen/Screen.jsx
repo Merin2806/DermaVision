@@ -128,8 +128,12 @@ const Screen = ({ tempImage, setTempImage, onAnalyze }) => {
     try {
       await onAnalyze(tempImage);
     } catch (err) {
-      console.error(err);
+      console.error('Image analysis error:', err);
       navigate('/screen');
+      const errorMsg = 'Invalid image detected. Please upload a clear image of the affected skin area.';
+      setError(errorMsg);
+      // Trigger user alert toast
+      alert(errorMsg);
     }
   };
 

@@ -18,6 +18,7 @@ from fastapi.responses import JSONResponse
 
 from config import Config
 from predict import DiseasePredictor
+from validator import ImageValidator
 
 # Setup logging
 logging.basicConfig(
@@ -26,8 +27,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger("DermaVisionAPI")
 
-# Global predictor instance
+# Global predictor and validator instances
 predictor = None
+validator = None
 temp_dir = None
 
 
@@ -37,7 +39,7 @@ async def lifespan(app: FastAPI):
     Handles application startup and shutdown lifespan events.
     Loads the trained model once to optimize inference latencies.
     """
-    global predictor, temp_dir
+    global predictor, validator, temp_dir
     logger.info("Initializing DermaVision AI Service...")
     
     # Resolve sandboxed temporary directory within the workspace
@@ -47,9 +49,13 @@ async def lifespan(app: FastAPI):
     logger.info(f"Temporary file workspace configured at: {temp_dir}")
     
     try:
+        # Load validation model (torchvision ResNet50)
+        validator = ImageValidator()
+        logger.info("Image validation layer initialized successfully.")
+
         # Load prediction model
         predictor = DiseasePredictor()
-        logger.info("Model loaded successfully. Service ready for incoming scans.")
+        logger.info("Disease prediction model loaded successfully. Service ready for incoming scans.")
     except Exception as e:
         logger.critical(f"Failed to load model on startup: {e}")
         # We do not crash the app, but log it so developers can troubleshoot
@@ -63,25 +69,25 @@ async def lifespan(app: FastAPI):
 # Initialize FastAPI with Lifespan
 app = FastAPI(
     title="DermaVision AI Prediction API",
-    description="Microservice providing TensorFlow EfficientNet-B4 skin disease predictions",
+    description="Microservice providing skin disease validation and predictions",
     version="1.0.0",
     lifespan=lifespan
 )
 
 
-@app.post("/predict", response_model=Dict[str, Any])
-async def predict_skin_disease(image: UploadFile = File(...)) -> Dict[str, Any]:
+@app.post("/predict")
+async def predict_skin_disease(image: UploadFile = File(...)):
     """
-    Receives an uploaded skin lesion image and returns the predicted disease class
-    and confidence score.
+    Receives an uploaded skin lesion image, validates it with ResNet50,
+    and returns the predicted disease class and confidence score if valid.
     
     Args:
         image (UploadFile): The uploaded image file.
         
     Returns:
-        JSONResponse: {"disease": "Psoriasis", "confidence": 98.62} or a standard error.
+        JSONResponse: Disease prediction dict or HTTP 400 validation error.
     """
-    global predictor, temp_dir
+    global predictor, validator, temp_dir
     
     if predictor is None:
         raise HTTPException(
@@ -109,7 +115,20 @@ async def predict_skin_disease(image: UploadFile = File(...)) -> Dict[str, Any]:
             
         logger.info(f"Received scan '{image.filename}' saved as '{unique_filename}'")
         
-        # Run classification
+        # Step 1: Run lightweight ImageNet validation layer (ResNet50)
+        if validator is not None:
+            is_valid, top5_preds, val_message = validator.validate_image(str(temp_file_path))
+            if not is_valid:
+                logger.warning(f"Validation FAILED for '{image.filename}': Non-skin image detected. Returning HTTP 400.")
+                return JSONResponse(
+                    status_code=400,
+                    content={
+                        "success": False,
+                        "message": "Invalid image. Please upload a clear image of the affected human skin."
+                    }
+                )
+        
+        # Step 2: Run classification with existing disease model if valid
         prediction = predictor.predict(str(temp_file_path))
         logger.info(f"Prediction success for '{unique_filename}': {prediction}")
         return prediction
