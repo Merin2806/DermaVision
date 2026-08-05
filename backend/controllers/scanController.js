@@ -166,12 +166,6 @@ const analyzeImage = async (req, res, next) => {
       const fastResp = await fetch(`${fastapiUrl}/predict`, { method: 'POST', body: formData });
       if (fastResp.ok) {
         aiResult = await fastResp.json();
-      } else {
-        const errorJson = await fastResp.json().catch(() => null);
-        if (fastResp.status === 400 && errorJson && errorJson.success === false) {
-          console.warn('Image validation failed in FastAPI layer:', errorJson.message);
-          return res.status(400).json(errorJson);
-        }
       }
     } catch (fastApiErr) {
       console.warn('FastAPI service unreachable:', fastApiErr.message);
@@ -255,7 +249,22 @@ const analyzeImage = async (req, res, next) => {
       const user = await User.findById(req.user._id);
       if (user) {
         user.scans.unshift(newScan);
-        await user.save();
+        if (user.scans.length > 20) {
+          user.scans = user.scans.slice(0, 20);
+        }
+        try {
+          await user.save();
+        } catch (saveErr) {
+          console.error('Failed to save scan to user history:', saveErr.message);
+          if (saveErr.code === 10334 || (saveErr.message && saveErr.message.includes('BSONObj size'))) {
+            user.scans = user.scans.slice(0, 5);
+            try {
+              await user.save();
+            } catch (pruneErr) {
+              console.error('Failed to save even after pruning scans history:', pruneErr.message);
+            }
+          }
+        }
       }
     }
 
