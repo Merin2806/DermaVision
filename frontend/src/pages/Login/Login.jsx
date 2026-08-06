@@ -25,7 +25,7 @@ const Login = ({ onLogin }) => {
       await onLogin(email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.error || 'Authentication failed. Please check credentials.');
+      setError(err.response?.data?.message || err.response?.data?.error || 'Authentication failed. Please check credentials.');
     } finally {
       setLoading(false);
     }

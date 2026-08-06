@@ -6,11 +6,9 @@ const fs = require('fs');
 const connectDB = require('./config/db');
 const { errorHandler } = require('./middleware/errorMiddleware');
 
-// Load environment variables
+// Load environment variables before any other imports/configs
 dotenv.config();
-
-// Connect to MongoDB Atlas
-connectDB();
+console.log('✔ Loading Environment Variables');
 
 const app = express();
 
@@ -46,12 +44,23 @@ app.get('/', (req, res) => {
   res.send('DermaVision API is running...');
 });
 
+// Global error handler — must be registered LAST, after all routes
+app.use(errorHandler);
+
 // Port fallback configuration
 const PORT = process.env.PORT || 5001;
 
-app.listen(PORT, () => {
-  console.log(`Server running in development mode on port ${PORT}`);
-});
+// Start server only after database connects successfully
+const startServer = async () => {
+  try {
+    await connectDB();
+    app.listen(PORT, () => {
+      console.log(`✔ Express Server Started on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error(`❌ Server startup failed: ${err.message}`);
+    process.exit(1);
+  }
+};
 
-// Global error handler — must be registered LAST, after all routes
-app.use(errorHandler);
+startServer();

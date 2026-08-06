@@ -49,7 +49,7 @@ const Signup = ({ onSignup }) => {
       if (err.code === 'ERR_NETWORK' || !err.response) {
         setError('Cannot connect to the server. Please ensure the backend is running on port 5001.');
       } else {
-        setError(err.response?.data?.error || 'Registration failed. Please try again.');
+        setError(err.response?.data?.message || err.response?.data?.error || 'Registration failed. Please try again.');
       }
     } finally {
       setLoading(false);

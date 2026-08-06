@@ -6,6 +6,7 @@ const { validateSignup, validateLogin } = require('../middleware/validationMiddl
 const { authLimiter } = require('../middleware/rateLimitMiddleware');
 
 router.post('/signup', authLimiter, validateSignup, signup);
+router.post('/register', authLimiter, validateSignup, signup);
 router.post('/login', authLimiter, validateLogin, login);
 router.get('/me', protect, getMe);
 

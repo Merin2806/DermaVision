@@ -14,6 +14,20 @@ const errorHandler = (err, req, res, next) => { // eslint-disable-line no-unused
   console.error(`[${new Date().toISOString()}] ERROR — ${req.method} ${req.originalUrl}`);
   console.error(err);
 
+  // Check for Mongoose buffering or connection errors
+  const isMongoConnectionError = 
+    err.name === 'MongooseError' && err.message.includes('buffering timed out') ||
+    err.name === 'MongoNetworkError' ||
+    err.name === 'MongoServerSelectionError' ||
+    err.name === 'MongoTimeoutError';
+
+  if (isMongoConnectionError) {
+    return res.status(503).json({
+      success: false,
+      message: 'Database connection failed. Please try again later.'
+    });
+  }
+
   // Use the status code already set on the error object, or fall back to 500
   const statusCode = err.statusCode || err.status || 500;
 
